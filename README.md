@@ -19,22 +19,22 @@ Target Pengguna :
 <br>
 Mockup kasar sementara :  
 1.Homepage  
-(https://i.ibb.co/02CBYxH/Homepage-mockup.png)  
+![Mockup Homepage https://i.ibb.co/02CBYxH/Homepage-mockup.png](https://i.ibb.co/02CBYxH/Homepage-mockup.png)  
 2.Menu Science  
-(https://i.ibb.co/mCg7vTj/Menu-Science-mockup.png)  
+![Mockup Menu Science https://i.ibb.co/mCg7vTj/Menu-Science-mockup.png](https://i.ibb.co/mCg7vTj/Menu-Science-mockup.png)  
 3.Menu Social  
-(https://i.ibb.co/D4NQ6Zb/Menu-Social-mockup.png)  
+![Mockup Menu Social https://i.ibb.co/D4NQ6Zb/Menu-Social-mockup.png](https://i.ibb.co/D4NQ6Zb/Menu-Social-mockup.png)  
 4.Konten Mata Pelajaran  
-(https://i.ibb.co/YjKp10j/Content-Mapel-mockup.png)  
+![Mockup Konten Mapel https://i.ibb.co/YjKp10j/Content-Mapel-mockup.png](https://i.ibb.co/YjKp10j/Content-Mapel-mockup.png)  
 5.Konten Materi  
-(https://i.ibb.co/7J9LQfz/Content-Materi-mockup.png)  
+![Mockup Konten Materi https://i.ibb.co/7J9LQfz/Content-Materi-mockup.png](https://i.ibb.co/7J9LQfz/Content-Materi-mockup.png)  
 6.Navbar  
-(https://i.ibb.co/w00V6Lq/Navbar-mockup.png)  
+![Mockup Navbar https://i.ibb.co/w00V6Lq/Navbar-mockup.png](https://i.ibb.co/w00V6Lq/Navbar-mockup.png)  
 7.Login Page  
-(https://i.ibb.co/n1FK3bf/Login-mockup.png)  
+![Mockup Login Page https://i.ibb.co/n1FK3bf/Login-mockup.png](https://i.ibb.co/n1FK3bf/Login-mockup.png)  
 <br>
 Skema Database :  
 1.ERD  
-(https://i.ibb.co/6RDsRjR/ERD-Project-Pemweb.png)  
+![Skema ERD https://i.ibb.co/6RDsRjR/ERD-Project-Pemweb.png](https://i.ibb.co/6RDsRjR/ERD-Project-Pemweb.png)  
 2.Tabel  
-(https://i.ibb.co/86z6mxw/Tabel-Project-Pemweb.png)
+![Tabel https://i.ibb.co/86z6mxw/Tabel-Project-Pemweb.png](https://i.ibb.co/86z6mxw/Tabel-Project-Pemweb.png)
