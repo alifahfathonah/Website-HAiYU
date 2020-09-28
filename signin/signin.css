@@ -61,16 +61,19 @@ a, label {
 
 .login{
     border-radius: 22px;
-    width: 200px;
-    height: 40px;
+    width: 250px;
+    height: 50px;
     margin: 10px;    
     text-align: center;
     color: black;
     font-family: inherit;
+    border-color: white;
 }
-#forgetPW:hover{
+
+a:hover{
     color: black;
 }
+
 button{
     border-radius: 22px;
     width: 100px;
@@ -82,7 +85,140 @@ button{
     border-color: #2C004F;
     cursor: pointer;
 }
+
 button:hover{
     background: #ca91ff;
     color: black;
+}
+
+#myBtn{
+    background-color: inherit;
+    color: #551a8b;
+    font-size: smaller;
+    border:none;
+    width: fit-content;
+    text-decoration: underline;
+}
+
+#myBtn:hover{
+    color: black;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    text-align: center;
+}
+
+.modal h1{
+    margin-left: 35px;
+    font-size: xx-large;
+}
+
+.modal input {
+    border-radius: 22px;
+    width: 400px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    color: black;
+    font-family: inherit;
+    font-size: large;
+}
+
+.modal button {
+    border-radius: 22px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #ca91ff;
+    color: inherit;
+    font-family: inherit;
+    border-color: #ca91ff;
+    cursor: pointer;
+}
+
+.modal a {
+    color: #ca91ffb6;
+    font-size: small;
+}
+
+
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #2C004F;
+    margin: auto;
+    padding: 0;
+    border-radius: 5%;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-header{
+    padding:5px;
+    border-bottom: 1px solid white;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.close:hover,
+.close:focus {
+    color: #ca91ff;
+    text-decoration: none;
+    cursor: pointer;
 }
