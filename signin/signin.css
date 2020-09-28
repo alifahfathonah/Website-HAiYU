@@ -1,12 +1,14 @@
 
-
 body{
     font-family: 'Righteous', cursive;
     color: white;
-    background-color: black;
-    margin: 150px;
-    margin-top: 125px;
-    margin-bottom: inherit;
+    background: url(vector1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 793px;
+    margin: 0;
+    padding: 0;
+    
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -20,8 +22,15 @@ body{
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 30px;
+    padding: 30px 50px 30px 50px;
   }
-
+.item1{
+    width: fit-content;
+    height: fit-content;
+    margin-left:10%;
+    margin-top: 20%;
+    
+}
 img{
     width: 75px;
     height: 75px;
@@ -33,13 +42,20 @@ h1
     text-align: center;
     vertical-align: middle;
 }
-
+#subjudul{
+    position: absolute;
+    top: 50%;
+    left: 9%;
+    letter-spacing: 0.255em;
+}
 h2{
     font-size: xx-large;
 }
 
 .item2{
     text-align: center;
+    margin-top: 21%;
+    margin-right: 10%;
 }
 
 a, label {
@@ -53,10 +69,12 @@ a, label {
     height: 40px;
     margin: 10px;    
     text-align: center;
-    color: inherit;
+    color: black;
     font-family: inherit;
 }
-
+#forgetPW:hover{
+    color: black;
+}
 button{
     border-radius: 22px;
     width: 100px;
@@ -66,4 +84,9 @@ button{
     color: inherit;
     font-family: inherit;
     border-color: #2C004F;
+    cursor: pointer;
+}
+button:hover{
+    background: #ca91ff;
+    color: black;
 }
