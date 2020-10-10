@@ -205,3 +205,12 @@ p{
 .btn-container .sign-up-btn:hover{
     background-color:  #ccc;
 }
+
+h6{
+    position: absolute;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 550px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
