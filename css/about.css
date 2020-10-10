@@ -1,0 +1,61 @@
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    text-align: center;
+  }
+
+body{
+    font-family: 'Righteous', cursive;
+    color: white;
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#background{
+    width: max-content;
+    height: 1300px;
+}
+
+#judul{
+    font-size: 80px;
+}
+
+h1, h2, h6{
+    text-align: center;
+}
+
+h6{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3, p{
+    margin-left: 20px;
+}
+
+p, li{
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+a{
+    color: #ca91ff;
+}
+
+a:hover{
+    color: #2C004F;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
+
