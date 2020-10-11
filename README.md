@@ -35,6 +35,6 @@ Mockup kasar sementara :
 <br>
 Skema Database :  
 1.ERD  
-![Skema ERD https://ibb.co/hKvkbgB](https://ibb.co/hKvkbgB)  
+![Skema ERD https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png](https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png)  
 2.Tabel  
-![Tabel https://ibb.co/Wnvp3Bv](https://ibb.co/Wnvp3Bv)
+![Tabel https://i.ibb.co/F64qW84/Tabel-Database-HAi-YU.png](https://i.ibb.co/F64qW84/Tabel-Database-HAi-YU.png)
