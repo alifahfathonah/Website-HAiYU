@@ -1,0 +1,38 @@
+create table login(
+email varchar(255) not null primary key,
+username varchar(255) not null,
+password varchar(255) not null
+);
+
+create table siswa(
+id bigint not null primary key auto_increment,
+email varchar(255) not null,
+username varchar(255) not null,
+nama varchar(255)
+jenis_kelamin varchar(1),
+tanggal_lahir date
+);
+
+create table pengajar(
+id bigint not null primary key auto_increment,
+email varchar(255) not null,
+username varchar(255) not null,
+nama varchar(255)
+jenis_kelamin varchar(1),
+tanggal_lahir date
+);
+
+create table mapel(
+id bigint not null primary key auto_increment,
+nama varchar(255),
+materi varchar(255),
+id_pengajar bigint not null
+);
+
+create tabel belajar(
+id_siswa id bigint not null,
+id_pengajar bigint not null,
+tryout1 int,
+tryout2 int
+);
+
