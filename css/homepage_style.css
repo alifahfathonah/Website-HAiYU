@@ -15,7 +15,7 @@ body{
 }
 .sidebar {
     height: 100%;
-    width: 481px;
+    width: 0;
     left: 0px;
     top: 0px;
     bottom: 0px;
@@ -54,26 +54,46 @@ body{
     font-family: 'Righteous', cursive;
     color : #FFFFFF;
     font-size: 48px;
-    left: 85px;
+    left: 70px;
     width: 80px;
 }
 .sidebar .top-nav .search-container{
     float: right;   
 }
-.sidebar .bottom-nav{
-    position: absolute;
-    width: 40px;
-    height: 50px;
-    left: 0px;
-    bottom: 0px;
+.sidebar .user-disp{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    width : 481px;
+    left: 0;
 }
-.sidebar .bottom-nav .bottom-link{
+.sidebar .user-disp img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+    border: 1px;
+    left: 0;
+}
+.sidebar .user-disp .user-info{
+    width : 200px;
+    border: 1px;
+    margin-left: 200px;
+    font-size: 25px;
+    padding: 20px;
+}
+.sidebar .bottom-nav{
+    position : absolute;
+    bottom : 0;
+    left: 0;
+    width: 481px;
+    height: 100px;
+}
+.sidebar .bottom-nav a{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #FFFFFF;
-    transition: 0.3s;
-    bottom: 0px;
+    float : left;
 }
 .sidebar input[type=text]{
     padding: 6px;
