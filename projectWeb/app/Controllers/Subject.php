@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Pages extends BaseController
+class Subject extends BaseController
 {
     public function science()
     {
