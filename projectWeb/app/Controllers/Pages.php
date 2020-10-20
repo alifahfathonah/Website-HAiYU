@@ -16,7 +16,8 @@ class Pages extends BaseController
     {
         return view('Page/signin');
     }
-
-    //--------------------------------------------------------------------
-
+    public function about()
+    {
+        return view('Page/about');
+    }
 }

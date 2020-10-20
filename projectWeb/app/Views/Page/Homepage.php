@@ -24,7 +24,7 @@
         <div class="nav1">
             <div class="home">
                 <img src="../images/homepage.png" alt="">
-                <a href="Homepage.html">Home</a>
+                <a href="/">Home</a>
             </div>
             <div class="subject">
                 <img src="../images/language.png" alt="">
@@ -33,13 +33,13 @@
         </div>
         <div class="nav2">
             <div class="about">
-                <a href="about.html">About</a>
+                <a href="about">About</a>
             </div>
             <div class="signIn">
                 <a href="signin">Sign in</a>
             </div>
             <div class="signOut">
-                <a href="signup.html">Sign up</a>
+                <a href="signup">Sign up</a>
             </div>
         </div>
     </div>
