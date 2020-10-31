@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-6 col-md-4 column">
                     <div class="cardEconomics">
-                        <img src="../images/edu/036-chart.png" alt="social" id="icon">
+                        <img src="../images/edu/036-chart.png" alt="social" id="icon" onclick="location.href = '/social/economics'">
                         <h3 id="titleSub">Economics</h3>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-6 col-md-4 column">
                    <div class="cardHistory">
-                        <img src="../images/edu/003-university.png" alt="social" id="icon">
+                        <img src="../images/edu/003-university.png" alt="social" id="icon" onclick="location.href = '/social/history'">
                         <h3 id="titleSub">History</h3>
                     </div>
                 </div>
@@ -42,19 +42,19 @@
             <div class="row">
                 <div class="col-6 col-md-4 column">
                     <div class="cardGeography">
-                        <img src="../images/edu/050-globe.png" alt="social" id="icon">
+                        <img src="../images/edu/050-globe.png" alt="social" id="icon" onclick="location.href = '/social/geography'">
                         <h3 id="titleSub">Geography</h3>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
                     <div class="cardLanguage">
-                        <img src="../images/edu/013-conversation.png" alt="social" id="icon">
+                        <img src="../images/edu/013-conversation.png" alt="social" id="icon" onclick="location.href = '/language'">
                         <h3 id="titleSub">Language</h3>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
                    <div class="cardSociology">
-                        <img src="../images/edu/043-qa.png" alt="social" id="icon">
+                        <img src="../images/edu/043-qa.png" alt="social" id="icon" onclick="location.href = '/social/sociology'">
                         <h3 id="titleSub">Sociology</h3>
                     </div>
                 </div>

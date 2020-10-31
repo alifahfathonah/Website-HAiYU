@@ -7,19 +7,19 @@ body{
     background-color: #000000;
 }
 .Isi{
-    margin-left: 90px;
-    padding: 25px;
+    margin-left: 115px;
     height: 600px;
     display: block;
 }
 
 .row{
     margin: 50px;
+    margin-top: 100px;
     position: relative;
 }
 
-.cardMath{
-    background: #FF4164;
+#chapter1{
+    background: #AC53F8;
     border-radius: 54px;
     width :229px;
     height :232px;
@@ -27,22 +27,10 @@ body{
     transition: 0.4s;
     cursor: pointer;
 }
-.cardMath:hover{
+#chapter1:hover{
     background-color: #FFCFD8;
 }
-.cardPhysics{
-    background: #FF4164;
-    border-radius: 54px;
-    width :229px;
-    height :232px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    cursor: pointer;
-}
-.cardPhysics:hover{
-    background-color: #FFDED7;
-}
-.cardChemistry{
+#chapter2{
     background: #FFC06F;
     border-radius: 54px;
     width :229px;
@@ -51,11 +39,23 @@ body{
     transition: 0.3s;
     cursor: pointer;
 }
-.cardChemistry:hover{
+#chapter2:hover{
+    background-color: #FFDED7;
+}
+#chapter3{
+    background: #74FFC5;
+    border-radius: 54px;
+    width :229px;
+    height :232px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    cursor: pointer;
+}
+#chapter3:hover{
     background-color: #FFF1E0;
 }
-.cardLanguage{
-    background: #FF67E1;
+#chapter4{
+    background: #7C79FF;
     border-radius: 54px;
     width :229px;
     height :232px;
@@ -63,11 +63,11 @@ body{
     transition: 0.3s;
     cursor: pointer;
 }
-.cardLanguage:hover{
+#chapter4:hover{
     background-color: #FFD7F7;
 }
-.cardBiology{
-    background: #BD6DFF;
+#chapter5{
+    background: #FF5171;
     border-radius: 54px;
     width :229px;
     height :232px;
@@ -75,10 +75,23 @@ body{
     transition: 0.3s;
     cursor: pointer;
 }
-.cardBiology:hover{
+#chapter5:hover{
     background-color: #F0DEFF;
 }
 
+#midtest{
+    background: #B0FF80;
+    border-radius: 54px;
+    width :229px;
+    height :232px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#midtest:hover{
+    background-color: #F0DEFF;
+}
 
 #icon{
     width: 112px;
@@ -86,26 +99,36 @@ body{
     margin: 30px 58px 90px 59px;
     transition: 0.3s;
 }
-#titleSub{
-    text-align: center;
-    margin-top: -70px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 41px;
-}
-.titlePage{
-    margin-left: -160px;
-}
+
 #title{
+    margin:0px;
+    padding:0px;
     font-style: normal;
     font-weight: bold;
     font-size: 54px;
     line-height: 53px;
     text-align: center;
-
     color: #FFFFFF;
 }
+
+#titleSub{
+    text-align: center;
+    margin-top: -80px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+}
+
+#titleSub2{
+    text-align: center;
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 41px;
+}
+
 @media screen and (max-width:600px) {
     body {
         margin-left: 30px;
@@ -118,8 +141,7 @@ body{
     position: absolute;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 150px;
-    left: 48%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: x-small;
     font-weight: bold;
