@@ -6,11 +6,7 @@ class Pages extends BaseController
 {
     public function index()
     {
-        return view('Page/Homepage');
-    }
-    public function signup()
-    {
-        return view('Page/signup');
+        return view('Page/User_homepage');
     }
     public function signin()
     {
@@ -19,5 +15,21 @@ class Pages extends BaseController
     public function about()
     {
         return view('Page/about');
+    }
+    public function subject()
+    {
+        return view('Page/subject_user');
+    }
+    public function science()
+    {
+        return view('Page/sciencePage');
+    }
+    public function social()
+    {
+        return view('Page/socialPage');
+    }
+    public function dashboard()
+    {
+        return view('Page/Homepage');
     }
 }

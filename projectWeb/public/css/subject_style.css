@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Righteous", cursive;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ececec;
+  background-attachment: fixed;
+}
+.container {
+  position: relative;
+  width: 1150px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  background: rgb(160, 29, 242);
+  background: linear-gradient(
+    90deg,
+    rgba(160, 29, 242, 1) 0%,
+    rgba(204, 0, 255, 1) 100%
+  );
+  margin: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+.container .card .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  clip-path: circle(250px at center 0);
+  text-align: center;
+}
+.container .card .circle img {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+  position: relative;
+}
+.container .card .content {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  top: 62%;
+  page-break-after: 20px;
+  text-align: center;
+}
+.container .card .content h2 {
+  color: white;
+  padding: 10px;
+  margin-top: 0px;
+  font-size: 40px;
+}
+.container .card .content a {
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 15px 38px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+.container .card .content a:hover {
+  background-color: #ffffff;
+  color: rgb(76, 0, 99);
+}
+.container .card .content a:active {
+  position: relative;
+  top: 1px;
+}

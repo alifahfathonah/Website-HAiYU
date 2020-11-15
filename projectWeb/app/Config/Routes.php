@@ -32,9 +32,13 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
-$routes->get('/signup', 'Pages::signup');
-$routes->get('/signin', 'Pages::signin');
+$routes->get('/dashboard', 'Pages::dashboard');
+$routes->get('/signup', 'user::signup');
+$routes->get('/signin', 'user::signin');
 $routes->get('/about', 'Pages::about');
+$routes->get('/user/subject', 'Pages::subject');
+$routes->get('/user/science', 'Pages::science');
+$routes->get('/user/social', 'Pages::social');
 
 /**
  * --------------------------------------------------------------------

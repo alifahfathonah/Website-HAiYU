@@ -28,7 +28,7 @@
             </div>
             <div class="subject">
                 <img src="../images/language.png" alt="">
-                <a href="#">Subject</a>
+                <a href="signin">Subject</a>
             </div>
         </div>
         <div class="nav2">
@@ -54,7 +54,7 @@
             <p>Come on join with us! by explore and learning your hardskill with us for prepare your future. we will accomodate your needs to get what you need.</p>
         </div>
         <div class="btn-container">
-            <button class="find-it-btn"><a href="#">Find it</a></button>
+            <button class="find-it-btn"><a href="signin">Find it</a></button>
             <span class="tab">
                 <button class="sign-up-btn"><a href="signup">Sign up</a></button>
             </span>

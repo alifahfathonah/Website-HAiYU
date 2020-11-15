@@ -23,24 +23,27 @@
             <img src="../images/people.png" alt="people">
 
             <h2>Sign in</h2>
-
-            <form action="">
-                <input class="login" type="text" id="username" placeholder="Username/Email" required>
+            <form action="/user/login" method="POST">
+                <?= session()->get('pesan'); ?>
                 <br>
-                <input class="login" type="password" id="password" placeholder="Password" required>
+                <input class="login" type="text" name="email" id="email" placeholder="email" required>
+                <br>
+                <input class="login" type="password" name="password" name="password" placeholder="password" required>
+                <br>
+                <a href="" id="forgetPW">Forget password</a>
+                <br>
+                <label for="rm">Remember me</label>
+                <input type="checkbox" id="rm">
+
+                <br>
+                <br>
+
+                <button class="loginButton">Login</button>
+                <br>
+                <button href="/signup" id="myBtn">Doesn't have an account?</button>
             </form>
 
-            <a href="" id="forgetPW">Forget password</a>
-            <br>
-            <label for="rm">Remember me</label>
-            <input type="checkbox" id="rm">
 
-            <br>
-            <br>
-
-            <button type="submit">Login</button>
-            <br>
-            <button id="myBtn">Doesn't have an account?</button>
         </div>
 
 
@@ -57,20 +60,21 @@
             </div>
 
             <div>
-                <form action="">
+                <form action="/user/regis" method="POST">
+                    <?= session()->get('pesan'); ?>
                     <br>
-                    <input type="text" id="username" placeholder="Create your username" required>
+                    <input type="text" id="username" name="username" placeholder="Create your username" required>
                     <br>
-                    <input type="email" id="email" placeholder="Enter your valid email" required>
+                    <input type="email" id="emailregis" name="email" placeholder="Enter your valid email" required>
                     <br>
-                    <input type="password" id="password" placeholder="Make the password" required>
+                    <input type="password" id="password" name="password" placeholder="Make the password" required>
                     <br>
                     <br>
-                    <button type="submit">AS TEACHER</button>
-                    <span style="display: inline-block; width: 20px;"></span>
-                    <button type="submit">AS STUDENT</button>
+                    <!-- <button type="submit">AS TEACHER</button>
+                    <span style="display: inline-block; width: 20px;"></span> -->
+                    <button class="regis" type="submit">AS STUDENT</button>
                     <br>
-                    <a href="signin.html" id="signin">Already have an account</a>
+                    <a href="/signin" id="signin">Already have an account</a>
                     <br>
                     <br>
 
