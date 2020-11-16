@@ -16,7 +16,12 @@ class User extends Controller
     {
         $val = $this->validate(
             [
-                'username' => 'required',
+                'username' => [
+                    'required|is_unique[login.username]',
+                    'errors' => [
+                        'is_unique' => '{field} already used!'
+                    ]
+                ],
                 'email' => [
                     'rules' => 'required|is_unique[login.email]',
                     'errors' => [
@@ -47,11 +52,11 @@ class User extends Controller
     {
         $userdata = new M_user();
         $table = 'login';
-        $email = $this->request->getPost('email');
+        $email_username = $this->request->getPost('email_username');
         $password = $this->request->getPost('password');
-        $row = $userdata->get_data_login($email, $table);
+        $row = $userdata->get_data_login($email_username, $email_username, $table);
         if ($row == NULL) {
-            session()->setFlashData('pesan', 'Sorry! your email or password is wrong');
+            session()->setFlashData('pesan', 'Sorry! your email/username and password doesn\'t match');
             return redirect()->to('/signin');
         }
         if (password_verify($password, $row->password)) {
@@ -64,7 +69,7 @@ class User extends Controller
             session()->setFlashData('pesan', 'Login succesfully!');
             return redirect()->to('/');
         }
-        session()->setFlashData('pesan', 'Sorry! your email or password is wrong');
+        session()->setFlashData('pesan', 'Sorry! your email/username and password doesn\'t match');
         return redirect()->to('/signin');
     }
     public function logout()

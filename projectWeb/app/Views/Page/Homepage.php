@@ -38,9 +38,6 @@
             <div class="signIn">
                 <a href="signin">Sign in</a>
             </div>
-            <div class="signOut">
-                <a href="signup">Sign up</a>
-            </div>
         </div>
     </div>
     <div id="main">
@@ -55,8 +52,6 @@
         </div>
         <div class="btn-container">
             <button class="find-it-btn"><a href="signin">Find it</a></button>
-            <span class="tab">
-                <button class="sign-up-btn"><a href="signup">Sign up</a></button>
             </span>
         </div>
     </div>

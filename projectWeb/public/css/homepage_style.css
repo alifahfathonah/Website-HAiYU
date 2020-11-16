@@ -65,27 +65,21 @@ body{
     background: rgba(208, 208, 208, 0.37);
     border-radius: 7px; 
 }
-.sidebar .user-disp{
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    width : 481px;
-    left: 0;
+
+.sidebar .user-info #prof{
+    margin-left: 150px;
 }
-.sidebar .user-disp img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-top: 100px;
-    border: 1px;
-    left: 0;
-}
-.sidebar .user-disp .user-info{
-    width : 200px;
-    border: 1px;
-    margin-left: 200px;
+
+.sidebar .user-info #username{
+    margin-left: 75px;
     font-size: 25px;
-    padding: 20px;
 }
+
+.sidebar .user-info #email{
+    margin-left: 75px;
+    font-size: 20px;
+}
+
 .sidebar .bottom-nav{
     position : absolute;
     bottom : 0;

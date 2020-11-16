@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAiYU - SIGN IN</title>
+    <title>HAiYU - Sign In</title>
     <link rel="stylesheet" href="../css/signin.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../images/favicon.ico" />
@@ -26,7 +26,7 @@
             <form action="/user/login" method="POST">
                 <?= session()->get('pesan'); ?>
                 <br>
-                <input class="login" type="text" name="email" id="email" placeholder="email" required>
+                <input class="login" type="text" name="email_username" id="email" placeholder="email/username" required>
                 <br>
                 <input class="login" type="password" name="password" name="password" placeholder="password" required>
                 <br>

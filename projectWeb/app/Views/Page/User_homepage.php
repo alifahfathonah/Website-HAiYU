@@ -21,19 +21,17 @@
                 </form>
             </div>
         </div>
-        <div class="user-disp">
-            <!-- <img src="../images/img-user.png" alt="user avatar"> -->
-            <div class="user-info">
-                <p>User</p>
-                <p>username : <?= session('username') ?></p>
-            </div>
+        <div class="user-info">
+            <p id="prof">PROFILE</p>
+            <p id="username">Username : <?= session('username') ?></p>
+            <p id="email">Email : <?= session('email') ?></p>
         </div>
-        <a href="Homepage.html">Home</a>
+        <a href="/">Home</a>
         <a href="/user/subject">Subject</a>
         <a href="#">Profile</a>
         <a href="about.html">About</a>
         <div class="bottom-nav">
-            <a href="#">Settings</a>
+            <!-- <a href="#">Settings</a> -->
             <a href="/user/logout">Log out</a>
         </div>
     </div>
@@ -42,7 +40,7 @@
             <button class="openbtn" onclick="openNav()">☰</button>
             <span class="haiyu">HAiYU</span>
         </div>
-        <img src="../images/background.png" alt="background">
+        <img src="../images/background.png" alt="background" class="bg">
         <div class="landing-text">
             <h1>Learn your Hardskill for The Great Future</h1>
             <p>Come on join with us! by explore and learning your hardskill with us for prepare your future. we will accomodate your needs to get what you need.</p>
@@ -50,7 +48,7 @@
         <div class="btn-container">
             <button class="find-it-btn"><a href="/user/subject">Find it</a></button>
             <span class="tab">
-                <button class="sign-up-btn"><a href="#">Start now!</a></button>
+                <!-- <button class="sign-up-btn"><a href="#">Start now!</a></button> -->
             </span>
         </div>
     </div>
