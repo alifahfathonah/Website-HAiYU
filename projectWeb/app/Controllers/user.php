@@ -71,6 +71,8 @@ class User extends Controller
 
             if ($rm == 'on') {
                 setcookie('log', 'true', time() + 10000, '/', '');
+                setcookie('email', $row->email, time() + 10000, '/', '');
+                setcookie('username', $row->username, time() + 10000, '/', '');
             }
 
             session()->setFlashData('pesan', 'Login succesfully!');
@@ -83,7 +85,9 @@ class User extends Controller
     {
         session()->setFlashData('pesan', 'Logout succesfully!');
         session()->destroy();
-        setcookie('log', 'true', time() - 10000, '/', '');
+        setcookie('log', '', time() - 10000, '/', '');
+        setcookie('email', '', time() - 10000, '/', '');
+        setcookie('username', '', time() - 10000, '/', '');
         return redirect()->to('/dashboard');
     }
 }

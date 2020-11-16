@@ -10,8 +10,15 @@ class AuthFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if($_COOKIE['log'] == 'true'){
-            session()->set('log', true);
+        if (isset($_COOKIE['log']) && isset($_COOKIE['email'])  && isset($_COOKIE['username']) ) {
+            if ($_COOKIE['log'] == 'true') {
+                $data = array(
+                    'log' => TRUE,
+                    'email' => $_COOKIE['email'],
+                    'username' => $_COOKIE['username'],
+                );
+                session()->set($data);
+            }
         }
 
         if (!session()->get('log')) {
