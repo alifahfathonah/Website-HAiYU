@@ -50,8 +50,10 @@ class User extends Controller
     }
     public function login()
     {
+        helper('cookie');
         $userdata = new M_user();
         $table = 'login';
+        $rm = $this->request->getPost('rm');
         $email_username = $this->request->getPost('email_username');
         $password = $this->request->getPost('password');
         $row = $userdata->get_data_login($email_username, $email_username, $table);
@@ -66,6 +68,11 @@ class User extends Controller
                 'username' => $row->username,
             );
             session()->set($data);
+
+            if ($rm == 'on') {
+                setcookie('log', 'true', time() + 10000, '/', '');
+            }
+
             session()->setFlashData('pesan', 'Login succesfully!');
             return redirect()->to('/');
         }
@@ -76,6 +83,7 @@ class User extends Controller
     {
         session()->setFlashData('pesan', 'Logout succesfully!');
         session()->destroy();
+        setcookie('log', 'true', time() - 10000, '/', '');
         return redirect()->to('/dashboard');
     }
 }

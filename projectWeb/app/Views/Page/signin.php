@@ -33,7 +33,7 @@
                 <a href="" id="forgetPW">Forget password</a>
                 <br>
                 <label for="rm">Remember me</label>
-                <input type="checkbox" id="rm">
+                <input type="checkbox" id="rm" name="rm">
 
                 <br>
                 <br>

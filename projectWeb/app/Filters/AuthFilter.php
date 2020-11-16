@@ -10,6 +10,10 @@ class AuthFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+        if($_COOKIE['log'] == 'true'){
+            session()->set('log', true);
+        }
+
         if (!session()->get('log')) {
             return redirect()->to('/dashboard');
         }
