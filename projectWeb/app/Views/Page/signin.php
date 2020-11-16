@@ -39,9 +39,9 @@
                 <br>
 
                 <button class="loginButton">Login</button>
-                <br>
-                <button href="/signup" id="myBtn">Doesn't have an account?</button>
             </form>
+                <br>
+                <button id="myBtn">Doesn't have an account?</button>
 
 
         </div>

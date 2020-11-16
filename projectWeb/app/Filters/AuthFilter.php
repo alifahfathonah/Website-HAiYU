@@ -10,10 +10,9 @@ class AuthFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        // $session = session();
-        // if ($session->get('log') != TRUE) {
-        //     return redirect()->to('/signin');
-        // }
+        if (!session()->get('log')) {
+            return redirect()->to('/dashboard');
+        }
     }
 
     //--------------------------------------------------------------------

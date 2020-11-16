@@ -24,7 +24,7 @@ class Filters extends BaseConfig
 		],
 		'after'  => [
 			// 'authFilter' => ['except' => ['/', '/user/*']],
-			// 'toolbar',
+			'toolbar',
 			//'honeypot'
 		],
 	];
