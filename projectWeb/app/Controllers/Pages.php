@@ -28,6 +28,10 @@ class Pages extends BaseController
     {
         return view('Page/socialPage');
     }
+    public function language()
+    {
+        return view('Page/LanguagePage');
+    }
     public function dashboard()
     {
         return view('Page/Homepage');

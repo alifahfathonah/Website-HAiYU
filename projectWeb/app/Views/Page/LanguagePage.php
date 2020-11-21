@@ -21,43 +21,43 @@
             <div class="row">
                 <div class="col-6 col-md-4 column">
                     <div class="cardMath">
-                        <img src="../images/edu/044-stationery.png" alt="Math" id="icon" onclick="location.href = '/science/math'">
-                        <h3 id="titleSub">Math</h3>
+                        <img src="../images/us.png" alt="Math" id="icon" onclick="location.href = '/science/math'">
+                        <h3 id="titleSub">English</h3>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
                     <div class="titlePage">
                         <h1 id="title">EXPLORE<br>
                             YOUR<br>
-                            SCIENCE<br>
+                            LANGUAGE<br>
                             HARDSKILL
                         </h1>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
                     <div class="cardPhysics">
-                        <img src="../images/edu/030-newtons-cradle.png" alt="Physics" id="icon" onclick="location.href = '/science/physics'">
-                        <h3 id="titleSub">Physics</h3>
+                        <img src="../images/indonesia.png" alt="Physics" id="icon" onclick="location.href = '/science/physics'">
+                        <h3 id="titleSub">Indonesian</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6 col-md-4 column">
                     <div class="cardChemistry">
-                        <img src="../images/edu/018-molecule.png" alt="Chemistry" id="icon" onclick="location.href = '/science/chemistry'">
-                        <h3 id="titleSub">Chemistry</h3>
+                        <img src="../images/france.png" alt="Chemistry" id="icon" onclick="location.href = '/science/chemistry'">
+                        <h3 id="titleSub">France</h3>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
                     <div class="cardLanguage">
-                        <img src="../images/edu/013-conversation.png" alt="Language" id="icon" onclick="location.href = '/language'">
-                        <h3 id="titleSub">Language</h3>
+                        <img src="../images/japan.png" alt="Language" id="icon" onclick="location.href = '/language'">
+                        <h3 id="titleSub">Japan</h3>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
                     <div class="cardBiology">
-                        <img src="../images/edu/014-dna.png" alt="Biologi" id="icon" onclick="location.href = '/science/biology'">
-                        <h3 id="titleSub">Biology</h3>
+                        <img src="../images/germany.png" alt="Biologi" id="icon" onclick="location.href = '/science/biology'">
+                        <h3 id="titleSub">Germany</h3>
                     </div>
                 </div>
             </div>

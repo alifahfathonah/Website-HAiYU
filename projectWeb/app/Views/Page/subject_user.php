@@ -36,7 +36,7 @@
             </div>
             <div class="content">
                 <h2>LANGUAGE</h2>
-                <a href="#">Find out</a>
+                <a href="language">Find out</a>
             </div>
         </div>
     </div>

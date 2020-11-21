@@ -38,6 +38,7 @@ $routes->get('/about', 'Pages::about');
 $routes->get('/user/subject', 'Pages::subject');
 $routes->get('/user/science', 'Pages::science');
 $routes->get('/user/social', 'Pages::social');
+$routes->get('/user/language', 'Pages::language');
 
 /**
  * --------------------------------------------------------------------

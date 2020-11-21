@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,10 @@
     <!--Bootstrap css URL-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styleSocial.css">
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+
 </head>
+
 <body>
     <main>
         <div class="Isi">
@@ -33,7 +35,7 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
-                   <div class="cardHistory">
+                    <div class="cardHistory">
                         <img src="../images/edu/003-university.png" alt="social" id="icon" onclick="location.href = '/social/history'">
                         <h3 id="titleSub">History</h3>
                     </div>
@@ -53,15 +55,16 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-4 column">
-                   <div class="cardSociology">
+                    <div class="cardSociology">
                         <img src="../images/edu/043-qa.png" alt="social" id="icon" onclick="location.href = '/social/sociology'">
                         <h3 id="titleSub">Sociology</h3>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
     </main>
     <h6>© HAiYU Developer Team. All Rights Reserved</h6>
 </body>
+
 </html>
