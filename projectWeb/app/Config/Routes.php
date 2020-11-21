@@ -34,11 +34,34 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index', ['filter' => 'authFilter']);
 $routes->get('/dashboard', 'Pages::dashboard');
 $routes->get('/signin', 'user::signin');
+$routes->get('/user/login','user::login');
 $routes->get('/about', 'Pages::about');
 $routes->get('/user/subject', 'Pages::subject');
 $routes->get('/user/science', 'Pages::science');
 $routes->get('/user/social', 'Pages::social');
+<<<<<<< HEAD
 $routes->get('/user/language', 'Pages::language');
+=======
+$routes->get('/science/math','Science::math');
+$routes->get('/science/physics','Science::physics');
+$routes->get('/science/chemistry','Science::chemistry');
+$routes->get('/science/biology','Science::biology');
+$routes->get('/language','Language::index');
+$routes->get('/social/economics','Social::economics');
+$routes->get('/social/history','Social::history');
+$routes->get('/social/geography','Social::geography');
+$routes->get('/social/sociology','Social::sociology');
+$routes->get('/math/chapter1','');
+$routes->get('','');
+$routes->get('','');
+$routes->get('','');
+$routes->get('','');
+$routes->get('','');
+$routes->get('','');
+$routes->get('','');
+$routes->get('','');
+$routes->get('','');
+>>>>>>> 350314e5e11f19579938cecc94aa13b30d73da06
 
 /**
  * --------------------------------------------------------------------
