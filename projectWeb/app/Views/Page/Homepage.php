@@ -42,7 +42,7 @@
     </div>
     <div id="main">
         <div class="menu">
-            <button class="openbtn" onclick="openNav()">☰</button>
+            <a class="openbtn" onclick="openNav()"><img src="../images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
             <span class="haiyu">HAiYU</span>
         </div>
 

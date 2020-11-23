@@ -18,7 +18,7 @@
 <body>
     <main>
         <div class="Isi">
-            <div class="row">
+            <div class="row" style="margin-top: 20%;">
                 <div class="col-6 col-md-4 column">
                     <div class="cardMath">
                         <img src="../images/us.png" alt="English" id="icon" onclick="location.href = '/language/english'">
@@ -38,26 +38,6 @@
                     <div class="cardPhysics">
                         <img src="../images/indonesia.png" alt="Indonesian" id="icon" onclick="location.href = '/language/indonesian'">
                         <h3 id="titleSub">Indonesian</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 col-md-4 column">
-                    <div class="cardChemistry">
-                        <img src="../images/france.png" alt="French" id="icon" onclick="location.href = '/language/french'">
-                        <h3 id="titleSub">French</h3>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 column">
-                    <div class="cardLanguage">
-                        <img src="../images/japan.png" alt="Japan" id="icon" onclick="location.href = '/language/japanese'">
-                        <h3 id="titleSub">Japanese</h3>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 column">
-                    <div class="cardBiology">
-                        <img src="../images/german.png" alt="Biologi" id="icon" onclick="location.href = '/language/german'">
-                        <h3 id="titleSub">German</h3>
                     </div>
                 </div>
             </div>
