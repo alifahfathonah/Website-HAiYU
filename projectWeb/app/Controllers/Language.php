@@ -23,7 +23,7 @@ class Language extends BaseController
         return view('Page/mapel', $data);
     }
 
-    public function indonesia()
+    public function indonesian()
     {
         $data = [
             'title' => 'Bahasa Indonesia',

@@ -16,4 +16,6 @@ class Subject extends BaseController
     {
         return view('Page/languagePage');
     }
+
+    protected function 
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAiYU - SIGN UP</title>
+    <title>HAiYU - Sign Up</title>
     <link rel="stylesheet" href="../css/signin.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../images/favicon.ico" />
@@ -23,25 +23,27 @@
             <img src="../images/people.png" alt="people">
 
             <h2>Sign in</h2>
-
             <form action="/user/login" method="POST">
                 <?= session()->get('pesan'); ?>
-                <input class="login" type="text" id="username" name="email" placeholder="Username/Email" required>
                 <br>
-                <input class="login" type="password" id="password" name="password" placeholder="Password" required>
+                <input class="login" type="text" name="email_username" id="email" placeholder="email/username" required>
+                <br>
+                <input class="login" type="password" name="password" name="password" placeholder="password" required>
                 <br>
                 <a href="" id="forgetPW">Forget password</a>
                 <br>
                 <label for="rm">Remember me</label>
-                <input type="checkbox" id="rm">
+                <input type="checkbox" id="rm" name="rm">
 
                 <br>
                 <br>
 
-                <button type="submit">Login</button>
-                <br>
-                <button href="/signup" id="myBtn">Doesn't have an account?</button>
+                <button class="loginButton">Login</button>
             </form>
+            <br>
+            <button id="myBtn">Doesn't have an account?</button>
+
+
         </div>
 
 
@@ -57,9 +59,10 @@
                 <h1>Sign Up</h1>
             </div>
 
-            <div class="modal-form">
-                <div class="error"><b><?= $validate->listErrors(); ?></b></div>
-                <form action="<?= base_url('user/regis') ?>" method="POST">
+            <div>
+                <form action="/user/regis" method="POST">
+                    <br>
+                    <?= session()->get('pesan'); ?>
                     <br>
                     <input type="text" id="username" name="username" placeholder="Create your username" required>
                     <br>
@@ -67,11 +70,10 @@
                     <br>
                     <input type="password" id="password" name="password" placeholder="Make the password" required>
                     <br>
-                    <!-- <input type="password" id="passwordConf" name="passwordConf" placeholder="Password confirmation" required>
-                    <br> -->
+                    <br>
                     <!-- <button type="submit">AS TEACHER</button>
                     <span style="display: inline-block; width: 20px;"></span> -->
-                    <button type="submit">AS STUDENT</button>
+                    <button class="regis" type="submit">AS STUDENT</button>
                     <br>
                     <a href="/signin" id="signin">Already have an account</a>
                     <br>

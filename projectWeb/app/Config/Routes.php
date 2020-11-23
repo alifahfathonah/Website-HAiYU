@@ -33,17 +33,22 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index', ['filter' => 'authFilter']);
 $routes->get('/dashboard', 'Pages::dashboard');
+
 $routes->get('/signin', 'user::signin');
+$routes->get('/signup', 'user::signup');
 $routes->get('/user/login','user::login');
+
 $routes->get('/about', 'Pages::about');
 $routes->get('/user/subject', 'Pages::subject');
 $routes->get('/user/science', 'Pages::science');
 $routes->get('/user/social', 'Pages::social');
 $routes->get('/user/language', 'Pages::language');
+
 $routes->get('/science/math','Science::math');
 $routes->get('/science/physics','Science::physics');
 $routes->get('/science/chemistry','Science::chemistry');
 $routes->get('/science/biology','Science::biology');
+
 $routes->get('/language','Language::index');
 $routes->get('/social/economics','Social::economics');
 $routes->get('/social/history','Social::history');

@@ -10,7 +10,7 @@ class M_user extends Model
     protected $primaryKey = 'email';
 
 
-    protected $allowedFields = ['email', 'username', 'password'];
+    protected $allowedFields = ['email', 'username', 'password', 'level'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
@@ -19,6 +19,12 @@ class M_user extends Model
     public function saveUser($data)
     {
         $query = $this->db->table($this->table)->insert($data);
+        return $query;
+    }
+
+    public function saveSiswa($data)
+    {
+        $query = $this->db->table('siswa')->insert($data);
         return $query;
     }
 
