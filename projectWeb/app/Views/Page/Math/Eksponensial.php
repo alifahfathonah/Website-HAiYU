@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../css/materi.css">
     <link href="https://fonts.googleapis.com/css2?family=Asap&family=Open+Sans&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../public/images/favicon.ico" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../js/homepage_script.js"></script>
 </head>
@@ -27,10 +27,10 @@
                 <p>id : xxxxxx</p>
             </div>
         </div>
-        <a href="../public/">Home</a>
+        <a href="../">Home</a>
         <a href="#">Subject</a>
         <a href="#">Profile</a>
-        <a href="../public/about">About</a>
+        <a href="../about">About</a>
         <div class="bottom-nav">
             <a href="#">Settings</a>
             <a href="#">Log out</a>
