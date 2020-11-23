@@ -12,4 +12,8 @@ class Subject extends BaseController
     {
         return view('Page/socialPage');
     }
+    public function language()
+    {
+        return view('Page/languagePage');
+    }
 }
