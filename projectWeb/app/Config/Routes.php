@@ -39,9 +39,6 @@ $routes->get('/about', 'Pages::about');
 $routes->get('/user/subject', 'Pages::subject');
 $routes->get('/user/science', 'Pages::science');
 $routes->get('/user/social', 'Pages::social');
-<<<<<<< HEAD
-$routes->get('/user/language', 'Pages::language');
-=======
 $routes->get('/science/math','Science::math');
 $routes->get('/science/physics','Science::physics');
 $routes->get('/science/chemistry','Science::chemistry');
@@ -61,7 +58,6 @@ $routes->get('','');
 $routes->get('','');
 $routes->get('','');
 $routes->get('','');
->>>>>>> 350314e5e11f19579938cecc94aa13b30d73da06
 
 /**
  * --------------------------------------------------------------------

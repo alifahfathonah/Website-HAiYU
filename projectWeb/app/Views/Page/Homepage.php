@@ -45,10 +45,11 @@
             <button class="openbtn" onclick="openNav()">☰</button>
             <span class="haiyu">HAiYU</span>
         </div>
-        <img src="../images/background.png" alt="background" class="bg">
+
+        <img src="../images/bg3.svg" alt="background" class="bg">
         <div class="landing-text">
-            <h1>Learn your Hardskill for The Great Future</h1>
-            <p>Come on join with us! by explore and learning your hardskill with us for prepare your future. we will accomodate your needs to get what you need.</p>
+            <h1>Learn your Hardskill <br> for The Great Future</h1>
+            <p>Come on join with us! <br> by explore and learning your hardskill with us for prepare your future. <br> we will accomodate your needs to get what you need.</p>
         </div>
         <div class="btn-container">
             <button class="find-it-btn"><a href="signin">Find it</a></button>
