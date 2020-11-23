@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Social extends BaseController
+class Social extends Subject
 {
     public function index()
     {
@@ -12,6 +12,7 @@ class Social extends BaseController
     public function economics()
     {
         $data = [
+            'id' => 5,
             'title' => 'Economics',
             'mapel' => 'economics',
             'chapter1' => 'Introduction',
@@ -20,12 +21,19 @@ class Social extends BaseController
             'chapter4' => 'Fiscal & Monetary Policy',
             'chapter5' => 'Government & Business',
         ];
-        return view('Page/mapel', $data);
+        $enrolled = $this->enrolled($data);
+
+        if($enrolled){
+            return view ('Page/mapel', $data);
+        }
+
+        return view ('Page/enroll_socialPage', $data); 
     }
 
     public function history()
     {
         $data = [
+            'id' => 6,
             'title' => 'History',
             'mapel' => 'history',
             'chapter1' => 'Humans Origins',
@@ -34,12 +42,19 @@ class Social extends BaseController
             'chapter4' => 'The Great War',
             'chapter5' => 'World War II',
         ];
-        return view('Page/mapel', $data);
+        $enrolled = $this->enrolled($data);
+
+        if($enrolled){
+            return view ('Page/mapel', $data);
+        }
+
+        return view ('Page/enroll_socialPage', $data); 
     }
 
     public function geography()
     {
         $data = [
+            'id' => 7,
             'title' => 'Geography',
             'mapel' => 'geography',
             'chapter1' => 'Introduction',
@@ -48,12 +63,19 @@ class Social extends BaseController
             'chapter4' => 'Climatology & Meteorology',
             'chapter5' => 'Landfroms & Geology',
         ];
-        return view('Page/mapel', $data);
+        $enrolled = $this->enrolled($data);
+
+        if($enrolled){
+            return view ('Page/mapel', $data);
+        }
+
+        return view ('Page/enroll_socialPage', $data); 
     }
 
     public function sociology()
     {
         $data = [
+            'id' => 8,
             'title' => 'Sociology',
             'mapel' => 'sociology',
             'chapter1' => 'Introduction',
@@ -62,6 +84,12 @@ class Social extends BaseController
             'chapter4' => 'Problems in Society',
             'chapter5' => 'Exploring our Society',
         ];
-        return view('Page/mapel', $data);
+        $enrolled = $this->enrolled($data);
+
+        if($enrolled){
+            return view ('Page/mapel', $data);
+        }
+
+        return view ('Page/enroll_socialPage', $data); 
     }
 }

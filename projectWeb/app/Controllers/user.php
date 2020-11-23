@@ -74,6 +74,8 @@ class User extends Controller
         $email_username = $this->request->getPost('email_username');
         $password = $this->request->getPost('password');
         $row = $userdata->get_data_login($email_username, $email_username, $table);
+        $row2 = $userdata->get_data_siswa($row->email);
+
         if ($row == NULL) {
             session()->setFlashData('pesan', 'Sorry! your email/username and password doesn\'t match');
             return redirect()->to('/signin');
@@ -83,6 +85,7 @@ class User extends Controller
                 'log' => TRUE,
                 'email' => $row->email,
                 'username' => $row->username,
+                'id' => $row2->id,
             );
             session()->set($data);
 
@@ -90,6 +93,7 @@ class User extends Controller
                 setcookie('log', 'true', time() + 10000, '/', '');
                 setcookie('email', $row->email, time() + 10000, '/', '');
                 setcookie('username', $row->username, time() + 10000, '/', '');
+                setcookie('id', $row2->id, time() + 10000, '/', '');
             }
 
             session()->setFlashData('pesan', 'Login succesfully!');
@@ -105,6 +109,7 @@ class User extends Controller
         setcookie('log', '', time() - 10000, '/', '');
         setcookie('email', '', time() - 10000, '/', '');
         setcookie('username', '', time() - 10000, '/', '');
+        setcookie('id', '', time() - 10000, '/', '');
         return redirect()->to('/dashboard');
     }
 }

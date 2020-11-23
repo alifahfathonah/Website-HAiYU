@@ -42,4 +42,13 @@ class M_user extends Model
 
         return $log;
     }
+
+    function get_data_siswa($email)
+    {
+        $builder = $this->db->table('siswa');
+        $builder->where('email', $email);
+        $log = $builder->get()->getRow();
+
+        return $log;
+    }
 }

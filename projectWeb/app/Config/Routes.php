@@ -53,16 +53,6 @@ $routes->get('/social/economics', 'Social::economics');
 $routes->get('/social/history', 'Social::history');
 $routes->get('/social/geography', 'Social::geography');
 $routes->get('/social/sociology', 'Social::sociology');
-$routes->get('/math/chapter1', '');
-$routes->get('', '');
-$routes->get('', '');
-$routes->get('', '');
-$routes->get('', '');
-$routes->get('', '');
-$routes->get('', '');
-$routes->get('', '');
-$routes->get('', '');
-$routes->get('', '');
 
 $routes->get('/math/chapter1', 'Math::chapter1');
 $routes->get('/math/chapter2', 'Math::chapter2');

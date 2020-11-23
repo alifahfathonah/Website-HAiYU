@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Language extends BaseController
+class Language extends Subject
 {
     public function index()
     {
@@ -12,6 +12,7 @@ class Language extends BaseController
     public function english()
     {
         $data = [
+            'id' => 9,
             'title' => 'English',
             'mapel' => 'english',
             'chapter1' => 'Foundatios of English I',
@@ -20,21 +21,33 @@ class Language extends BaseController
             'chapter4' => 'English Literature and Compostion',
             'chapter5' => 'Public Speaking',
         ];
-        return view('Page/mapel', $data);
+        $enrolled = $this->enrolled($data);
+
+        if($enrolled){
+            return view ('Page/mapel', $data);
+        }
+
+        return view ('Page/enroll_LanguagePage', $data); 
     }
 
     public function indonesian()
     {
         $data = [
-            'title' => 'Bahasa Indonesia',
-            'mapel' => 'indonesia',
+            'id' => 10,
+            'title' => 'Indonesian',
+            'mapel' => 'indonesian',
             'chapter1' => 'Pedoman Bahasa Indonesia',
             'chapter2' => 'Paragraf',
             'chapter3' => 'Cerpen',
             'chapter4' => 'Puisi & Sajak',
             'chapter5' => 'Karya Tulis Ilmiah',
         ];
-        return view('Page/mapel', $data);
-    }
+        $enrolled = $this->enrolled($data);
 
+        if($enrolled){
+            return view ('Page/mapel', $data);
+        }
+
+        return view ('Page/enroll_LanguagePage', $data);  
+    }
 }

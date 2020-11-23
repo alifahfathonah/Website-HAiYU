@@ -65,6 +65,29 @@
         </div>
     </main>
 
+     <!-- The Modal -->
+     <div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+    <div class="modal-header">
+        <h1>Do you want to enroll <?= $title ?> ? </h1>
+    </div>
+
+    <div>
+        <form action="/subject/enroll" method="POST">
+            <input type="hidden" name="id_mapel" value="<?= $id ?>">
+            <input type="hidden" id="page" name="page" value="/subject/social">  
+
+            <button type="submit" name="submit" value="yes">YES</button>
+            <button type="submit" name="submit" value="no">NO</button>
+            <br>
+        </form>
+    </div>
+</div>
+
+    </div>
+    
     <h6>© HAiYU Developer Team. All Rights Reserved</h6>
 </body>
 

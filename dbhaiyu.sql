@@ -80,8 +80,8 @@ INSERT INTO `mapel` (`id`, `nama`, `id_pengajar`) VALUES
 (6, 'History', NULL),
 (7, 'Geography', NULL),
 (8, 'Sociology', NULL),
-(9, 'Indonesian', NULL),
-(10, 'English', NULL);
+(9, 'English', NULL),
+(10, 'Indonesian', NULL);
 
 -- --------------------------------------------------------
 
