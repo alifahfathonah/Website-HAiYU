@@ -6,7 +6,7 @@ class Language extends BaseController
 {
     public function index()
     {
-        return view('Page/languagePage');
+        return view('Page/LanguagePage');
     }
 
     public function english()
