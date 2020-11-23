@@ -54,8 +54,8 @@ class Social extends BaseController
     public function sociology()
     {
         $data = [
-            'title' => 'Math',
-            'mapel' => 'math',
+            'title' => 'Sociology',
+            'mapel' => 'sociology',
             'chapter1' => 'Introduction',
             'chapter2' => 'Social Structure',
             'chapter3' => 'Families in Society',

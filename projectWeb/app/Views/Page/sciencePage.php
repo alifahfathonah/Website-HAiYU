@@ -48,7 +48,7 @@
                         <h3 id="titleSub">Chemistry</h3>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 column">
+                <div class="col-6 col-md-4 column" style="visibility: hidden;">
                     <div class="cardLanguage">
                         <img src="../images/edu/013-conversation.png" alt="Language" id="icon" onclick="location.href = '/language'">
                         <h3 id="titleSub">Language</h3>

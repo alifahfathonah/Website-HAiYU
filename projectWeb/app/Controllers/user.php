@@ -12,12 +12,17 @@ class User extends Controller
         return view('Page/signin');
     }
 
+    public function signup()
+    {
+        return view('Page/signup');
+    }
+
     public function regis()
     {
         $val = $this->validate(
             [
                 'username' => [
-                    'required|is_unique[login.username]',
+                    'rules' => 'required|is_unique[login.username]',
                     'errors' => [
                         'is_unique' => '{field} already used!'
                     ]
@@ -32,8 +37,12 @@ class User extends Controller
             ],
         );
         if (!$val) {
-            $pesanValidasi = \Config\Services::validation();
-            return redirect()->to('/signup')->withInput()->with('validate', $pesanValidasi);
+            // Code sebelumnya
+            // $pesanValidasi = \Config\Services::validation();
+            // return redirect()->to('/signup')->withInput()->with('validate', $pesanValidasi);
+
+            session()->setFlashData('pesan', 'Sorry, the email or password is already used!');
+            return redirect()->to('/signup');
         } else {
             $userdata = new M_user();
             // $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -41,9 +50,17 @@ class User extends Controller
                 'email' => $this->request->getPost('email'),
                 'username' => $this->request->getPost('username'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+                'level' => 1,
+            );
+
+            $data2 = array(
+                'email' => $this->request->getPost('email'),
+                'username' => $this->request->getPost('username'),
             );
 
             $userdata->saveUser($data);
+            $userdata->saveSiswa($data2);
+
             session()->setFlashData('pesan', 'Congratulation you have successfully registered, Please login!');
             return redirect()->to('/signin');
         }

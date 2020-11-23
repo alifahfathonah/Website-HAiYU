@@ -6,7 +6,7 @@ class Language extends BaseController
 {
     public function index()
     {
-        return view('Page/languagePage');
+        return view('Page/LanguagePage');
     }
 
     public function english()
@@ -23,7 +23,7 @@ class Language extends BaseController
         return view('Page/mapel', $data);
     }
 
-    public function indonesia()
+    public function indonesian()
     {
         $data = [
             'title' => 'Bahasa Indonesia',
