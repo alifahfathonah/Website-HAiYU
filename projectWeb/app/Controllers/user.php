@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\M_user;
+use App\Models\M_userProfile;
 use CodeIgniter\Controller;
 
 class User extends Controller
@@ -111,5 +112,25 @@ class User extends Controller
         setcookie('username', '', time() - 10000, '/', '');
         setcookie('id', '', time() - 10000, '/', '');
         return redirect()->to('/dashboard');
+    }
+    public function edit($id)
+    {
+        $model2 = new M_userProfile();
+        $data['user'] = $model2->getUser($id)->getRow();
+        echo view('Page/profileEdit', $data);
+    }
+    public function update()
+    {
+        $model2 = new M_userProfile();
+        $$id = $this->request->getPost('id');
+        $data = array(
+            'email' => $this->request->getPost('email'),
+            'username' => $this->request->getPost('username'),
+            'nama' => $this->request->getPost('nama'),
+            'gender' => $this->request->getPost('jenis_kelamin'),
+            'birtdate' => $this->request->getPost('tanggal_lahir')
+        );
+        $model2->updateUser($data, $id);
+        return redirect()->to('/');
     }
 }

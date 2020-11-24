@@ -27,7 +27,6 @@ class M_user extends Model
         $query = $this->db->table('siswa')->insert($data);
         return $query;
     }
-
     function get_data_login($email, $username, $table)
     {
         $builder = $this->db->table($table);

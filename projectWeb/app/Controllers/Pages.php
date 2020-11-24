@@ -40,4 +40,8 @@ class Pages extends BaseController
     {
         return view('Page/Homepage');
     }
+    public function edit()
+    {
+        return view('profileEdit');
+    }
 }

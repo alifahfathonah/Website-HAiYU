@@ -38,7 +38,7 @@
             </div>
             <div class="profile">
                 <img src="../images/user.png" alt="">
-                <a href="#">Profile</a>
+                <a href="/user/edit/<?= session('id') ?>">Profile</a>
             </div>
             <div class="aboutUser">
                 <img src="../images/about.png" alt="" style="width: 32px;height: 32px">
