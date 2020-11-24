@@ -54,4 +54,20 @@ class Subject extends Controller
 
         return redirect()->to($page);
     }
+
+    public function unenroll(){
+        $id_siswa = session()->get('id');
+        $id_mapel = $this->request->getPost('id_mapel');
+        $page = $this->request->getPost('page');
+        $subject = $this->request->getPost('subject');
+
+        if ($this->request->getPost('submit') == 'yes'){
+        $userdata = new M_belajar();
+
+        $userdata->deleteBelajar($id_siswa, $id_mapel);
+        return redirect()->to($subject);
+        }
+
+        return redirect()->to($page);
+    }
 }

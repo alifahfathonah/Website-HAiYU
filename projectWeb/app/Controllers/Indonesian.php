@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class Indonesian extends BaseController
 {
+    public function index(){
+        return redirect()->to('/language/indonesian');
+    }
     public function chapter1(){
         return view('/Page/Indonesian/Pedoman');
     }

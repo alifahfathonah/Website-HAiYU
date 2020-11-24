@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class English extends BaseController
 {
+    public function index(){
+        return redirect()->to('/language/english');
+    }
     public function chapter1(){
         return view('/Page/English/Foundations1');
     }

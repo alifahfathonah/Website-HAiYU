@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 class Language extends Subject
 {
+    private $subject = 'language';
+
     public function index()
     {
         return view('Page/LanguagePage');
@@ -12,6 +14,7 @@ class Language extends Subject
     public function english()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 9,
             'title' => 'English',
             'mapel' => 'english',
@@ -33,6 +36,7 @@ class Language extends Subject
     public function indonesian()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 10,
             'title' => 'Indonesian',
             'mapel' => 'indonesian',

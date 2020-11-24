@@ -4,6 +4,10 @@ namespace App\Controllers;
 
 class Math extends BaseController 
 {
+    public function index(){
+        return redirect()->to('/science/math');
+    }
+
     public function chapter1(){
         return view('Page/Math/Eksponensial');
     }

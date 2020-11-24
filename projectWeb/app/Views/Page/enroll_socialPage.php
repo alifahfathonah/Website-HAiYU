@@ -71,7 +71,9 @@
 <!-- Modal content -->
 <div class="modal-content">
     <div class="modal-header">
-        <h1>Do you want to enroll <?= $title ?> ? </h1>
+        <h1>Do you want to enroll
+        <br>    
+        <?= $title ?> ? </h1>
     </div>
 
     <div>

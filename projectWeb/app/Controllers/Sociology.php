@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class Sociology extends BaseController
 {
+    public function index(){
+        return redirect()->to('/social/sociology');
+    }
     public function chapter1(){
         return view('/Page/Sociology/Introduction');
     }

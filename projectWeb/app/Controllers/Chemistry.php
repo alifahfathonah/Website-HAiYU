@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class Chemistry extends BaseController 
 {
+    public function index(){
+        return redirect()->to('/science/chemistry');
+    }
     public function chapter1(){
         return view('Page/Chemistry/MatterStructure');
     }

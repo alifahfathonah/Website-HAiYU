@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 class Science extends Subject
 {
+    private $subject = 'science';
+
     public function index()
     {
         return view('Page/sciencePage');
@@ -12,6 +14,7 @@ class Science extends Subject
     public function math()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 1,
             'title' => 'Math',
             'mapel' => 'math',
@@ -34,6 +37,7 @@ class Science extends Subject
     public function physics()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 2,
             'title' => 'Physics',
             'mapel' => 'physics',
@@ -55,6 +59,7 @@ class Science extends Subject
     public function chemistry()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 3,
             'title' => 'Chemistry',
             'mapel' => 'chemistry',
@@ -76,6 +81,7 @@ class Science extends Subject
     public function biology()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 4,
             'title' => 'Biology',
             'mapel' => 'biology',

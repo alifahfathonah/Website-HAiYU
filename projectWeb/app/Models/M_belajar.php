@@ -29,4 +29,10 @@ class M_belajar extends Model
 
         return $log;
     }
+
+    public function deleteBelajar($id_siswa, $id_mapel)
+    {
+        $query = $this->db->table($this->table)->delete(['id_siswa' => $id_siswa, 'id_mapel' => $id_mapel]);
+        return $query;
+    }
 }

@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class Geography extends BaseController
 {
+    public function index(){
+        return redirect()->to('/social/geography');
+    }
     public function chapter1(){
         return view('/Page/Geography/Introduction');
     }

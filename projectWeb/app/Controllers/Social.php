@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 class Social extends Subject
 {
+    private $subject = 'social';
+
     public function index()
     {
         return view('Page/socialPage');
@@ -12,6 +14,7 @@ class Social extends Subject
     public function economics()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 5,
             'title' => 'Economics',
             'mapel' => 'economics',
@@ -33,6 +36,7 @@ class Social extends Subject
     public function history()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 6,
             'title' => 'History',
             'mapel' => 'history',
@@ -54,6 +58,7 @@ class Social extends Subject
     public function geography()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 7,
             'title' => 'Geography',
             'mapel' => 'geography',
@@ -75,6 +80,7 @@ class Social extends Subject
     public function sociology()
     {
         $data = [
+            'subject' => $this->subject,
             'id' => 8,
             'title' => 'Sociology',
             'mapel' => 'sociology',

@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class Physics extends BaseController 
 {
+    public function index(){
+        return redirect()->to('/science/physics');
+    }
     public function chapter1(){
         return view('Page/Physics/ForceAndMotion');
     }

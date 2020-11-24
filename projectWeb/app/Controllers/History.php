@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class History extends BaseController
 {
+    public function index(){
+        return redirect()->to('/social/history');
+    }
     public function chapter1(){
         return view('/Page/History/HumansOrigins');
     }

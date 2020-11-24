@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class Economics extends BaseController
 {
+    public function index(){
+        return redirect()->to('/social/economics');
+    }
     public function chapter1(){
         return view('/Page/Economics/Introduction');
     }

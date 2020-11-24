@@ -4,6 +4,10 @@ namespace App\Controllers;
 
 class Biology extends BaseController 
 {
+    public function index(){
+        return redirect()->to('/science/biology');
+    }
+
     public function chapter1(){
         return view('Page/Biology/BioFoundations');
     }
