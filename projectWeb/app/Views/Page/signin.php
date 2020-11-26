@@ -70,9 +70,9 @@
                     <input type="password" id="password" name="password" placeholder="Make the password" required>
                     <br>
                     <br>
-                    <button class="regis" type="submit" value="teacher">AS TEACHER</button>
+                    <button class="regis" type="submit" name="submit" value="teacher">AS TEACHER</button>
                     <span style="display: inline-block; width: 20px;"></span>
-                    <button class="regis" type="submit" value="student">AS STUDENT</button>
+                    <button class="regis" type="submit" name="submit" value="student">AS STUDENT</button>
                     <br>
                     <a href="/signin" id="signin">Already have an account</a>
                     <br>
