@@ -18,10 +18,10 @@ class Language extends Subject
             'id' => 9,
             'title' => 'English',
             'mapel' => 'english',
-            'chapter1' => 'Foundatios of English I',
-            'chapter2' => 'Foundations of English II',
-            'chapter3' => 'English Language and Composition',
-            'chapter4' => 'English Literature and Compostion',
+            'chapter1' => 'FOE I',
+            'chapter2' => 'FOE II',
+            'chapter3' => 'English Language',
+            'chapter4' => 'English Literature',
             'chapter5' => 'Public Speaking',
         ];
         $enrolled = $this->enrolled($data);
