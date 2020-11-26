@@ -27,10 +27,10 @@
                 <p>id : xxxxxx</p>
             </div>
         </div>
-        <a href="../">Home</a>
+        <a href="/">Home</a>
         <a href="#">Subject</a>
         <a href="#">Profile</a>
-        <a href="../about">About</a>
+        <a href="/about">About</a>
         <div class="bottom-nav">
             <a href="#">Settings</a>
             <a href="#">Log out</a>
@@ -43,14 +43,11 @@
         </div>
         <br><br>
         <div class="Content">
-            <h1>Economics</h1>
-            <h2>Chapter 3 - <span style="color:orange">Macroeconomics</span></h2>
+            <h1><?= $course;?></h1>
+            <h2><?= $chapter;?> - <span style="color:orange"><?= $materi;?></span></h2>
             <div class="isi">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.</p>
-                <br>
-                <p>Suspendisse ultricies consectetur sodales. Nunc vulputate, ipsum id fringilla semper, lorem nisi faucibus nisi, in commodo urna dolor in ligula. Ut vel sollicitudin odio, id porttitor ligula. Vestibulum pretium porta nisl, eget suscipit turpis. Nullam vitae nisl enim. Curabitur auctor, tortor fringilla laoreet convallis, felis ligula cursus mi, quis dignissim dolor enim non orci. Maecenas dictum justo massa, nec venenatis metus ullamcorper sit amet. Donec iaculis, lorem sed tristique porttitor, sem risus auctor velit, et facilisis dui mi eu magna. Vivamus feugiat diam orci, eu aliquam mi dapibus ut. Pellentesque rutrum vel ante nec dignissim.</p>
-                <br>
-                <a href="">next chapter</a>
+                <?= $isi;?>
+                <a href="<?= $next;?>">Next chapter</a>
             </div>
         </div>
     </div>

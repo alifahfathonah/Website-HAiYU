@@ -38,6 +38,7 @@ $routes->get('/signin', 'user::signin');
 $routes->get('/signup', 'user::signup');
 $routes->get('/user/login', 'user::login');
 $routes->get('/user/edit/(:num)', 'user::edit/$1');
+$routes->match(['get', 'post'], '/user/login', 'user::login');
 $routes->match(['get', 'post'], '/user/regis', 'user::regis');
 
 $routes->get('/about', 'Pages::about');
