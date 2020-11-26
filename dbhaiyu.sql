@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2020 at 06:45 AM
+-- Generation Time: Nov 26, 2020 at 02:56 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -34,6 +34,26 @@ CREATE TABLE `belajar` (
   `final_test` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `belajar`
+--
+
+INSERT INTO `belajar` (`id_siswa`, `id_mapel`, `mid_test`, `final_test`) VALUES
+(2, 1, NULL, NULL),
+(2, 2, NULL, NULL),
+(2, 8, NULL, NULL),
+(3, 1, NULL, NULL),
+(3, 2, NULL, NULL),
+(1, 4, NULL, NULL),
+(1, 1, NULL, NULL),
+(1, 2, NULL, NULL),
+(1, 3, NULL, NULL),
+(1, 6, NULL, NULL),
+(1, 10, NULL, NULL),
+(1, 9, NULL, NULL),
+(2, 7, NULL, NULL),
+(2, 3, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -52,8 +72,19 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`email`, `username`, `password`, `level`) VALUES
+('abc@gmail.com', 'abc', '$2y$10$O6imSp9OXu9Oe3N1zrbKD.9uvbzsWdLW4K5zZDuEzOjYs9Myxw4Cq', 1),
+('aghinyaam@gmail.com', 'aghniyaam', '$2y$10$OP39fUZvgSgSeJ7hOVlNF.VsbOlLJ1ijsoX1BdbObSK72VVBjZGF.', 2),
+('anest@gmail.com', 'anest', '$2y$10$pAI7MupIn856hyyVfmWymOnPYMFKgP676TnR.XB3rDlbGwvoZ7IvW', 2),
 ('bagas.ktbffh@gmail.com', 'bagas', '$2y$10$InxuNutOn08fmgl.AVp.BueQsHMpOZ1ZbvY2A/e2AcWFVi.4wNB.C', 1),
-('bagasadifirdaus@gmail.com', 'test', '$2y$10$Z3mJMdeTJKVEjIKljqmdxuvl6LfV..od7NUlaoC0Li8c.Yo9r/zOS', 1);
+('bagasadifirdaus@gmail.com', 'test', '$2y$10$Z3mJMdeTJKVEjIKljqmdxuvl6LfV..od7NUlaoC0Li8c.Yo9r/zOS', 1),
+('bagasaf@gmail.com', 'bagasaf', '$2y$10$duyMUyDUe8Dy/OxQOQ.BAug3o.klFrrzg1wXQc2FjoD9gJ/61zgUW', 2),
+('bambangk@gmail.com', 'bambangk', '$2y$10$c9PUptLZknC8Abw9qaREwuTg30qxPawp4uFjDbsQ4GENAhWoWLO9O', 2),
+('farhang@gmail.com', 'farhang', '$2y$10$vN2R67XbQPPCjNV6gZqLQ.qtMDQE92uFe/QgTpKRfmPev3X4drdfy', 2),
+('lindam@gmail.com', 'lindam', '$2y$10$4tuqx8GvYelhn0KzLjX2Duup7UOvSf.7iOYdj0uzOd0xo.V6DJFLy', 2),
+('nurula@gmail.com', 'nurula', '$2y$10$4CpbdKOtvGuK1ZcOGgzWse.rEQ7Wm2gZijnGbeEXYbOrS9w2vJbry', 2),
+('renataa@gmail.com', 'renataa', '$2y$10$4R/Nmh5mndJH4O8bU0cqxOVFIIY4sqvC2o9tBiqQrSmM3UIIFLmYW', 2),
+('sitih@gmail.com', 'sitih', '$2y$10$IjKI.jOcQ/ssLyW6MJl6pugB.Y/XvxqBZuj.FbkqerUuQB7elOIga', 2),
+('zahraf@gmail.com', 'zahraf', '$2y$10$NiTyAWvKm3Zssk5ZDCpY7u..jhyfMs6PJPX9nzE0fAP0UA5/hNgCC', 2);
 
 -- --------------------------------------------------------
 
@@ -72,16 +103,16 @@ CREATE TABLE `mapel` (
 --
 
 INSERT INTO `mapel` (`id`, `nama`, `id_pengajar`) VALUES
-(1, 'Math', NULL),
-(2, 'Physics', NULL),
-(3, 'Chemistry', NULL),
-(4, 'Biology', NULL),
-(5, 'Economics', NULL),
-(6, 'History', NULL),
-(7, 'Geography', NULL),
-(8, 'Sociology', NULL),
-(9, 'English', NULL),
-(10, 'Indonesian', NULL);
+(1, 'Math', 1),
+(2, 'Physics', 2),
+(3, 'Chemistry', 3),
+(4, 'Biology', 4),
+(5, 'Economics', 5),
+(6, 'History', 6),
+(7, 'Geography', 7),
+(8, 'Sociology', 8),
+(9, 'English', 9),
+(10, 'Indonesian', 10);
 
 -- --------------------------------------------------------
 
@@ -90,8 +121,10 @@ INSERT INTO `mapel` (`id`, `nama`, `id_pengajar`) VALUES
 --
 
 CREATE TABLE `materi` (
-  `id_mapel` bigint(20) NOT NULL,
-  `nama_materi` varchar(255) NOT NULL
+  `id` varchar(255) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `konten` varchar(255) DEFAULT NULL,
+  `id_mapel` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -106,8 +139,26 @@ CREATE TABLE `pengajar` (
   `username` varchar(255) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `jenis_kelamin` varchar(1) DEFAULT NULL,
-  `tanggal_lahir` date DEFAULT NULL
+  `tanggal_lahir` date DEFAULT NULL,
+  `telepon` varchar(255) DEFAULT NULL,
+  `foto` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pengajar`
+--
+
+INSERT INTO `pengajar` (`id`, `email`, `username`, `nama`, `jenis_kelamin`, `tanggal_lahir`, `telepon`, `foto`) VALUES
+(1, 'bagasaf@gmail.com', 'bagasaf', 'Bagas Adi Firdaus', NULL, NULL, '081212017625', NULL),
+(2, 'aghinyaam@gmail.com', 'aghniyaam', 'Aghniya Abdurrahman Mannan', NULL, NULL, '087777792710', NULL),
+(3, 'farhang@gmail.com', 'farhang', 'Farhan Gunadi', NULL, NULL, '08989040798', NULL),
+(4, 'sitih@gmail.com', 'sitih', 'Siti Humairoh', NULL, NULL, '081582719263', NULL),
+(5, 'anest@gmail.com', 'anest', 'Anes Trisakti', NULL, NULL, '081281728361', NULL),
+(6, 'nurula@gmail.com', 'nurula', 'Nurul Amalia', NULL, NULL, '082186192649', NULL),
+(7, 'zahraf@gmail.com', 'zahraf', 'Zahra Faradilla', NULL, NULL, '088827193541', NULL),
+(8, 'bambangk@gmail.com', 'bambangk', 'Bambang Kurniawan', NULL, NULL, '081584016012', NULL),
+(9, 'renataa@gmail.com', 'renataa', 'Renata Adila', NULL, NULL, '087771025391', NULL),
+(10, 'lindam@gmail.com', 'lindam', 'Linda Melinda', NULL, NULL, '082128943014', NULL);
 
 -- --------------------------------------------------------
 
@@ -121,16 +172,19 @@ CREATE TABLE `siswa` (
   `username` varchar(255) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `jenis_kelamin` varchar(1) DEFAULT NULL,
-  `tanggal_lahir` date DEFAULT NULL
+  `tanggal_lahir` date DEFAULT NULL,
+  `telepon` varchar(255) DEFAULT NULL,
+  `foto` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`id`, `email`, `username`, `nama`, `jenis_kelamin`, `tanggal_lahir`) VALUES
-(1, 'bagas.ktbffh@gmail.com', 'bagas', NULL, NULL, NULL),
-(2, 'bagasadifirdaus@gmail.com', 'test', NULL, NULL, NULL);
+INSERT INTO `siswa` (`id`, `email`, `username`, `nama`, `jenis_kelamin`, `tanggal_lahir`, `telepon`, `foto`) VALUES
+(1, 'bagas.ktbffh@gmail.com', 'bagas', NULL, NULL, NULL, NULL, NULL),
+(2, 'bagasadifirdaus@gmail.com', 'test', NULL, NULL, NULL, NULL, NULL),
+(3, 'abc@gmail.com', 'abc', NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -160,7 +214,7 @@ ALTER TABLE `mapel`
 -- Indexes for table `materi`
 --
 ALTER TABLE `materi`
-  ADD KEY `fk_materi` (`id_mapel`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pengajar`
@@ -183,19 +237,19 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `mapel`
 --
 ALTER TABLE `mapel`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `pengajar`
 --
 ALTER TABLE `pengajar`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -213,12 +267,6 @@ ALTER TABLE `belajar`
 --
 ALTER TABLE `mapel`
   ADD CONSTRAINT `fk_mapel` FOREIGN KEY (`id_pengajar`) REFERENCES `pengajar` (`id`);
-
---
--- Constraints for table `materi`
---
-ALTER TABLE `materi`
-  ADD CONSTRAINT `fk_materi` FOREIGN KEY (`id_mapel`) REFERENCES `mapel` (`id`);
 
 --
 -- Constraints for table `siswa`

@@ -46,12 +46,19 @@ class User extends Controller
             return redirect()->to('/signup');
         } else {
             $userdata = new M_user();
+            $submitAs = $this->request->getPost('submit');
+            $level = 0;
+            if ($submitAs == 'student') {
+                $level = 1;
+            } else {
+                $level = 2;
+            }
             // $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $data = array(
                 'email' => $this->request->getPost('email'),
                 'username' => $this->request->getPost('username'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
-                'level' => 1,
+                'level' => $level,
             );
 
             $data2 = array(
@@ -60,7 +67,11 @@ class User extends Controller
             );
 
             $userdata->saveUser($data);
-            $userdata->saveSiswa($data2);
+            if ($submitAs == 'student') {
+                $userdata->saveSiswa($data2);
+            } else {
+                $userdata->savePengajar($data2);
+            }
 
             session()->setFlashData('pesan', 'Congratulation you have successfully registered, Please login!');
             return redirect()->to('/signin');
@@ -75,7 +86,12 @@ class User extends Controller
         $email_username = $this->request->getPost('email_username');
         $password = $this->request->getPost('password');
         $row = $userdata->get_data_login($email_username, $email_username, $table);
-        $row2 = $userdata->get_data_siswa($row->email);
+        $level = $row->level;
+        if ($level == 1) {
+            $row2 = $userdata->get_data_siswa($row->email);
+        } else {
+            $row2 = $userdata->get_data_pengajar($row->email);
+        }
 
         if ($row == NULL) {
             session()->setFlashData('pesan', 'Sorry! your email/username and password doesn\'t match');
@@ -86,6 +102,7 @@ class User extends Controller
                 'log' => TRUE,
                 'email' => $row->email,
                 'username' => $row->username,
+                'level' => $level,
                 'id' => $row2->id,
             );
             session()->set($data);

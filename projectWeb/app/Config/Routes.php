@@ -43,6 +43,7 @@ $routes->match(['get', 'post'], '/user/regis', 'user::regis');
 
 $routes->get('/about', 'Pages::about');
 $routes->get('/user/subject', 'Pages::subject');
+// $routes->get('/user/subject', 'Pages::subject' ['filter' => 'authFilter']);
 $routes->get('/user/science', 'Pages::science');
 $routes->get('/user/social', 'Pages::social');
 $routes->get('/science/math', 'Science::math');

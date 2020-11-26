@@ -71,8 +71,8 @@
                     <input type="password" id="password" name="password" placeholder="Make the password" required>
                     <br>
                     <br>
-                    <!-- <button type="submit">AS TEACHER</button>
-                    <span style="display: inline-block; width: 20px;"></span> -->
+                    <button type="submit">AS TEACHER</button>
+                    <span style="display: inline-block; width: 20px;"></span>
                     <button class="regis" type="submit">AS STUDENT</button>
                     <br>
                     <a href="/signin" id="signin">Already have an account</a>

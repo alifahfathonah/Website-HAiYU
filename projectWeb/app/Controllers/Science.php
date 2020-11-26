@@ -13,9 +13,11 @@ class Science extends Subject
 
     public function math()
     {
+        $id = 1;
+        $pengajar = $this->getPengajar($id);
         $data = [
             'subject' => $this->subject,
-            'id' => 1,
+            'id' => $id,
             'title' => 'Math',
             'mapel' => 'math',
             'chapter1' => 'Eksponensial',
@@ -23,6 +25,8 @@ class Science extends Subject
             'chapter3' => 'Polinominal',
             'chapter4' => 'Diferential',
             'chapter5' => 'Integral',
+            'nama_pengajar' => $pengajar->nama,
+            'telepon_pengajar' => $pengajar->telepon,
         ];
 
         $enrolled = $this->enrolled($data);
@@ -36,9 +40,11 @@ class Science extends Subject
 
     public function physics()
     {
+        $id = 2;
+        $pengajar = $this->getPengajar($id);
         $data = [
             'subject' => $this->subject,
-            'id' => 2,
+            'id' => $id,
             'title' => 'Physics',
             'mapel' => 'physics',
             'chapter1' => 'Force and Motion',
@@ -46,6 +52,8 @@ class Science extends Subject
             'chapter3' => 'Kepler&#39;s Laws',
             'chapter4' => 'Energy',
             'chapter5' => 'Electricity',
+            'nama_pengajar' => $pengajar->nama,
+            'telepon_pengajar' => $pengajar->telepon,
         ];
         $enrolled = $this->enrolled($data);
 
@@ -58,9 +66,11 @@ class Science extends Subject
 
     public function chemistry()
     {
+        $id = 3;
+        $pengajar = $this->getPengajar($id);
         $data = [
             'subject' => $this->subject,
-            'id' => 3,
+            'id' => $id,
             'title' => 'Chemistry',
             'mapel' => 'chemistry',
             'chapter1' => 'Structure of Matter',
@@ -68,6 +78,8 @@ class Science extends Subject
             'chapter3' => 'Chemical Reactions',
             'chapter4' => 'Matter and Energy',
             'chapter5' => 'Nuclear Chemistry',
+            'nama_pengajar' => $pengajar->nama,
+            'telepon_pengajar' => $pengajar->telepon,
         ];
         $enrolled = $this->enrolled($data);
 
@@ -80,9 +92,11 @@ class Science extends Subject
 
     public function biology()
     {
+        $id = 4;
+        $pengajar = $this->getPengajar($id);
         $data = [
             'subject' => $this->subject,
-            'id' => 4,
+            'id' => $id,
             'title' => 'Biology',
             'mapel' => 'biology',
             'chapter1' => 'Biology Foundations',
@@ -90,6 +104,8 @@ class Science extends Subject
             'chapter3' => 'Energy and Transport',
             'chapter4' => 'Reproduction System',
             'chapter5' => 'Genetics',
+            'nama_pengajar' => $pengajar->nama,
+            'telepon_pengajar' => $pengajar->telepon,
         ];
         $enrolled = $this->enrolled($data);
 

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\M_mapel;
 use App\Models\M_belajar;
 use CodeIgniter\Controller;
 
@@ -26,6 +27,11 @@ class Subject extends Controller
 
     public function enrolled($data = [])
     {
+        $level = session()->get('level');
+        if($level == 2){
+            return true;
+        }
+
         $userdata = new M_belajar();
         $table = 'belajar';
         $id_siswa = session()->get('id');
@@ -69,5 +75,12 @@ class Subject extends Controller
         }
 
         return redirect()->to($page);
+    }
+
+    public function getPengajar($id_mapel){
+        $mapel = new M_mapel;
+        $pengajar = $mapel->get_data_pengajar($id_mapel);
+
+        return $pengajar;
     }
 }

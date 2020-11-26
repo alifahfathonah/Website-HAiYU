@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/mapel.css">
     <link rel="shortcut icon" href="../images/favicon.ico" />
     <script src="../js/mapel.js"></script>
-        
+
 </head>
 
 <body>
@@ -21,9 +21,23 @@
         <br>
         <br>
         <h1 id="title"><?= $title; ?></h1>
-        <button id="unenroll" name="unenroll" onclick="open_modal()">unenroll</button>
-        <form action="subject/unenroll" method="post">
-        </form>
+
+        <br>
+        <div id="pengajar">
+        <h4 style="padding-left: 180px;">Pengajar : <?= $nama_pengajar ?></h4>
+        <br>
+        <img src="../images/telephone.jpg" alt="Telephone : "> <h4><?= $telepon_pengajar?></h4>
+        </div>
+
+        <!-- Hanya siswa yang akan keluar tombol untuk unenroll         -->
+        <?php
+        if (session()->get('level') == 1) {
+            echo "
+        <button id='unenroll' name='unenroll' onclick='open_modal()'>unenroll</button>
+        ";
+        }
+        ?>
+
         <div class="Isi">
             <div class="row" id="row1">
                 <div class="col-6 col-md-4 column">
@@ -81,7 +95,7 @@
             <div class="modal-header">
                 <h1>Are you sure want to unenroll
                     <br>
-                     <?= $title ?> ? </h1>
+                    <?= $title ?> ? </h1>
             </div>
 
             <div>

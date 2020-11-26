@@ -149,10 +149,10 @@ button:hover {
   width: 150px;
   height: 50px;
   text-align: center;
-  background-color: red;
+  background-color: #ca91ffb6;
   color: inherit;
   font-family: inherit;
-  border-color: red;
+  border-color: #ca91ffb6;
   cursor: pointer;
 }
 .modal button:hover {

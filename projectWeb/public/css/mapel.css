@@ -18,6 +18,17 @@ body{
     position: relative;
 }
 
+#pengajar h4{
+  color:white;
+  display: inline;
+}
+
+#pengajar img{
+  height: 50px;
+  width: 50px;
+  margin-left:180px;
+}
+
 #chapter1{
     background: #AC53F8;
     border-radius: 54px;

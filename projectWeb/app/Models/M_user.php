@@ -9,7 +9,6 @@ class M_user extends Model
     protected $table = 'login';
     protected $primaryKey = 'email';
 
-
     protected $allowedFields = ['email', 'username', 'password', 'level'];
 
     protected $useTimestamps = true;
@@ -27,6 +26,13 @@ class M_user extends Model
         $query = $this->db->table('siswa')->insert($data);
         return $query;
     }
+
+    public function savePengajar($data)
+    {
+        $query = $this->db->table('pengajar')->insert($data);
+        return $query;
+    }
+
     function get_data_login($email, $username, $table)
     {
         $builder = $this->db->table($table);
@@ -45,6 +51,15 @@ class M_user extends Model
     function get_data_siswa($email)
     {
         $builder = $this->db->table('siswa');
+        $builder->where('email', $email);
+        $log = $builder->get()->getRow();
+
+        return $log;
+    }
+
+    function get_data_pengajar($email)
+    {
+        $builder = $this->db->table('pengajar');
         $builder->where('email', $email);
         $log = $builder->get()->getRow();
 
