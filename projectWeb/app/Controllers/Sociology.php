@@ -2,10 +2,11 @@
 
 namespace App\Controllers;
 
-class Sociology extends BaseController
+class Sociology extends Social
 {
     private $course = 'Sociology';
     private $mapel = 'sociology';
+    private $id = 8;
     
     public function index(){
         return redirect()->to('/social/sociology');
@@ -78,5 +79,24 @@ class Sociology extends BaseController
             'next' => '/'.$this->mapel.'/midtest',
         ];
         return view('Page/Content',$data);
+    }
+
+    public function midTest(){
+        $score = $this->getMidTest($this->id);
+
+        $data=[
+            'title' => $this->course,
+            'mapel' => $this->mapel,
+            'id' => $this->id,
+            'score' => $score,
+        ];
+
+        $graded = $this->isGraded($this->id);
+
+        if($graded){
+            return view('Page/midTest_score', $data);
+        }
+
+        return view('Page/midTest', $data);
     }
 }

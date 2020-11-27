@@ -47,8 +47,6 @@ class Subject extends Controller
         $id_siswa = session()->get('id');
         $id_mapel = $this->request->getPost('id_mapel');
         $page = $this->request->getPost('page');
-
-        if ($this->request->getPost('submit') == 'yes'){
         $userdata = new M_belajar();
         $data = array(
             'id_siswa' => $id_siswa,
@@ -56,7 +54,6 @@ class Subject extends Controller
         );
 
         $userdata->saveBelajar($data);
-        }
 
         return redirect()->to($page);
     }
@@ -64,17 +61,11 @@ class Subject extends Controller
     public function unenroll(){
         $id_siswa = session()->get('id');
         $id_mapel = $this->request->getPost('id_mapel');
-        $page = $this->request->getPost('page');
         $subject = $this->request->getPost('subject');
-
-        if ($this->request->getPost('submit') == 'yes'){
         $userdata = new M_belajar();
 
         $userdata->deleteBelajar($id_siswa, $id_mapel);
         return redirect()->to($subject);
-        }
-
-        return redirect()->to($page);
     }
 
     public function getPengajar($id_mapel){
@@ -82,5 +73,37 @@ class Subject extends Controller
         $pengajar = $mapel->get_data_pengajar($id_mapel);
 
         return $pengajar;
+    }
+
+    public function isGraded($id_mapel)
+    {
+        $level = session()->get('level');
+        if($level == 2){
+            return true;
+        }
+        $id_siswa = session()->get('id');
+        $userdata = new M_belajar();
+        $table = 'belajar';
+        $row = $userdata->get_data_belajar($id_siswa, $id_mapel, $table);
+        if ($row == null) {
+            return false;
+        }
+        if ($row->mid_test == null) {
+            return false;
+        }
+        return true;
+    }
+
+    public function getMidTest($id_mapel)
+    {
+        $level = session()->get('level');
+        if($level == 2){
+            return true;
+        }
+        $id_siswa = session()->get('id');
+        $userdata = new M_belajar();
+        $table = 'belajar';
+        $row = $userdata->get_data_belajar($id_siswa, $id_mapel, $table);
+        return $row->mid_test;
     }
 }

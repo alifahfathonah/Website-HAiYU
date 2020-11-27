@@ -27,6 +27,7 @@ class Science extends Subject
             'chapter5' => 'Integral',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
 
         $enrolled = $this->enrolled($data);
@@ -54,6 +55,7 @@ class Science extends Subject
             'chapter5' => 'Electricity',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
@@ -80,6 +82,7 @@ class Science extends Subject
             'chapter5' => 'Nuclear Chemistry',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
@@ -106,6 +109,7 @@ class Science extends Subject
             'chapter5' => 'Genetics',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 

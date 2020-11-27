@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\M_belajar;
 use App\Models\M_user;
 use App\Models\M_userProfile;
 use CodeIgniter\Controller;
@@ -139,7 +140,7 @@ class User extends Controller
     public function update()
     {
         $model2 = new M_userProfile();
-        $$id = $this->request->getPost('id');
+        $id = $this->request->getPost('id');
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
@@ -149,5 +150,22 @@ class User extends Controller
         );
         $model2->updateUser($data, $id);
         return redirect()->to('/');
+    }
+
+    public function midTest()
+    {
+        $level = session()->get('level');
+        $id_siswa = session()->get('id');
+        $id_mapel = $this->request->getPost('id_mapel');
+        $mapel = $this->request->getPost('nama_mapel');
+        $data = array(
+            'mid_test' => $_COOKIE['score'],
+        );
+        if ($level == 1) {
+            $userdata = new M_belajar();
+            $userdata->saveNilai($data, $id_siswa, $id_mapel);
+        }
+
+        return redirect()->to("/$mapel/midTest");
     }
 }

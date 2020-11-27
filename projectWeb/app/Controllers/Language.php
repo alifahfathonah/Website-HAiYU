@@ -27,6 +27,7 @@ class Language extends Subject
             'chapter5' => 'Public Speaking',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
@@ -53,6 +54,7 @@ class Language extends Subject
             'chapter5' => 'Karya Tulis Ilmiah',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 

@@ -27,6 +27,7 @@ class Social extends Subject
             'chapter5' => 'Government & Business',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
@@ -53,6 +54,7 @@ class Social extends Subject
             'chapter5' => 'World War II',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
@@ -79,6 +81,7 @@ class Social extends Subject
             'chapter5' => 'Landfroms & Geology',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
@@ -105,6 +108,7 @@ class Social extends Subject
             'chapter5' => 'Exploring our Society',
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
+            'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 

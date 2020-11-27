@@ -2,10 +2,11 @@
 
 namespace App\Controllers;
 
-class Chemistry extends BaseController 
+class Chemistry extends Science 
 {
     private $course = 'Chemistry';
     private $mapel = 'chemistry';
+    private $id = 3;
     
     public function index(){
         return redirect()->to('/science/chemistry');
@@ -78,5 +79,24 @@ class Chemistry extends BaseController
             'next' => '/'.$this->mapel.'/midtest',
         ];
         return view('Page/Content',$data);
+    }
+
+    public function midTest(){
+        $score = $this->getMidTest($this->id);
+
+        $data=[
+            'title' => $this->course,
+            'mapel' => $this->mapel,
+            'id' => $this->id,
+            'score' => $score,
+        ];
+
+        $graded = $this->isGraded($this->id);
+
+        if($graded){
+            return view('Page/midTest_score', $data);
+        }
+
+        return view('Page/midTest', $data);
     }
 }

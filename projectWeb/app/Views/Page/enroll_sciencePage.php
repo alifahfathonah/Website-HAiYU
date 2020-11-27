@@ -82,7 +82,7 @@
                     <input type="hidden" id="page" name="page" value="/science">  
 
                     <button type="submit" name="submit" value="yes">YES</button>
-                    <button type="submit" name="submit" value="no">NO</button>
+                    <button type="button" name="close" value="no" onclick="location.href = '/subject/science'">NO</button>
                     <br>
                 </form>
             </div>
