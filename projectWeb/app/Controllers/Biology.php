@@ -2,10 +2,11 @@
 
 namespace App\Controllers;
 
-class Biology extends BaseController 
+class Biology extends Science
 {
     private $course = 'Biology';
     private $mapel = 'biology';
+    private $id = 4;
     
     public function index(){
         return redirect()->to('/science/biology');
@@ -79,5 +80,24 @@ class Biology extends BaseController
             'next' => '/'.$this->mapel.'/midtest',
         ];
         return view('Page/Content',$data);
+    }
+
+    public function midTest(){
+        $score = $this->getMidTest($this->id);
+
+        $data=[
+            'title' => $this->course,
+            'mapel' => $this->mapel,
+            'id' => $this->id,
+            'score' => $score,
+        ];
+
+        $graded = $this->isGraded($this->id);
+
+        if($graded){
+            return view('Page/midTest_score', $data);
+        }
+
+        return view('Page/midTest', $data);
     }
 }

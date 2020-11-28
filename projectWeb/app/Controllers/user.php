@@ -2,7 +2,11 @@
 
 namespace App\Controllers;
 
+<<<<<<< HEAD
 use App\Models\M_teacherProfile;
+=======
+use App\Models\M_belajar;
+>>>>>>> c4ba44c650683ea756ac4f955512b6c4aa75ebd7
 use App\Models\M_user;
 use App\Models\M_userProfile;
 
@@ -151,6 +155,7 @@ class User extends Controller
     {
         $model2 = new M_userProfile();
         $id = $this->request->getPost('id');
+<<<<<<< HEAD
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
@@ -170,6 +175,8 @@ class User extends Controller
     {
         $model2 = new M_teacherProfile();
         $id = $this->request->getPost('id');
+=======
+>>>>>>> c4ba44c650683ea756ac4f955512b6c4aa75ebd7
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
@@ -184,5 +191,22 @@ class User extends Controller
             session()->setFlashdata('info', 'Updated profile successfully');
             return redirect()->to('/');
         }
+    }
+
+    public function midTest()
+    {
+        $level = session()->get('level');
+        $id_siswa = session()->get('id');
+        $id_mapel = $this->request->getPost('id_mapel');
+        $mapel = $this->request->getPost('nama_mapel');
+        $data = array(
+            'mid_test' => $_COOKIE['score'],
+        );
+        if ($level == 1) {
+            $userdata = new M_belajar();
+            $userdata->saveNilai($data, $id_siswa, $id_mapel);
+        }
+
+        return redirect()->to("/$mapel/midTest");
     }
 }

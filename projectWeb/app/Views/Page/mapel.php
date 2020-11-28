@@ -24,9 +24,10 @@
 
         <br>
         <div id="pengajar">
-        <h4 style="padding-left: 180px;">Pengajar : <?= $nama_pengajar ?></h4>
-        <br>
-        <img src="../images/telephone.jpg" alt="Telephone : "> <h4><?= $telepon_pengajar?></h4>
+            <h4 style="padding-left: 180px;">Pengajar : <?= $nama_pengajar ?></h4>
+            <br>
+            <img src="../images/telephone.jpg" alt="Telephone : ">
+            <h4><?= $telepon_pengajar ?></h4>
         </div>
 
         <!-- Hanya siswa yang akan keluar tombol untuk unenroll         -->
@@ -79,7 +80,15 @@
                 </div>
                 <div class="col-6 col-md-4 column">
                     <div id="midtest">
-                        <img src="../images/edu/027-loupe.png" alt="image" id="icon" onclick="location.href = '/<?= $mapel; ?>/midtest'">
+                        <?php
+                        if ($graded) {
+                            echo
+                                "<img src='../images/edu/027-loupe.png' alt='image' id='icon' onclick=\"location.href = '/$mapel/midTest'\">";
+                        } else {
+                            echo
+                                '<img src="../images/edu/027-loupe.png" alt="image" id="icon" onclick="open_modal2()">';
+                        }
+                        ?>
                         <h3 id="titleSub">Mid Test</h3>
                     </div>
                 </div>
@@ -105,7 +114,26 @@
                     <input type="hidden" id="subject" name="subject" value="/<?= $subject ?>">
 
                     <button type="submit" name="submit" value="yes">YES</button>
-                    <button type="submit" name="submit" value="no">NO</button>
+                    <button type="button" name="close" onclick="close_modal()" value="no">NO</button>
+                    <br>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="myModal2" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Do you want to start Mid Test now ?</h1>
+            </div>
+
+            <div>
+                <form action="/<?= $mapel ?>/midTest" method="POST">
+                    <button type="submit" name="submit" value="yes">YES</button>
+                    <button type="button" name="close" onclick="close_modal2()" value="no">NO</button>
                     <br>
                 </form>
             </div>

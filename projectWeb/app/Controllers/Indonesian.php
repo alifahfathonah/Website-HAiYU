@@ -2,10 +2,11 @@
 
 namespace App\Controllers;
 
-class Indonesian extends BaseController
+class Indonesian extends Language
 {
     private $course = 'Indonesian';
     private $mapel = 'indonesian';
+    private $id = 10;
     
     public function index(){
         return redirect()->to('/language/indonesian');
@@ -78,5 +79,24 @@ class Indonesian extends BaseController
             'next' => '/'.$this->mapel.'/midtest',
         ];
         return view('Page/Content',$data);
+    }
+
+    public function midTest(){
+        $score = $this->getMidTest($this->id);
+
+        $data=[
+            'title' => $this->course,
+            'mapel' => $this->mapel,
+            'id' => $this->id,
+            'score' => $score,
+        ];
+
+        $graded = $this->isGraded($this->id);
+
+        if($graded){
+            return view('Page/midTest_score', $data);
+        }
+
+        return view('Page/midTest', $data);
     }
 }

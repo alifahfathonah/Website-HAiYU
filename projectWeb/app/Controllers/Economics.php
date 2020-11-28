@@ -2,10 +2,11 @@
 
 namespace App\Controllers;
 
-class Economics extends BaseController
+class Economics extends Social
 {
     private $course = 'Economics';
     private $mapel = 'economics';
+    private $id = 5;
     
     public function index(){
         return redirect()->to('/social/economics');
@@ -78,5 +79,24 @@ class Economics extends BaseController
             'next' => '/'.$this->mapel.'/midtest',
         ];
         return view('Page/Content',$data);
+    }
+
+    public function midTest(){
+        $score = $this->getMidTest($this->id);
+
+        $data=[
+            'title' => $this->course,
+            'mapel' => $this->mapel,
+            'id' => $this->id,
+            'score' => $score,
+        ];
+
+        $graded = $this->isGraded($this->id);
+
+        if($graded){
+            return view('Page/midTest_score', $data);
+        }
+
+        return view('Page/midTest', $data);
     }
 }

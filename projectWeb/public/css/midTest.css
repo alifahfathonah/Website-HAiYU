@@ -1,0 +1,66 @@
+body{
+	font-family: 'Righteous', cursive;
+	background-color: #000000;
+	color: white;
+}
+
+#title{
+	text-align: center;
+}
+
+.question, .answers{
+	font-family: "Asap", sans-serif;
+	width: 35%; 
+	margin: 0 auto;
+	font-size: large;
+}
+
+h2{
+	width: 35%; 
+	margin: 0 auto;
+	font-weight: normal;
+	color: lightgreen;
+}
+
+.answers {
+  	margin-bottom: 20px;
+}
+
+.answers label{
+  display: block;
+}
+
+.answers p{
+	color: lightgreen;
+}
+
+.answers #hide{
+	color: black;
+}
+
+#submit{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 22px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: #ca91ff;
+    color: inherit;
+    font-family: inherit;
+	border-color: #ca91ff;
+    cursor: pointer;
+	margin: 0 auto;
+	font-size: larger;
+}
+#submit:hover{
+	background-color: #6321a0;
+	border-color: #803cc0;
+}
+
+#results{
+	margin: 20px;
+	text-align: center;
+	font-size: x-large;
+}
