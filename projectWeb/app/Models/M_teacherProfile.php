@@ -16,12 +16,12 @@ class M_teacherProfile extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
-    public function getTeacher($username = false)
+    public function getTeacher($email = false)
     {
-        if ($username == false) {
+        if ($email == false) {
             return $this->findAll();
         } else {
-            return $this->getWhere(['username' => $username]);
+            return $this->getWhere(['email' => $email]);
         }
     }
     public function updateTeacher($data, $id)

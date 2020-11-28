@@ -265,7 +265,7 @@ form .form-control1 label img {
   height: auto;
   display: block;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 60px;
   margin-left: 50px;
 }
 form .form-control1 #imgProfile {
@@ -300,6 +300,7 @@ form .form-control select {
   height: 30px;
   color: black;
   font-size: large;
+  text-align-last: center;
 }
 form .form-control input:focus {
   outline: none;

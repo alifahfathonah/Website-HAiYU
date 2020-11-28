@@ -16,12 +16,12 @@ class M_userProfile extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
-    public function getUser($username = false)
+    public function getUser($email = false)
     {
-        if ($username == false) {
+        if ($email == false) {
             return $this->findAll();
         } else {
-            return $this->getWhere(['username' => $username]);
+            return $this->getWhere(['email' => $email]);
         }
     }
     public function updateUser($data, $id)

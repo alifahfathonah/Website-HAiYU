@@ -64,14 +64,14 @@
         <h2>Edit Profile</h2>
         <form action="/user/updateUser/" method="POST" enctype="mulipart/form-data">
             <div class="row1">
-                <div class="col">
+                <!-- <div class="col">
                     <div class="form-control1">
                         <label for="imgProfile">
                             <img src="/images/avatar.png" alt="">
                         </label>
-                        <input type="file" id="imgProfile">
+                        <input type="file" name="foto" id="imgProfile">
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row2">
                 <div class="col">
@@ -82,16 +82,16 @@
                         <input type="text" name="email" id="email" value="<?php echo $user['email']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="username" id="username" value="<?php echo $user['username']; ?>"><br>
+                        <input type="text" name="username" id="username" value="<?php echo $user['username']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
                         <input type="text" name="nama" id="nama" value="<?php echo $user['nama']; ?>"><br>
                     </div>
                     <div class="form-control">
-                        <select id="gender">
+                        <select name="jenis_kelamin">
                             <option value="" name="jenis_kelamin">Select Gender</option>
-                            <option value="L" name="jenis_kelamin">Man</option>
-                            <option value="P" name="jenis_kelamin">Woman</option>
+                            <option value="L" name="jenis_kelamin" <?php if ($user['jenis_kelamin'] == 'L') : ?>selected="selected" <?php endif; ?>>Man</option>
+                            <option value="P" name="jenis_kelamin" <?php if ($user['jenis_kelamin'] == 'P') : ?>selected="selected" <?php endif; ?>>Woman</option>
                         </select><br>
                     </div>
                     <div class="form-control">
@@ -99,6 +99,7 @@
                     </div>
                     <div class="form-control">
                         <input type="number" name="telepon" id="telepon" value="<?php echo $user['telepon']; ?>"><br>
+                        <input type="file" name="foto" id="imgProfile">
                     </div>
                 </div>
             </div>

@@ -2,15 +2,13 @@
 
 namespace App\Controllers;
 
-<<<<<<< HEAD
 use App\Models\M_teacherProfile;
-=======
-use App\Models\M_belajar;
->>>>>>> c4ba44c650683ea756ac4f955512b6c4aa75ebd7
 use App\Models\M_user;
+use App\Models\M_belajar;
 use App\Models\M_userProfile;
 
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\Files\UploadedFile;
 
 class User extends Controller
 {
@@ -140,14 +138,15 @@ class User extends Controller
     {
         $userdata = new M_user();
         $row = $userdata->getData($username);
+        $email = $row->email;
         $level = $row->level;
         if ($level == 1) {
             $model2 = new M_userProfile();
-            $data['user'] = $model2->getUser($username)->getRowArray();
+            $data['user'] = $model2->getUser($email)->getRowArray();
             echo view('Page/profileEdit', $data);
         } else {
             $model1 = new M_teacherProfile();
-            $data['teacher'] = $model1->getTeacher($username)->getRowArray();
+            $data['teacher'] = $model1->getTeacher($email)->getRowArray();
             echo view('Page/teacherEdit', $data);
         }
     }
@@ -155,14 +154,23 @@ class User extends Controller
     {
         $model2 = new M_userProfile();
         $id = $this->request->getPost('id');
-<<<<<<< HEAD
+        $validated = $this->validate([
+            'foto' => 'uploaded[foto]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,4096]'
+        ]);
+        // if (!$validated) {
+        //     return redirect()->to('/about');
+        // } else {
+        $avatar = $this->request->getFile('foto');
+        dd($avatar);
+        $avatar->move(ROOTPATH . 'public/uploads');
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
             'nama' => $this->request->getPost('nama'),
             'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
-            'telepon' => $this->request->getPost('telepon')
+            'telepon' => $this->request->getPost('telepon'),
+            'foto' => $avatar->getName()
         );
         $ubah = $model2->updateUser($data, $id);
         if ($ubah) {
@@ -170,13 +178,12 @@ class User extends Controller
             session()->setFlashdata('info', 'Updated profile successfully');
             return redirect()->to('/');
         }
+        // }
     }
     public function updateTeacher()
     {
         $model2 = new M_teacherProfile();
         $id = $this->request->getPost('id');
-=======
->>>>>>> c4ba44c650683ea756ac4f955512b6c4aa75ebd7
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),

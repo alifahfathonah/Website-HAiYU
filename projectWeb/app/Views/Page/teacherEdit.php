@@ -82,16 +82,16 @@
                         <input type="text" name="email" id="email" value="<?php echo $teacher['email']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="username" id="username" value="<?php echo $teacher['username']; ?>"><br>
+                        <input type="text" name="username" id="username" value="<?php echo $teacher['username']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
                         <input type="text" name="nama" id="nama" value="<?php echo $teacher['nama']; ?>"><br>
                     </div>
                     <div class="form-control">
-                        <select id="gender">
+                        <select name="jenis_kelamin">
                             <option value="" name="jenis_kelamin">Select Gender</option>
-                            <option value="L" name="jenis_kelamin">Man</option>
-                            <option value="P" name="jenis_kelamin">Woman</option>
+                            <option value="L" name="jenis_kelamin" <?php if ($teacher['jenis_kelamin'] == 'L') : ?>selected="selected" <?php endif; ?>>Man</option>
+                            <option value="P" name="jenis_kelamin" <?php if ($teacher['jenis_kelamin'] == 'P') : ?>selected="selected" <?php endif; ?>>Woman</option>
                         </select><br>
                     </div>
                     <div class="form-control">
