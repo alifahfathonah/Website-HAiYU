@@ -32,7 +32,14 @@ class M_user extends Model
         $query = $this->db->table('pengajar')->insert($data);
         return $query;
     }
+    public function getData($username)
+    {
+        $builder = $this->db->table('login');
+        $builder->where('username', $username);
+        $log = $builder->get()->getRow();
 
+        return $log;
+    }
     function get_data_login($email, $username, $table)
     {
         $builder = $this->db->table($table);

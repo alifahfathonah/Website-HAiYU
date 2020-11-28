@@ -38,7 +38,7 @@
             </div>
             <div class="profile">
                 <img src="../images/user.png" alt="">
-                <a href="/user/edit/<?= session('id') ?>">Profile</a>
+                <a href="/user/edit/<?= session('username') ?>">Profile</a>
             </div>
             <div class="aboutUser">
                 <img src="../images/about.png" alt="" style="width: 32px;height: 32px">
@@ -57,6 +57,7 @@
         </div>
         <img src="../images/bg4.svg" alt="background" class="bg" style="top: 20%; left: 49%">
         <div class="landing-text">
+            <h4><?= session('info') ?></h4>
             <h2>Hello <?= session('username') ?>!</h2>
             <h1>Learn your Hardskill <br> for The Great Future</h1>
         </div>

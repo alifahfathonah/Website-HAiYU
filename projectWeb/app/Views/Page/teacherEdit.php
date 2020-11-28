@@ -37,7 +37,7 @@
             </div>
             <div class="subject">
                 <img src="/images/language.png" alt="">
-                <a href="/user/subject">Subject</a>
+                <a href="/teacher/subject">Subject</a>
             </div>
             <div class="profile">
                 <img src="/images/user.png" alt="">
@@ -50,7 +50,7 @@
         </div>
         <div class="bottom-nav">
             <!-- <a href="#">Settings</a> -->
-            <a href="/user/logout">Log out</a>
+            <a href="/teacher/logout">Log out</a>
         </div>
     </div>
     <div class="main">
@@ -62,7 +62,7 @@
 
     <div class="content">
         <h2>Edit Profile</h2>
-        <form action="/user/updateUser/" method="POST" enctype="mulipart/form-data">
+        <form action="/user/updateTeacher/" method="POST" enctype="mulipart/form-data">
             <div class="row1">
                 <div class="col">
                     <div class="form-control1">
@@ -76,16 +76,16 @@
             <div class="row2">
                 <div class="col">
                     <div class="form-control">
-                        <input type="hidden" name="id" id="id" value="<?php echo $user['id']; ?>" readonly><br>
+                        <input type="hidden" name="id" id="id" value="<?php echo $teacher['id']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="email" id="email" value="<?php echo $user['email']; ?>" readonly><br>
+                        <input type="text" name="email" id="email" value="<?php echo $teacher['email']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="username" id="username" value="<?php echo $user['username']; ?>"><br>
+                        <input type="text" name="username" id="username" value="<?php echo $teacher['username']; ?>"><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="nama" id="nama" value="<?php echo $user['nama']; ?>"><br>
+                        <input type="text" name="nama" id="nama" value="<?php echo $teacher['nama']; ?>"><br>
                     </div>
                     <div class="form-control">
                         <select id="gender">
@@ -95,10 +95,10 @@
                         </select><br>
                     </div>
                     <div class="form-control">
-                        <input type="date" name="tanggal_lahir" id="birthdate" value="<?php echo $user['tanggal_lahir']; ?>">
+                        <input type="date" name="tanggal_lahir" id="birthdate" value="<?php echo $teacher['tanggal_lahir']; ?>">
                     </div>
                     <div class="form-control">
-                        <input type="number" name="telepon" id="telepon" value="<?php echo $user['telepon']; ?>"><br>
+                        <input type="number" name="telepon" id="telepon" value="<?php echo $teacher['telepon']; ?>"><br>
                     </div>
                 </div>
             </div>

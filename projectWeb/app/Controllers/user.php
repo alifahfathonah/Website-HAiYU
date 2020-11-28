@@ -2,8 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Models\M_teacherProfile;
 use App\Models\M_user;
 use App\Models\M_userProfile;
+
 use CodeIgniter\Controller;
 
 class User extends Controller
@@ -130,24 +132,57 @@ class User extends Controller
         setcookie('id', '', time() - 10000, '/', '');
         return redirect()->to('/dashboard');
     }
-    public function edit($id)
+    public function edit($username)
     {
-        $model2 = new M_userProfile();
-        $data['user'] = $model2->getUser($id)->getRow();
-        echo view('Page/profileEdit', $data);
+        $userdata = new M_user();
+        $row = $userdata->getData($username);
+        $level = $row->level;
+        if ($level == 1) {
+            $model2 = new M_userProfile();
+            $data['user'] = $model2->getUser($username)->getRowArray();
+            echo view('Page/profileEdit', $data);
+        } else {
+            $model1 = new M_teacherProfile();
+            $data['teacher'] = $model1->getTeacher($username)->getRowArray();
+            echo view('Page/teacherEdit', $data);
+        }
     }
-    public function update()
+    public function updateUser()
     {
         $model2 = new M_userProfile();
-        $$id = $this->request->getPost('id');
+        $id = $this->request->getPost('id');
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
             'nama' => $this->request->getPost('nama'),
-            'gender' => $this->request->getPost('jenis_kelamin'),
-            'birtdate' => $this->request->getPost('tanggal_lahir')
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'telepon' => $this->request->getPost('telepon')
         );
-        $model2->updateUser($data, $id);
-        return redirect()->to('/');
+        $ubah = $model2->updateUser($data, $id);
+        if ($ubah) {
+            // Deklarasikan session flashdata dengan tipe info
+            session()->setFlashdata('info', 'Updated profile successfully');
+            return redirect()->to('/');
+        }
+    }
+    public function updateTeacher()
+    {
+        $model2 = new M_teacherProfile();
+        $id = $this->request->getPost('id');
+        $data = array(
+            'email' => $this->request->getPost('email'),
+            'username' => $this->request->getPost('username'),
+            'nama' => $this->request->getPost('nama'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'telepon' => $this->request->getPost('telepon')
+        );
+        $ubah = $model2->updateTeacher($data, $id);
+        if ($ubah) {
+            // Deklarasikan session flashdata dengan tipe info
+            session()->setFlashdata('info', 'Updated profile successfully');
+            return redirect()->to('/');
+        }
     }
 }
