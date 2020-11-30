@@ -210,9 +210,7 @@ body {
 }
 #main {
   transition: margin-left 0.5s;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
+  padding: 16px;
 }
 .haiyu {
   position: absolute;
@@ -234,26 +232,15 @@ body {
   width: 705px;
   height: auto;
   left: 47%;
-  top: 8%;
-}
-.bgImage {
-  width: 50%;
-  height: auto;
-  position: absolute;
-  left: 43%;
-  top: 5%;
-}
-.bg2 {
-  width: 705px;
-  height: auto;
+  top: 35%;
 }
 
 .landing-text {
-  position: absolute;
+  position: relative;
   width: 932px;
   height: 270px;
-  left: 100px;
-  top: 10%;
+  left: 81px;
+  top: 172px;
 }
 h1 {
   font-family: "Asap", sans-serif;
@@ -272,7 +259,7 @@ h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-style: normal;
-  color: #ff75ff;
+  color: #ffffff;
 }
 p {
   font-family: "Asap", sans-serif;
@@ -281,11 +268,11 @@ p {
   color: #ffffff;
 }
 .btn-container {
-  position: absolute;
+  position: relative;
   width: max-content;
   height: auto;
-  left: 100px;
-  top: 23%;
+  left: 81px;
+  top: 228px;
 }
 .btn-container .find-it-btn {
   width: 155px;
@@ -319,93 +306,12 @@ p {
 .btn-container .sign-up-btn:hover {
   background-color: #ccc;
 }
-.section2 {
-  width: 100%;
-  height: 150vh;
-  background-color: #131313;
-}
-.section2 .content {
-  width: 100%;
-  height: 70vh;
-  margin-top: 20px;
-}
-.section2 .content .title {
-  padding: 10px;
-}
-.section2 .content .title #Titlefitur {
-  font-family: "Righteous", cursive;
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-}
-.section2 .content .title #Titlefitur2 {
-  font-family: "Montserrat", cursive;
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-  color: #f5f5f5e3;
-}
-.section2 .container {
-  width: 100%;
-  height: 70vh;
-}
-.section2 .container .r-1 .col,
-.r-2 .col {
-  padding: 50px;
-}
-.section2 .container .r-1 .col .fitur1,
-.fitur2,
-.fitur3 {
-  padding: 20px;
-  border-radius: 20px;
-}
-.section2 .container .r-1 .col .fitur1:hover {
-  background-color: #e046ff;
-  transition: 0.3s;
-}
-.section2 .container .r-1 .col .fitur2:hover {
-  background-color: #ff46f6;
-  transition: 0.3s;
-}
-.section2 .container .r-2 .col .fitur3:hover {
-  background-color: #ff46e6;
-  transition: 0.3s;
-}
-.fitur1 a,
-.fitur2 a,
-.fitur3 a {
-  font-family: "Open Sans", sans-serif;
-  padding: 8px 8px 8px 8px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-  margin-left: 0px;
-  margin-top: 0px;
-}
-.fitur1 span img,
-.fitur2 span img,
-.fitur3 span img {
-  position: absolute;
-  width: 50px;
-  top: 80px;
-}
-.fitur1 h1,
-.fitur2 h1,
-.fitur3 h1 {
-  margin-left: 70px;
-}
-.image1 img {
-  position: absolute;
-  width: 600px;
-  height: auto;
-}
+
 h6 {
   position: absolute;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  top: 240vh;
+  margin-top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
