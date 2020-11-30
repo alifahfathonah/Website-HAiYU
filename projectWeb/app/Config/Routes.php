@@ -42,6 +42,7 @@ $routes->match(['get', 'post'], '/user/login', 'user::login');
 $routes->match(['get', 'post'], '/user/regis', 'user::regis');
 
 $routes->get('/about', 'Pages::about');
+$routes->get('/news', 'Pages::news');
 $routes->get('/user/subject', 'Pages::subject');
 // $routes->get('/user/subject', 'Pages::subject' ['filter' => 'authFilter']);
 $routes->get('/user/science', 'Pages::science');

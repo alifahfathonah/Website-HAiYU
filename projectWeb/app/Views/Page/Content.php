@@ -47,7 +47,11 @@
             <h2><?= $chapter;?> - <span style="color:orange"><?= $materi;?></span></h2>
             <div class="isi">
                 <?= $isi;?>
-                <a href="<?= $next;?>">Next chapter</a>
+                <br>
+                <div class="next">
+                    <img src="../images/next.png" alt="->" onclick="location.href = '<?=$next;?>'">
+                    <a href="<?= $next;?>">Next chapter</a><br>
+                </div>
             </div>
         </div>
     </div>

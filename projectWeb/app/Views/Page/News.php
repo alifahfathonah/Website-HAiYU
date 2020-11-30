@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="../css/homepage_style.css">
+    <link rel="stylesheet" href="../css/news.css">
     <link href="https://fonts.googleapis.com/css2?family=Asap&family=Open+Sans&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -9,9 +9,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../js/homepage_script.js"></script>
-    <title>HAiYU</title>
 </head>
-
 <body>
     <div id="Sidebar" class="sidebar">
         <div class="top-nav">
@@ -54,23 +52,30 @@
         <div class="menu">
             <a class="openbtn" onclick="openNav()"><img src="../images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
             <span class="haiyu">HAiYU</span>
-            <img src="../images/news.png" alt="" class="newsimg">
-            <a class="news" href="/news">News</a>
         </div>
-        <img src="../images/bg4.svg" alt="background" class="bg" style="top: 20%; left: 49%">
-        <div class="landing-text">
-            <h4><?= session('info') ?></h4>
-            <h2>Hello <?= session('username') ?>!</h2>
-            <h1>Learn your Hardskill <br> for The Great Future</h1>
-        </div>
-        <div class="btn-container">
-            <button class="find-it-btn"><a href="/user/subject">Find it</a></button>
-            <span class="tab">
-                <!-- <button class="sign-up-btn"><a href="#">Start now!</a></button> -->
-            </span>
+        <br>
+        <br>
+        <br>
+        <h1>Your Notifications</h1>
+        <div class="notification">
+            <h3><?= $title1;?></h3>
+            <p><?= $content1;?></p>    
+        </div><br>
+        <div class="notification">
+            <h3><?= $title2;?></h3>
+            <p><?= $content2;?></p>    
+        </div><br>
+        <div class="notification">
+            <h3><?= $title3;?></h3>
+            <p><?= $content3;?></p>    
+        </div><br>
+        <div class="notification">
+            <h3><?= $title4;?></h3>
+            <p><?= $content4;?></p>    
+        </div><br>
+        <div class="notification">
+            <h3><?= $title5;?></h3>
+            <p><?= $content5;?></p>    
         </div>
     </div>
-    <h6>© HAiYU Developer Team. All Rights Reserved</h6>
 </body>
-
-</html>
