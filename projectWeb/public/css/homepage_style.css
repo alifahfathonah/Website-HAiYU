@@ -13,7 +13,12 @@ body {
   left: 81px;
   top: 24px;
 }
-.menu a{
+.menu .newsNav {
+  position: absolute;
+  left: 75%;
+  top: 10%;
+}
+.menu a {
   font-family: "Righteous", cursive;
   font-style: normal;
   font-weight: normal;
@@ -22,7 +27,7 @@ body {
   line-height: 40px;
   float: right;
 }
-.menu .newsimg{
+.menu .newsimg {
   height: 40px;
   width: 40px;
   float: right;

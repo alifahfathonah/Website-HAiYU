@@ -50,7 +50,7 @@
         </div>
         <div class="bottom-nav">
             <!-- <a href="#">Settings</a> -->
-            <a href="/teacher/logout">Log out</a>
+            <a href="/user/logout">Log out</a>
         </div>
     </div>
     <div class="main">

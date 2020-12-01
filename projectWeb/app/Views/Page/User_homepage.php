@@ -55,8 +55,10 @@
         <div class="menu">
             <a class="openbtn" onclick="openNav()"><img src="../images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
             <span class="haiyu">HAiYU</span>
-            <img src="../images/news.png" alt="" class="newsimg">
-            <a class="news" href="/news">News</a>
+            <div class="newsNav">
+                <img src="../images/news.png" alt="" class="newsimg">
+                <a class="news" href="/news">News</a>
+            </div>
         </div>
         <div class="bgImage">
             <img src="../images/bg4.svg" alt="background" class="bg2" style="top: 20%; left: 49%">

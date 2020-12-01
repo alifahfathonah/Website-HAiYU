@@ -64,14 +64,14 @@
         <h2>Edit Profile</h2>
         <form action="/user/updateUser/" method="POST" enctype="mulipart/form-data">
             <div class="row1">
-                <!-- <div class="col">
+                <div class="col">
                     <div class="form-control1">
                         <label for="imgProfile">
                             <img src="/images/avatar.png" alt="">
                         </label>
                         <input type="file" name="foto" id="imgProfile">
                     </div>
-                </div> -->
+                </div>
             </div>
             <div class="row2">
                 <div class="col">
@@ -99,7 +99,6 @@
                     </div>
                     <div class="form-control">
                         <input type="number" name="telepon" id="telepon" value="<?php echo $user['telepon']; ?>"><br>
-                        <input type="file" name="foto" id="imgProfile">
                     </div>
                 </div>
             </div>
