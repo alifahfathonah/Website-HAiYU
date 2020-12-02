@@ -6,6 +6,7 @@ use App\Models\M_teacherProfile;
 use App\Models\M_user;
 use App\Models\M_belajar;
 use App\Models\M_userProfile;
+use App\Models\M_mapel;
 
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\Files\UploadedFile;
@@ -42,10 +43,6 @@ class User extends Controller
             ],
         );
         if (!$val) {
-            // Code sebelumnya
-            // $pesanValidasi = \Config\Services::validation();
-            // return redirect()->to('/signup')->withInput()->with('validate', $pesanValidasi);
-
             session()->setFlashData('pesan', 'Sorry, the email or password is already used!');
             return redirect()->to('/signup');
         } else {
@@ -111,6 +108,12 @@ class User extends Controller
             );
             session()->set($data);
 
+            if($level == 2){
+                $mapel = new M_mapel();
+                $nama_mapel = $mapel->get_mapel($row2->id)->nama;
+                session()->set('nama_mapel', $nama_mapel);
+            }
+
             if ($rm == 'on') {
                 setcookie('log', 'true', time() + 10000, '/', '');
                 setcookie('email', $row->email, time() + 10000, '/', '');
@@ -160,7 +163,7 @@ class User extends Controller
         // if (!$validated) {
         //     return redirect()->to('/about');
         // } else {
-        $avatar = $this->request->getFile('foto');
+        $avatar = $this->request->getFIle('foto');
         dd($avatar);
         $avatar->move(ROOTPATH . 'public/uploads');
         $data = array(

@@ -24,7 +24,10 @@ class Subject extends Controller
     {
         return view('Page/languagePage');
     }
-
+    public function editMateri($mapel = null, $chapter = null)
+    {
+        return view('Page/editMateri');
+    }
     public function enrolled($data = [])
     {
         $level = session()->get('level');

@@ -9,7 +9,6 @@ class M_teacherProfile extends Model
     protected $table = 'pengajar';
     protected $primaryKey = 'id';
 
-
     protected $allowedFields = ['email', 'username', 'nama', 'jenis_kelamin', 'tanggal_lahir', 'telepon', 'foto'];
 
     protected $useTimestamps = true;

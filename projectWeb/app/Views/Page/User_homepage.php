@@ -68,12 +68,18 @@
             <h2>Hello <?= session('username') ?>!</h2>
             <h1>Learn your Hardskill <br> for The Great Future</h1>
         </div>
+
         <div class="btn-container">
-            <button class="find-it-btn"><a href="/user/subject">Find it</a></button>
+            <?php if (session('level') == 2) : ?>
+                <button class="find-it-btn"><a href="/<?= session('nama_mapel') ?>">Find it</a></button>
+            <?php else : ?>
+                <button class="find-it-btn"><a href="/user/subject">Find it</a></button>
+            <?php endif; ?>
             <span class="tab">
                 <!-- <button class="sign-up-btn"><a href="#">Start now!</a></button> -->
             </span>
         </div>
+
     </div>
     <div class="section2">
         <div class="content">
