@@ -323,3 +323,17 @@ form .form-control input:focus {
   background-color: #bf71ff;
   color: rgb(66, 66, 66);
 }
+
+/* #backButton{
+  display: block;
+  position: absolute;
+  font-size: 100px;
+  right: 75px;
+  top: 0px;
+  text-decoration: none;
+  color: rgb(160, 29, 242);
+}
+
+#backButton:hover{
+  color: rgb(76, 0, 99);
+} */

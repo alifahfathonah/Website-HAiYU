@@ -64,3 +64,17 @@ h2{
 	text-align: center;
 	font-size: x-large;
 }
+
+#backButton{
+    display: block;
+    position: absolute;
+    font-size: 100px;
+    right: 75px;
+    top: 0px;
+    text-decoration: none;
+    color: rgb(160, 29, 242);
+  }
+  
+  #backButton:hover{
+    color: rgb(76, 0, 99);
+  }

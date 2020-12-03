@@ -70,6 +70,7 @@
         </div>
 
         <div class="btn-container">
+            <br><br>
             <?php if (session('level') == 2) : ?>
                 <button class="find-it-btn"><a href="/<?= session('nama_mapel') ?>">Find it</a></button>
             <?php else : ?>

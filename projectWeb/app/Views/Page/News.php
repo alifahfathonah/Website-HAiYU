@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../js/homepage_script.js"></script>
 </head>
+
 <body>
     <div id="Sidebar" class="sidebar">
         <div class="top-nav">
@@ -49,6 +50,7 @@
         </div>
     </div>
     <div id="main">
+        <a id="backButton" href="/">&#8678</a>
         <div class="menu">
             <a class="openbtn" onclick="openNav()"><img src="../images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
             <span class="haiyu">HAiYU</span>
@@ -58,24 +60,24 @@
         <br>
         <h1>Your Notifications</h1>
         <div class="notification">
-            <h3><?= $title1;?></h3>
-            <p><?= $content1;?></p>    
+            <h3><?= $title1; ?></h3>
+            <p><?= $content1; ?></p>
         </div><br>
         <div class="notification">
-            <h3><?= $title2;?></h3>
-            <p><?= $content2;?></p>    
+            <h3><?= $title2; ?></h3>
+            <p><?= $content2; ?></p>
         </div><br>
         <div class="notification">
-            <h3><?= $title3;?></h3>
-            <p><?= $content3;?></p>    
+            <h3><?= $title3; ?></h3>
+            <p><?= $content3; ?></p>
         </div><br>
         <div class="notification">
-            <h3><?= $title4;?></h3>
-            <p><?= $content4;?></p>    
+            <h3><?= $title4; ?></h3>
+            <p><?= $content4; ?></p>
         </div><br>
         <div class="notification">
-            <h3><?= $title5;?></h3>
-            <p><?= $content5;?></p>    
+            <h3><?= $title5; ?></h3>
+            <p><?= $content5; ?></p>
         </div>
     </div>
 </body>

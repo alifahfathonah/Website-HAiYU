@@ -18,6 +18,7 @@
 
 <body>
     <main>
+        <a id="backButton" href="/<?= $subject ?>">&#8678</a>
         <br>
         <br>
         <h1 id="title"><?= $title; ?></h1>

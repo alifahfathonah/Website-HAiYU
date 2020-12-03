@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <a id="backButton" href="/">&#8678</a>
+
     <div class="container">
         <div class="card">
             <div class="circle">

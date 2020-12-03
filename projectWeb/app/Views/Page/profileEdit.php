@@ -53,6 +53,7 @@
             <a href="/user/logout">Log out</a>
         </div>
     </div>
+
     <div class="main">
         <div class="menu">
             <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
@@ -69,7 +70,7 @@
                         <label for="imgProfile">
                             <img src="/images/avatar.png" alt="">
                         </label>
-                        <input type="file" name="foto" id="imgProfile"/>
+                        <input type="file" name="foto" id="imgProfile" />
                     </div>
                 </div>
             </div>
@@ -106,4 +107,5 @@
         </form>
     </div>
 </body>
+
 </html>

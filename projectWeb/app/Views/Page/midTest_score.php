@@ -13,10 +13,11 @@
 </head>
 
 <body>
+    <a id="backButton" href="/<?= $mapel ?>">&#8678</a>
     <h1 id="title"> <?= $title ?> - Mid Test</h1>
 
-    <?php 
-    if(session()->get('level') == 1){
+    <?php
+    if (session()->get('level') == 1) {
         echo "
     <div id='results'>
     Your Score : $score out of 5

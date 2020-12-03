@@ -87,3 +87,16 @@ body {
   position: relative;
   top: 1px;
 }
+
+#backButton{
+  position: absolute;
+  font-size: 100px;
+  right: 75px;
+  top: 0;
+  text-decoration: none;
+  color: rgb(160, 29, 242);
+}
+
+#backButton:hover{
+  color: rgb(76, 0, 99);
+}

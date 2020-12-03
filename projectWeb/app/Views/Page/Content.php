@@ -16,7 +16,7 @@
             <span class="haiyu-sidebar">HAiYU</span>
             <div class="search-container">
                 <form name="Searchbar">
-                  <input type="text" placeholder="Search.." name="search">
+                    <input type="text" placeholder="Search.." name="search">
                 </form>
             </div>
         </div>
@@ -34,23 +34,24 @@
         <div class="bottom-nav">
             <a href="#">Settings</a>
             <a href="#">Log out</a>
-        </div>    
+        </div>
     </div>
     <div id="main">
+        <a id="backButton" href="/<?= $course ?>">&#8678</a>
         <div class="menu">
             <button class="openbtn" onclick="openNav()">☰</button>
             <span class="haiyu">HAiYU</span>
         </div>
         <br><br>
         <div class="Content">
-            <h1><?= $course;?></h1>
-            <h2><?= $chapter;?> - <span style="color:orange"><?= $materi;?></span></h2>
+            <h1><?= $course; ?></h1>
+            <h2><?= $chapter; ?> - <span style="color:orange"><?= $materi; ?></span></h2>
             <div class="isi">
-                <?= $isi;?>
+                <?= $isi; ?>
                 <br>
                 <div class="next">
-                    <img src="../images/next.png" alt="->" onclick="location.href = '<?=$next;?>'">
-                    <a href="<?= $next;?>">Next chapter</a><br>
+                    <img src="../images/next.png" alt="->" onclick="location.href = '<?= $next; ?>'">
+                    <a href="<?= $next; ?>">Next chapter</a><br>
                 </div>
             </div>
         </div>

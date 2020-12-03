@@ -161,3 +161,17 @@ h1{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color : white;
 }
+
+#backButton{
+    display: block;
+    position: absolute;
+    font-size: 100px;
+    right: 75px;
+    top: 0px;
+    text-decoration: none;
+    color: rgb(160, 29, 242);
+  }
+  
+  #backButton:hover{
+    color: rgb(76, 0, 99);
+  }

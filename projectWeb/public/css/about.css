@@ -62,4 +62,15 @@ img{
     height: 300px;
 }
 
-
+#backButton{
+    position: absolute;
+    font-size: 100px;
+    left: 520px;
+    top: 0;
+    text-decoration: none;
+    color: rgb(160, 29, 242);
+  }
+  
+  #backButton:hover{
+    color: rgb(76, 0, 99);
+  }

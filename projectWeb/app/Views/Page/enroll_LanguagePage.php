@@ -18,6 +18,9 @@
 <body>
     <main>
         <div class="Isi">
+            <div class="row" id="backRow">
+                <a id="backButton" href="/user/subject">&#8678</a>
+            </div>
             <div class="row" style="margin-top: 20%;">
                 <div class="col-6 col-md-4 column">
                     <div class="cardMath">
@@ -51,15 +54,15 @@
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
-                <h1>Do you want to enroll 
-                <br>    
-                <?= $title ?> ? </h1>
+                <h1>Do you want to enroll
+                    <br>
+                    <?= $title ?> ? </h1>
             </div>
 
             <div>
                 <form action="/subject/enroll" method="POST">
                     <input type="hidden" name="id_mapel" value="<?= $id ?>">
-                    <input type="hidden" id="page" name="page" value="/language">  
+                    <input type="hidden" id="page" name="page" value="/language">
 
                     <button type="submit" name="submit" value="yes">YES</button>
                     <button type="button" name="close" value="no" onclick="location.href = '/subject/language'">NO</button>

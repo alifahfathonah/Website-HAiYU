@@ -250,4 +250,22 @@ h6 {
   cursor: pointer;
 }
 
+#backButton{
+  display: block;
+  position: absolute;
+  font-size: 100px;
+  right: 0px;
+  top: 0px;
+  text-decoration: none;
+  color: rgb(160, 29, 242);
+}
+
+#backButton:hover{
+  color: rgb(76, 0, 99);
+}
+
+#backRow{
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
