@@ -15,7 +15,6 @@
     <div class="grid-container1">
 
         <div>
-            <a id="backButton" href="/">&#8678</a>
             <h1 id="judul">ABOUT US</h1>
             <h2>LATAR BELAKANG</h2>
             <p>Di zaman yang serba digital ini, keberlangsungan hidup manusia sangat dipengaruhi oleh teknologi yang
