@@ -47,7 +47,7 @@
             <h1><?= $course; ?></h1>
             <h2><?= $chapter; ?> - <span style="color:orange"><?= $materi; ?></span></h2>
             <div class="isi">
-                <?= $isi; ?>
+                <p><?= $isi; ?></p>
                 <br>
                 <div class="next">
                     <img src="../images/next.png" alt="->" onclick="location.href = '<?= $next; ?>'">
