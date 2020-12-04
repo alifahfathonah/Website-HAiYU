@@ -18,10 +18,6 @@ class M_materi extends Model
         $builder = $this->db->table($this->table);
         $builder->where('id', $id_materi);
         
-        //$id_mapel = $builder->get()->getRow()->id_mapel;
-
-        //$builder = $this->db->table('mapel');
-        //$builder->where('id', $id_mapel);
         $log = $builder->get()->getRow();
 
         return $log;
