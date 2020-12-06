@@ -13,10 +13,19 @@
     <link rel="stylesheet" href="../css/mapel.css">
     <link rel="shortcut icon" href="../images/favicon.ico" />
     <script src="../js/mapel.js"></script>
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <script src="/js/sidebar_script.js"></script>
 
 </head>
 
 <body>
+    <?php include 'sidebar.php'?>
+    <div class="main">
+        <div class="menu">
+            <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
+            <span class="haiyu">HAiYU</span>
+        </div>
+    </div>
     <main>
         <a id="backButton" href="/<?= $subject ?>">&#8678</a>
         <br>

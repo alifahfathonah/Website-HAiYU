@@ -9,9 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/midTest.css">
     <script src="../js/midTest.js" defer></script>
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <script src="/js/sidebar_script.js"></script>
     
 </head>
 <body>
+    <?php include 'sidebar.php'?>
+    <div class="main">
+        <div class="menu">
+            <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
+            <span class="haiyu">HAiYU</span>
+        </div>
+    </div>
     <h1 id="title"> <?=$title?> - Mid Test</h1>
 
     <div id="quiz"></div>

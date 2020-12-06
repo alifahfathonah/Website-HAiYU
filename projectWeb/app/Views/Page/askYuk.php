@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap&family=Open+Sans&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/askYuk.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <script src="/js/sidebar_script.js"></script>
     <script src="../js/askyuk.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +15,13 @@
 </head>
 
 <body>
+    <?php include 'sidebar.php'?>
+    <div class="main">
+        <div class="menu">
+            <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
+            <span class="haiyu">HAiYU</span>
+        </div>
+    </div>
     <div class="container">
         <a id="backButton" href="/">&#8678</a>
         <h1>Teacher's Contact</h1>

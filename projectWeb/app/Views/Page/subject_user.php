@@ -7,10 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="stylesheet" href="../css/subject_style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <script src="/js/sidebar_script.js"></script>
     <title>HAiYU - Subject</title>
 </head>
 
 <body>
+    <?php include 'sidebar.php'?>
+    <div class="main">
+        <div class="menu">
+            <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
+            <span class="haiyu">HAiYU</span>
+        </div>
+    </div>
     <a id="backButton" href="/">&#8678</a>
     <h1>SUBJECT</h1>
     <div class="container">
