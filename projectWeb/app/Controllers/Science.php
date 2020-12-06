@@ -36,11 +36,11 @@ class Science extends Subject
 
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_sciencePage', $data);        
+        return view('Page/enroll_sciencePage', $data);
     }
 
     public function physics()
@@ -64,11 +64,11 @@ class Science extends Subject
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_sciencePage', $data); 
+        return view('Page/enroll_sciencePage', $data);
     }
 
     public function chemistry()
@@ -92,11 +92,11 @@ class Science extends Subject
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_sciencePage', $data); 
+        return view('Page/enroll_sciencePage', $data);
     }
 
     public function biology()
@@ -120,10 +120,10 @@ class Science extends Subject
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_sciencePage', $data); 
+        return view('Page/enroll_sciencePage', $data);
     }
 }

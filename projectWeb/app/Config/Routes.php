@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index', ['filter' => 'authFilter']);
 $routes->get('/dashboard', 'Pages::dashboard');
 
+$routes->get('/user/askyuk', 'user::contact');
 $routes->get('/signin', 'user::signin');
 $routes->get('/signup', 'user::signup');
 $routes->get('/user/login', 'user::login');
