@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php include 'sidebar.php'?>
+    <?php include 'sidebar.php' ?>
     <div id="main">
         <div class="menu">
             <a class="openbtn" onclick="openNav()"><img src="../images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
@@ -60,7 +60,7 @@
                             <span><img src="../images/027-loupe.png" alt=""></span>
                             <h1 id="judulfitur">Learn-Yuk</h1>
                             <p>Classroom lessons can be accessed online and using the enroll system, so you can study anywhere</p>
-                            <a href="">Learn more!</a>
+                            <a href="/user/subject">Learn more!</a>
                         </div>
                     </div>
                     <div class="col">
@@ -68,7 +68,7 @@
                             <span><img src="../images/003-blackboard.png" alt=""></span>
                             <h1 id="judulfitur">Test-Yuk</h1>
                             <p>Test with question analysis in accordance with the material being studied, so that it can evaluate what has been learned</p>
-                            <a href="">Learn more!</a>
+                            <a href="/user/subject">Learn more!</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                             <span><img src="../images/035-question.png" alt=""></span>
                             <h1 id="judulfitur">Ask-Yuk</h1>
                             <p>Understand in depth each lesson by asking directly with teachers who are experts in their fields, making learning easier</p>
-                            <a href="">Learn more!</a>
+                            <a href="/user/askyuk">Learn more!</a>
                         </div>
                     </div>
                     <div class="col">

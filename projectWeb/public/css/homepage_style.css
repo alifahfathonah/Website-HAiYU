@@ -219,6 +219,11 @@ p {
   margin-left: 0px;
   margin-top: 0px;
 }
+.fitur1 a:hover,
+.fitur2 a:hover,
+.fitur3 a:hover{
+  color: #7800af;
+}
 .fitur1 span img,
 .fitur2 span img,
 .fitur3 span img {

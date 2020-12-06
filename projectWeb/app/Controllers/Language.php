@@ -25,17 +25,17 @@ class Language extends Subject
             'chapter3' => 'English Language',
             'chapter4' => 'English Literature',
             'chapter5' => 'Public Speaking',
-            'nama_pengajar' => $pengajar->nama,
+            'nama_pengajar' => $pengajar->nama_pengajar,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_LanguagePage', $data); 
+        return view('Page/enroll_LanguagePage', $data);
     }
 
     public function indonesian()
@@ -52,16 +52,16 @@ class Language extends Subject
             'chapter3' => 'Cerpen',
             'chapter4' => 'Puisi & Sajak',
             'chapter5' => 'Karya Tulis Ilmiah',
-            'nama_pengajar' => $pengajar->nama,
+            'nama_pengajar' => $pengajar->nama_pengajar,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_LanguagePage', $data);  
+        return view('Page/enroll_LanguagePage', $data);
     }
 }

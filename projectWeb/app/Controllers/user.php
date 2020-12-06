@@ -108,7 +108,7 @@ class User extends Controller
             );
             session()->set($data);
 
-            if($level == 2){
+            if ($level == 2) {
                 $mapel = new M_mapel();
                 $nama_mapel = $mapel->get_mapel($row2->id)->nama;
                 session()->set('nama_mapel', $nama_mapel);
@@ -218,5 +218,11 @@ class User extends Controller
         }
 
         return redirect()->to("/$mapel/midTest");
+    }
+    public function contact()
+    {
+        $model = new M_teacherProfile();
+        $data['teacher'] = $model->getAllTeacher();
+        echo view('Page/askYuk', $data);
     }
 }

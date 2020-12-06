@@ -25,17 +25,17 @@ class Social extends Subject
             'chapter3' => 'Macroeconomics',
             'chapter4' => 'Fiscal & Monetary Policy',
             'chapter5' => 'Government & Business',
-            'nama_pengajar' => $pengajar->nama,
+            'nama_pengajar' => $pengajar->nama_pengajar,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_socialPage', $data); 
+        return view('Page/enroll_socialPage', $data);
     }
 
     public function history()
@@ -52,17 +52,17 @@ class Social extends Subject
             'chapter3' => 'Art and Culture of World',
             'chapter4' => 'The Great War',
             'chapter5' => 'World War II',
-            'nama_pengajar' => $pengajar->nama,
+            'nama_pengajar' => $pengajar->nama_pengajar,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_socialPage', $data); 
+        return view('Page/enroll_socialPage', $data);
     }
 
     public function geography()
@@ -79,17 +79,17 @@ class Social extends Subject
             'chapter3' => 'Astronomy of the Earth',
             'chapter4' => 'Climatology & Meteorology',
             'chapter5' => 'Landfroms & Geology',
-            'nama_pengajar' => $pengajar->nama,
+            'nama_pengajar' => $pengajar->nama_pengajar,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_socialPage', $data); 
+        return view('Page/enroll_socialPage', $data);
     }
 
     public function sociology()
@@ -106,16 +106,16 @@ class Social extends Subject
             'chapter3' => 'Families in Society',
             'chapter4' => 'Problems in Society',
             'chapter5' => 'Exploring our Society',
-            'nama_pengajar' => $pengajar->nama,
+            'nama_pengajar' => $pengajar->nama_pengajar,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
         $enrolled = $this->enrolled($data);
 
-        if($enrolled){
-            return view ('Page/mapel', $data);
+        if ($enrolled) {
+            return view('Page/mapel', $data);
         }
 
-        return view ('Page/enroll_socialPage', $data); 
+        return view('Page/enroll_socialPage', $data);
     }
 }

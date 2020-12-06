@@ -23,6 +23,12 @@ class M_teacherProfile extends Model
             return $this->getWhere(['email' => $email]);
         }
     }
+    public function getAllTeacher()
+    {
+        return $this->db->table('pengajar')
+            ->join('mapel', 'mapel.id_pengajar=pengajar.id')
+            ->get()->getResultArray();
+    }
     public function updateTeacher($data, $id)
     {
         $query = $this->db->table($this->table)->update($data, array('id' => $id));
