@@ -217,6 +217,7 @@ class User extends Controller
             $userdata->saveNilai($data, $id_siswa, $id_mapel);
         }
 
+        setcookie('score', '', time() - 10000, '/', '');    
         return redirect()->to("/$mapel/midTest");
     }
     public function contact()

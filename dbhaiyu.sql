@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2020 at 03:12 PM
+-- Generation Time: Dec 06, 2020 at 04:14 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -49,12 +49,7 @@ INSERT INTO `belajar` (`id_siswa`, `id_mapel`, `mid_test`, `final_test`) VALUES
 (3, 8, NULL, NULL),
 (3, 9, NULL, NULL),
 (3, 10, NULL, NULL),
-<<<<<<< HEAD
-(1, 1, NULL, NULL);
-=======
-(4, 1, NULL, NULL),
-(4, 3, NULL, NULL);
->>>>>>> 68083783994caecfedc78155f55259f8789c1986
+(1, 1, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -75,7 +70,6 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`email`, `username`, `password`, `level`) VALUES
 ('abc@gmail.com', 'abc', '$2y$10$O6imSp9OXu9Oe3N1zrbKD.9uvbzsWdLW4K5zZDuEzOjYs9Myxw4Cq', 1),
-('abcd@gmail.com', 'frhn231', '$2y$10$m4sK5TaPkilg5P68rNisUeZFjs2fFXiiZArvbxc8bePVT/AnlWDyG', 2),
 ('abdurrahman1270@gmail.com', 'rahman', '$2y$10$wKVuS6WPv3XJfTSLzLQkGuGqqKW/amH6ZLW74WsU6NhuLHlt6/YfS', 1),
 ('aghinyaam@gmail.com', 'aghniyaam', '$2y$10$OP39fUZvgSgSeJ7hOVlNF.VsbOlLJ1ijsoX1BdbObSK72VVBjZGF.', 2),
 ('anest@gmail.com', 'anest', '$2y$10$pAI7MupIn856hyyVfmWymOnPYMFKgP676TnR.XB3rDlbGwvoZ7IvW', 2),
@@ -88,7 +82,6 @@ INSERT INTO `login` (`email`, `username`, `password`, `level`) VALUES
 ('nurula@gmail.com', 'nurula', '$2y$10$4CpbdKOtvGuK1ZcOGgzWse.rEQ7Wm2gZijnGbeEXYbOrS9w2vJbry', 2),
 ('renataa@gmail.com', 'renataa', '$2y$10$4R/Nmh5mndJH4O8bU0cqxOVFIIY4sqvC2o9tBiqQrSmM3UIIFLmYW', 2),
 ('sitih@gmail.com', 'sitih', '$2y$10$IjKI.jOcQ/ssLyW6MJl6pugB.Y/XvxqBZuj.FbkqerUuQB7elOIga', 2),
-('test@gmail.com', 'frhn232', '$2y$10$7V3dWz1Cn6XTDPYf139IGO9b6DrB1TvhxGgZTwt1slXmvvtYlXSTS', 1),
 ('zahraf@gmail.com', 'zahraf', '$2y$10$NiTyAWvKm3Zssk5ZDCpY7u..jhyfMs6PJPX9nzE0fAP0UA5/hNgCC', 2);
 
 -- --------------------------------------------------------
@@ -129,14 +122,14 @@ CREATE TABLE `materi` (
   `id` varchar(255) NOT NULL,
   `judul` varchar(255) NOT NULL,
   `konten` varchar(1000) DEFAULT NULL,
-  `id_mapel` bigint(20) NOT NULL
+  `id_mapel` bigint(20) NOT NULL,
+  `chapter` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `materi`
 --
 
-<<<<<<< HEAD
 INSERT INTO `materi` (`id`, `judul`, `konten`, `id_mapel`, `chapter`) VALUES
 ('1', 'Eksponensial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1, 1),
 ('2', 'Logaritma', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1, 2),
@@ -188,14 +181,6 @@ INSERT INTO `materi` (`id`, `judul`, `konten`, `id_mapel`, `chapter`) VALUES
 ('48', 'Cerpen', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 10, 3),
 ('49', 'Puisi & Sajak', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 10, 4),
 ('50', 'Karya Tulis Ilmiah', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 10, 5);
-=======
-INSERT INTO `materi` (`id`, `judul`, `konten`, `id_mapel`) VALUES
-('1', 'Eksponensial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
-('2', 'Logaritma', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
-('3', 'Polinomial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
-('4', 'Diferential', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
-('5', 'Integral', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1);
->>>>>>> 68083783994caecfedc78155f55259f8789c1986
 
 -- --------------------------------------------------------
 
@@ -207,7 +192,7 @@ CREATE TABLE `pengajar` (
   `id` bigint(20) NOT NULL,
   `email` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `nama_pengajar` varchar(255) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
   `jenis_kelamin` varchar(1) DEFAULT NULL,
   `tanggal_lahir` date DEFAULT NULL,
   `telepon` varchar(255) DEFAULT NULL,
@@ -218,7 +203,7 @@ CREATE TABLE `pengajar` (
 -- Dumping data for table `pengajar`
 --
 
-INSERT INTO `pengajar` (`id`, `email`, `username`, `nama_pengajar`, `jenis_kelamin`, `tanggal_lahir`, `telepon`, `foto`) VALUES
+INSERT INTO `pengajar` (`id`, `email`, `username`, `nama`, `jenis_kelamin`, `tanggal_lahir`, `telepon`, `foto`) VALUES
 (1, 'bagasaf@gmail.com', 'bagasaf', 'Bagas Adi Firdaus', NULL, NULL, '081212017625', NULL),
 (2, 'aghinyaam@gmail.com', 'aghniyaam', 'Aghniya Abdurrahman Mannan', NULL, NULL, '087777792710', NULL),
 (3, 'farhang@gmail.com', 'farhang', 'Farhan Gunadi', NULL, NULL, '08989040798', NULL),
@@ -228,8 +213,7 @@ INSERT INTO `pengajar` (`id`, `email`, `username`, `nama_pengajar`, `jenis_kelam
 (7, 'zahraf@gmail.com', 'zahraf', 'Zahra Faradilla', NULL, NULL, '088827193541', NULL),
 (8, 'bambangk@gmail.com', 'bambangk', 'Bambang Kurniawan', NULL, NULL, '081584016012', NULL),
 (9, 'renataa@gmail.com', 'renataa', 'Renata Adila', NULL, NULL, '087771025391', NULL),
-(10, 'lindam@gmail.com', 'lindam', 'Linda Melinda', NULL, NULL, '082128943014', NULL),
-(11, 'abcd@gmail.com', 'frhn231', NULL, NULL, NULL, NULL, NULL);
+(10, 'lindam@gmail.com', 'lindam', 'Linda Melinda', NULL, NULL, '082128943014', NULL);
 
 -- --------------------------------------------------------
 
@@ -255,8 +239,7 @@ CREATE TABLE `siswa` (
 INSERT INTO `siswa` (`id`, `email`, `username`, `nama`, `jenis_kelamin`, `tanggal_lahir`, `telepon`, `foto`) VALUES
 (1, 'bagas.ktbffh@gmail.com', 'bagas', NULL, NULL, NULL, NULL, NULL),
 (2, 'bagasadifirdaus@gmail.com', 'test', NULL, NULL, NULL, NULL, NULL),
-(3, 'abdurrahman1270@gmail.com', 'rahman', NULL, NULL, NULL, NULL, NULL),
-(4, 'test@gmail.com', 'frhn232', NULL, NULL, NULL, NULL, NULL);
+(3, 'abdurrahman1270@gmail.com', 'rahman', NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -309,13 +292,13 @@ ALTER TABLE `mapel`
 -- AUTO_INCREMENT for table `pengajar`
 --
 ALTER TABLE `pengajar`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

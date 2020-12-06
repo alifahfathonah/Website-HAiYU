@@ -20,11 +20,11 @@
         <div class="top-nav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰</a>
             <span class="haiyu-sidebar">HAiYU</span>
-            <div class="search-container">
+            <!-- <div class="search-container">
                 <form name="Searchbar">
                     <input type="text" value="Search.." name="search" class="search">
                 </form>
-            </div>
+            </div> -->
         </div>
         <span><img src="/images/avatar.png" alt="" id="avatar"></span>
         <div class="user-info">
