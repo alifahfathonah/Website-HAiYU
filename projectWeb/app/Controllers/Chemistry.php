@@ -13,6 +13,7 @@ class Chemistry extends Science
     }
     public function chapter1(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
             'materi' => 'Structure of Matter',
@@ -27,6 +28,7 @@ class Chemistry extends Science
 
     public function chapter2(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
             'materi' => 'Chemical Systems',
@@ -41,6 +43,7 @@ class Chemistry extends Science
 
     public function chapter3(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
             'materi' => 'Chemical Reactions',
@@ -55,6 +58,7 @@ class Chemistry extends Science
 
     public function chapter4(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
             'materi' => 'Matter and Energy',
@@ -69,6 +73,7 @@ class Chemistry extends Science
 
     public function chapter5(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
             'materi' => 'Nuclear Chemistry',

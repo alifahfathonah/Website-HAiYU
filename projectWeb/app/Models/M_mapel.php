@@ -28,17 +28,23 @@ class M_mapel extends Model
         return $log;
     }
 
+    // get mapel by id_pengajar
     function get_mapel($id_pengajar)
     {
         $builder = $this->db->table($this->table);
         $builder->where('id_pengajar', $id_pengajar);
+        $log = $builder->get()->getRow();
         
-        $id_mapel = $builder->get()->getRow()->id;
-        
-        $builder = $this->db->table('mapel');
+        return $log;
+    }
+
+    // get mapel by id mapel
+    function getMapel($id_mapel)
+    {
+        $builder = $this->db->table($this->table);
         $builder->where('id', $id_mapel);
         $log = $builder->get()->getRow();
-
+        
         return $log;
     }
 }

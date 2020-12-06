@@ -13,6 +13,7 @@ class Indonesian extends Language
     }
     public function chapter1(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
             'materi' => 'Pedoman Bahasa Indonesia',
@@ -27,6 +28,7 @@ class Indonesian extends Language
 
     public function chapter2(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
             'materi' => 'Paragraf',
@@ -41,6 +43,7 @@ class Indonesian extends Language
 
     public function chapter3(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
             'materi' => 'Cerpen',
@@ -55,6 +58,7 @@ class Indonesian extends Language
 
     public function chapter4(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
             'materi' => 'Puisi & Sajak',
@@ -69,6 +73,7 @@ class Indonesian extends Language
 
     public function chapter5(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
             'materi' => 'Karya Tulis Ilmiah',

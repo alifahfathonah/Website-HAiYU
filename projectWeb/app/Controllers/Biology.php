@@ -14,6 +14,7 @@ class Biology extends Science
 
     public function chapter1(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
             'materi' => 'Biology Foundations',
@@ -28,6 +29,7 @@ class Biology extends Science
 
     public function chapter2(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
             'materi' => 'Cells',
@@ -42,6 +44,7 @@ class Biology extends Science
 
     public function chapter3(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
             'materi' => 'Energy and Transport',
@@ -56,6 +59,7 @@ class Biology extends Science
 
     public function chapter4(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
             'materi' => 'Reproduction System',
@@ -70,6 +74,7 @@ class Biology extends Science
 
     public function chapter5(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
             'materi' => 'Genetics',

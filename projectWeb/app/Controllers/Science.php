@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\M_materi;
 
 class Science extends Subject
 {
-    private $subject = 'science';
+    protected $subject = 'science';
 
     public function index()
     {
@@ -13,6 +14,7 @@ class Science extends Subject
 
     public function math()
     {
+        $model = new M_materi();
         $id = 1;
         $pengajar = $this->getPengajar($id);
         $data = [
@@ -20,11 +22,11 @@ class Science extends Subject
             'id' => $id,
             'title' => 'Math',
             'mapel' => 'math',
-            'chapter1' => 'Eksponensial',
-            'chapter2' => 'Logaritma',
-            'chapter3' => 'Polinominal',
-            'chapter4' => 'Diferential',
-            'chapter5' => 'Integral',
+            'chapter1' => $model->get_Materi($id, 1)->judul,
+            'chapter2' => $model->get_Materi($id, 2)->judul,
+            'chapter3' => $model->get_Materi($id, 3)->judul,
+            'chapter4' => $model->get_Materi($id, 4)->judul,
+            'chapter5' => $model->get_Materi($id, 5)->judul,
             'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),

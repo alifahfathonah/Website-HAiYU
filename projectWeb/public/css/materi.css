@@ -6,6 +6,7 @@ body{
     padding: 0;
     background:#000000;
 }
+
 .menu{
     position: absolute;
     width: 40px;
@@ -255,4 +256,27 @@ body{
   
   #backButton:hover{
     color: rgb(76, 0, 99);
+  }
+
+  #buttonEdit {
+    border-radius: 22px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: larger;
+    background-color: #eb4034;
+    color: white;
+    font-family: 'Righteous', cursive;
+    border-color:#eb4034;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    bottom: 70px;
+  }
+
+  #buttonEdit:hover {
+    background-color: #db2114;
+    color: white;
+    font-family: inherit;
+    border-color: #db2114;
   }

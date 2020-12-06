@@ -13,6 +13,7 @@ class Physics extends Science
     }
     public function chapter1(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
             'materi' => 'Force and Motion',
@@ -27,6 +28,7 @@ class Physics extends Science
 
     public function chapter2(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
             'materi' => 'Fundamental Forces',
@@ -41,6 +43,7 @@ class Physics extends Science
 
     public function chapter3(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
             'materi' => 'Kepler&#39;s Laws',
@@ -55,6 +58,7 @@ class Physics extends Science
 
     public function chapter4(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
             'materi' => 'Energy',
@@ -69,6 +73,7 @@ class Physics extends Science
 
     public function chapter5(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
             'materi' => 'Electricity',

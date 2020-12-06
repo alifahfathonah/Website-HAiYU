@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\M_mapel;
 use App\Models\M_belajar;
+use App\Models\M_materi;
 use CodeIgniter\Controller;
 
 class Subject extends Controller
@@ -23,10 +24,6 @@ class Subject extends Controller
     public function language()
     {
         return view('Page/languagePage');
-    }
-    public function editMateri($mapel = null, $chapter = null)
-    {
-        return view('Page/editMateri');
     }
     public function enrolled($data = [])
     {
@@ -108,5 +105,23 @@ class Subject extends Controller
         $table = 'belajar';
         $row = $userdata->get_data_belajar($id_siswa, $id_mapel, $table);
         return $row->mid_test;
+    }
+
+    public function editChapter()
+    {
+        $model = new M_materi();
+        $model2 = new M_mapel();
+        $id_mapel = $this->request->getPost('id_mapel');
+        $nama_mapel = $model2->getMapel($id_mapel)->nama;
+        $chapter = $this->request->getPost('chapter');
+        $judul = $this->request->getPost('judul');
+        $konten = $this->request->getPost('konten');
+        $data = [
+            'judul' => $judul,
+            'konten' => $konten,
+        ];
+        $model->update_Materi($data, $id_mapel, $chapter);
+        
+        return redirect()->to("/$nama_mapel/chapter$chapter");
     }
 }

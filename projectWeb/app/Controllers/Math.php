@@ -16,11 +16,15 @@ class Math extends Science
 
     public function chapter1(){    
         $model = new M_materi();
+        $id_materi = 1;
         $data=[
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
-            'materi' => (string)$model->getMateri(1)->judul,
-            'isi' => (string)$model->getMateri(1)->konten,
+            'num' => 1,
+            'materi' => (string)$model->getMateri($id_materi)->judul,
+            'isi' => (string)$model->getMateri($id_materi)->konten,
             'next' => '/'.$this->mapel.'/chapter2',
         ];
         return view('Page/Content',$data);
@@ -28,11 +32,15 @@ class Math extends Science
 
     public function chapter2(){
         $model = new M_materi();
+        $id_materi = 2;
         $data=[
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
-            'materi' => (string)$model->getMateri(2)->judul,
-            'isi' => (string)$model->getMateri(2)->konten,
+            'num' => 2,
+            'materi' => (string)$model->getMateri($id_materi)->judul,
+            'isi' => (string)$model->getMateri($id_materi)->konten,
             'next' => '/'.$this->mapel.'/chapter3',
         ];
         return view('Page/Content',$data);
@@ -40,11 +48,15 @@ class Math extends Science
 
     public function chapter3(){
         $model = new M_materi();
+        $id_materi = 3;
         $data=[
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
-            'materi' => (string)$model->getMateri(3)->judul,
-            'isi' => (string)$model->getMateri(3)->konten,
+            'num' => 3,
+            'materi' => (string)$model->getMateri($id_materi)->judul,
+            'isi' => (string)$model->getMateri($id_materi)->konten,
             'next' => '/'.$this->mapel.'/chapter4',
         ];
         return view('Page/Content',$data);
@@ -52,11 +64,15 @@ class Math extends Science
 
     public function chapter4(){
         $model = new M_materi();
+        $id_materi = 4;
         $data=[
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
-            'materi' => (string)$model->getMateri(4)->judul,
-            'isi' => (string)$model->getMateri(4)->konten,
+            'num' => 4,
+            'materi' => (string)$model->getMateri($id_materi)->judul,
+            'isi' => (string)$model->getMateri($id_materi)->konten,
             'next' => '/'.$this->mapel.'/chapter5',
         ];
         return view('Page/Content',$data);
@@ -64,11 +80,15 @@ class Math extends Science
 
     public function chapter5(){
         $model = new M_materi();
+        $id_materi = 5;
         $data=[
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
-            'materi' => (string)$model->getMateri(5)->judul,
-            'isi' => (string)$model->getMateri(5)->konten,
+            'num' => 5,
+            'materi' => (string)$model->getMateri($id_materi)->judul,
+            'isi' => (string)$model->getMateri($id_materi)->konten,
             'next' => '/'.$this->mapel.'/midtest',
         ];
         return view('Page/Content',$data);

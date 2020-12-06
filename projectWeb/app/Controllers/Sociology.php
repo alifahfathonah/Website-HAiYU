@@ -13,6 +13,7 @@ class Sociology extends Social
     }
     public function chapter1(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
             'materi' => 'Introduction',
@@ -27,6 +28,7 @@ class Sociology extends Social
 
     public function chapter2(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
             'materi' => 'Social Structure',
@@ -41,6 +43,7 @@ class Sociology extends Social
 
     public function chapter3(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
             'materi' => 'Families in Society',
@@ -55,6 +58,7 @@ class Sociology extends Social
 
     public function chapter4(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
             'materi' => 'Problems in Society',
@@ -69,6 +73,7 @@ class Sociology extends Social
 
     public function chapter5(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
             'materi' => 'Exploring our Society',

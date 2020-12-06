@@ -44,16 +44,22 @@ $routes->match(['get', 'post'], '/user/regis', 'user::regis');
 
 $routes->get('/about', 'Pages::about');
 $routes->get('/news', 'Pages::news');
+// $routes->get('/editChapter/(:num)', 'Pages::editChapter/$1');
+// $routes->post('/editChapter/(:num)', 'Pages::editChapter/$1');
+
+$routes->get('/editChapter/(:any)/(:num)', 'Pages::editChapter/$1/$2');
+
+
 $routes->get('/user/subject', 'Pages::subject');
-// $routes->get('/user/subject', 'Pages::subject' ['filter' => 'authFilter']);
 $routes->get('/user/science', 'Pages::science');
 $routes->get('/user/social', 'Pages::social');
+$routes->get('/user/language', 'Language::index');
+
 $routes->get('/science/math', 'Science::math');
 $routes->get('/science/physics', 'Science::physics');
 $routes->get('/science/chemistry', 'Science::chemistry');
 $routes->get('/science/biology', 'Science::biology');
 
-$routes->get('/user/language', 'Language::index');
 $routes->get('/social/economics', 'Social::economics');
 $routes->get('/social/history', 'Social::history');
 $routes->get('/social/geography', 'Social::geography');

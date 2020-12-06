@@ -13,6 +13,7 @@ class English extends Language
     }
     public function chapter1(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
             'materi' => 'Foundations of English I',
@@ -27,6 +28,7 @@ class English extends Language
 
     public function chapter2(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
             'materi' => 'Foundations of English II',
@@ -41,6 +43,7 @@ class English extends Language
 
     public function chapter3(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
             'materi' => 'English Language and Composition',
@@ -55,6 +58,7 @@ class English extends Language
 
     public function chapter4(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
             'materi' => 'English Literature and Compostion',
@@ -69,6 +73,7 @@ class English extends Language
 
     public function chapter5(){
         $data=[
+            'id' => $this->id,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
             'materi' => 'Public Speaking',

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\M_materi;
 
 class Pages extends BaseController
 {
@@ -59,5 +60,17 @@ class Pages extends BaseController
             'content5' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.',
         ];
         return view('Page/News', $data);
+    }
+    public function editChapter($id_mapel, $chapter)
+    {
+        $model = new M_materi();
+        $data=[
+            'id_mapel' => $id_mapel,
+            'chapter' => $chapter,
+            'judul' => $model->getMateri($id_mapel, $chapter)->judul,
+            'konten'=> $model->getMateri($id_mapel, $chapter)->konten,
+        ];
+
+        return view('Page/editChapter', $data);
     }
 }
