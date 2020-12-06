@@ -2,8 +2,8 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 26, 2020 at 02:56 PM
+-- Host: localhost
+-- Generation Time: Dec 06, 2020 at 05:39 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -39,20 +39,16 @@ CREATE TABLE `belajar` (
 --
 
 INSERT INTO `belajar` (`id_siswa`, `id_mapel`, `mid_test`, `final_test`) VALUES
-(2, 1, NULL, NULL),
-(2, 2, NULL, NULL),
-(2, 8, NULL, NULL),
 (3, 1, NULL, NULL),
 (3, 2, NULL, NULL),
-(1, 4, NULL, NULL),
-(1, 1, NULL, NULL),
-(1, 2, NULL, NULL),
-(1, 3, NULL, NULL),
-(1, 6, NULL, NULL),
-(1, 10, NULL, NULL),
-(1, 9, NULL, NULL),
-(2, 7, NULL, NULL),
-(2, 3, NULL, NULL);
+(3, 3, NULL, NULL),
+(3, 4, NULL, NULL),
+(3, 5, NULL, NULL),
+(3, 6, NULL, NULL),
+(3, 7, NULL, NULL),
+(3, 8, NULL, NULL),
+(3, 9, NULL, NULL),
+(3, 10, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -73,6 +69,7 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`email`, `username`, `password`, `level`) VALUES
 ('abc@gmail.com', 'abc', '$2y$10$O6imSp9OXu9Oe3N1zrbKD.9uvbzsWdLW4K5zZDuEzOjYs9Myxw4Cq', 1),
+('abdurrahman1270@gmail.com', 'rahman', '$2y$10$wKVuS6WPv3XJfTSLzLQkGuGqqKW/amH6ZLW74WsU6NhuLHlt6/YfS', 1),
 ('aghinyaam@gmail.com', 'aghniyaam', '$2y$10$OP39fUZvgSgSeJ7hOVlNF.VsbOlLJ1ijsoX1BdbObSK72VVBjZGF.', 2),
 ('anest@gmail.com', 'anest', '$2y$10$pAI7MupIn856hyyVfmWymOnPYMFKgP676TnR.XB3rDlbGwvoZ7IvW', 2),
 ('bagas.ktbffh@gmail.com', 'bagas', '$2y$10$InxuNutOn08fmgl.AVp.BueQsHMpOZ1ZbvY2A/e2AcWFVi.4wNB.C', 1),
@@ -123,9 +120,20 @@ INSERT INTO `mapel` (`id`, `nama`, `id_pengajar`) VALUES
 CREATE TABLE `materi` (
   `id` varchar(255) NOT NULL,
   `judul` varchar(255) NOT NULL,
-  `konten` varchar(255) DEFAULT NULL,
+  `konten` varchar(1000) DEFAULT NULL,
   `id_mapel` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `materi`
+--
+
+INSERT INTO `materi` (`id`, `judul`, `konten`, `id_mapel`) VALUES
+('1', 'Eksponensial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
+('2', 'Logaritma', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
+('3', 'Polinomial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
+('4', 'Diferential', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1),
+('5', 'Integral', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.', 1);
 
 -- --------------------------------------------------------
 
@@ -184,7 +192,7 @@ CREATE TABLE `siswa` (
 INSERT INTO `siswa` (`id`, `email`, `username`, `nama`, `jenis_kelamin`, `tanggal_lahir`, `telepon`, `foto`) VALUES
 (1, 'bagas.ktbffh@gmail.com', 'bagas', NULL, NULL, NULL, NULL, NULL),
 (2, 'bagasadifirdaus@gmail.com', 'test', NULL, NULL, NULL, NULL, NULL),
-(3, 'abc@gmail.com', 'abc', NULL, NULL, NULL, NULL, NULL);
+(3, 'abdurrahman1270@gmail.com', 'rahman', NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -211,12 +219,6 @@ ALTER TABLE `mapel`
   ADD KEY `fk_mapel` (`id_pengajar`);
 
 --
--- Indexes for table `materi`
---
-ALTER TABLE `materi`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `pengajar`
 --
 ALTER TABLE `pengajar`
@@ -237,7 +239,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `mapel`
 --
 ALTER TABLE `mapel`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `pengajar`
