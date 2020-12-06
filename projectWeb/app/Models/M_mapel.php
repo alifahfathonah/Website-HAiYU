@@ -14,15 +14,20 @@ class M_mapel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
-    function get_data_pengajar($id_mapel)
+    function get_id_pengajar($id_mapel)
     {
         $builder = $this->db->table($this->table);
         $builder->where('id', $id_mapel);
         
         $id_pengajar = $builder->get()->getRow()->id_pengajar;
-        
+
+        return $id_pengajar;
+    }
+
+    function get_data_pengajar($id_mapel)
+    {
         $builder = $this->db->table('pengajar');
-        $builder->where('id', $id_pengajar);
+        $builder->where('id', $this->get_id_pengajar($id_mapel));
         $log = $builder->get()->getRow();
 
         return $log;

@@ -15,10 +15,14 @@ class Sociology extends Social
     }
     public function chapter1(){
         $model = new M_materi();
+        $id_materi = 36;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
+            'num' => 1,
             'materi' => (string)$model->getMateri(36)->judul,
             'isi' => (string)$model->getMateri(36)->konten,
             'next' => '/'.$this->mapel.'/chapter2',
@@ -28,10 +32,14 @@ class Sociology extends Social
 
     public function chapter2(){
         $model = new M_materi();
+        $id_materi = 37;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
+            'num' => 2,
             'materi' => (string)$model->getMateri(37)->judul,
             'isi' => (string)$model->getMateri(37)->konten,
             'next' => '/'.$this->mapel.'/chapter3',
@@ -41,10 +49,14 @@ class Sociology extends Social
 
     public function chapter3(){
         $model = new M_materi();
+        $id_materi = 38;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
+            'num' => 3,
             'materi' => (string)$model->getMateri(38)->judul,
             'isi' => (string)$model->getMateri(38)->konten,
             'next' => '/'.$this->mapel.'/chapter4',
@@ -54,10 +66,14 @@ class Sociology extends Social
 
     public function chapter4(){
         $model = new M_materi();
+        $id_materi = 39;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
+            'num' => 4,
             'materi' => (string)$model->getMateri(39)->judul,
             'isi' => (string)$model->getMateri(39)->konten,
             'next' => '/'.$this->mapel.'/chapter5',
@@ -67,10 +83,14 @@ class Sociology extends Social
 
     public function chapter5(){
         $model = new M_materi();
+        $id_materi = 40;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
+            'num' => 5,
             'materi' => (string)$model->getMateri(40)->judul,
             'isi' => (string)$model->getMateri(40)->konten,
             'next' => '/'.$this->mapel.'/midtest',

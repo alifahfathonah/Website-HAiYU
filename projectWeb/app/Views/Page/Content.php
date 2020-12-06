@@ -46,7 +46,7 @@
         <div class="Content">
             <h1><?= $course; ?></h1>
             <h2><?= $chapter; ?> - <span style="color:orange"><?= $materi; ?></span></h2>
-            <?php if (session('level') == 2 && session('id') == $id_mapel) : ?>
+            <?php if (session('level') == 2 && session('id') == $id_pengajar) : ?>
                 <button id="buttonEdit" onclick='location.href="/editChapter/<?=$id_mapel?>/<?=$num?>"'>edit chapter</button>
                 </form>
             <?php endif; ?>

@@ -9,79 +9,106 @@ class Indonesian extends Language
     private $course = 'Indonesian';
     private $mapel = 'indonesian';
     private $id = 10;
-    
-    public function index(){
+
+    public function index()
+    {
         return redirect()->to('/language/indonesian');
     }
-    public function chapter1(){
+    public function chapter1()
+    {
         $model = new M_materi();
-        $data=[
-            'id' => $this->id,
+        $id_materi = 46;
+        $data = [
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
+            'num' => 1,
             'materi' => (string)$model->getMateri(46)->judul,
             'isi' => (string)$model->getMateri(46)->konten,
-            'next' => '/'.$this->mapel.'/chapter2',
+            'next' => '/' . $this->mapel . '/chapter2',
         ];
-        return view('Page/Content',$data);
+        return view('Page/Content', $data);
     }
 
-    public function chapter2(){
+    public function chapter2()
+    {
         $model = new M_materi();
-        $data=[
-            'id' => $this->id,
+        $id_materi = 47;
+        $data = [
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
+            'num' => 2,
             'materi' => (string)$model->getMateri(47)->judul,
             'isi' => (string)$model->getMateri(47)->konten,
-            'next' => '/'.$this->mapel.'/chapter3',
+            'next' => '/' . $this->mapel . '/chapter3',
         ];
-        return view('Page/Content',$data);
+        return view('Page/Content', $data);
     }
 
-    public function chapter3(){
+    public function chapter3()
+    {
         $model = new M_materi();
-        $data=[
-            'id' => $this->id,
+        $id_materi = 48;
+        $data = [
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
+            'num' => 3,
             'materi' => (string)$model->getMateri(48)->judul,
             'isi' => (string)$model->getMateri(48)->konten,
-            'next' => '/'.$this->mapel.'/chapter4',
+            'next' => '/' . $this->mapel . '/chapter4',
         ];
-        return view('Page/Content',$data);
+        return view('Page/Content', $data);
     }
 
-    public function chapter4(){
+    public function chapter4()
+    {
         $model = new M_materi();
-        $data=[
-            'id' => $this->id,
+        $id_materi = 49;
+        $data = [
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
+            'num' => 4,
             'materi' => (string)$model->getMateri(49)->judul,
             'isi' => (string)$model->getMateri(49)->konten,
-            'next' => '/'.$this->mapel.'/chapter5',
+            'next' => '/' . $this->mapel . '/chapter5',
         ];
-        return view('Page/Content',$data);
+        return view('Page/Content', $data);
     }
 
-    public function chapter5(){
+    public function chapter5()
+    {
         $model = new M_materi();
-        $data=[
-            'id' => $this->id,
+        $id_materi = 50;
+        $data = [
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
+            'num' => 5,
             'materi' => (string)$model->getMateri(50)->judul,
             'isi' => (string)$model->getMateri(50)->konten,
-            'next' => '/'.$this->mapel.'/midtest',
+            'next' => '/' . $this->mapel . '/midtest',
         ];
-        return view('Page/Content',$data);
+        return view('Page/Content', $data);
     }
 
-    public function midTest(){
+    public function midTest()
+    {
         $score = $this->getMidTest($this->id);
 
-        $data=[
+        $data = [
             'title' => $this->course,
             'mapel' => $this->mapel,
             'id' => $this->id,
@@ -90,7 +117,7 @@ class Indonesian extends Language
 
         $graded = $this->isGraded($this->id);
 
-        if($graded){
+        if ($graded) {
             return view('Page/midTest_score', $data);
         }
 

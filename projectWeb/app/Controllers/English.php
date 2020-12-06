@@ -15,10 +15,14 @@ class English extends Language
     }
     public function chapter1(){
         $model = new M_materi();
+        $id_materi = 41;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
+            'num' => 1,
             'materi' => (string)$model->getMateri(41)->judul,
             'isi' => (string)$model->getMateri(41)->konten,
             'next' => '/'.$this->mapel.'/chapter2',
@@ -28,10 +32,14 @@ class English extends Language
 
     public function chapter2(){
         $model = new M_materi();
+        $id_materi = 42;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
+            'num' => 2,
             'materi' => (string)$model->getMateri(42)->judul,
             'isi' => (string)$model->getMateri(42)->konten,
             'next' => '/'.$this->mapel.'/chapter3',
@@ -41,10 +49,14 @@ class English extends Language
 
     public function chapter3(){
         $model = new M_materi();
+        $id_materi = 43;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
+            'num' => 3,
             'materi' => (string)$model->getMateri(43)->judul,
             'isi' => (string)$model->getMateri(43)->konten,
             'next' => '/'.$this->mapel.'/chapter4',
@@ -54,10 +66,14 @@ class English extends Language
 
     public function chapter4(){
         $model = new M_materi();
+        $id_materi = 44;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
+            'num' => 4,
             'materi' => (string)$model->getMateri(44)->judul,
             'isi' => (string)$model->getMateri(44)->konten,
             'next' => '/'.$this->mapel.'/chapter5',
@@ -67,10 +83,14 @@ class English extends Language
 
     public function chapter5(){
         $model = new M_materi();
+        $id_materi = 45;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
+            'num' => 5,
             'materi' => (string)$model->getMateri(45)->judul,
             'isi' => (string)$model->getMateri(45)->konten,
             'next' => '/'.$this->mapel.'/midtest',

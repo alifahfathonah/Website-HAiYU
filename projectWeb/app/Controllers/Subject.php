@@ -75,6 +75,13 @@ class Subject extends Controller
         return $pengajar;
     }
 
+    public function getIdPengajar($id_mapel){
+        $mapel = new M_mapel;
+        $id_pengajar = $mapel->get_id_pengajar($id_mapel);
+
+        return $id_pengajar;
+    }
+
     public function isGraded($id_mapel)
     {
         $level = session()->get('level');

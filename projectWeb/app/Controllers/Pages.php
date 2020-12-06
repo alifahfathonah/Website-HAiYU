@@ -67,8 +67,8 @@ class Pages extends BaseController
         $data=[
             'id_mapel' => $id_mapel,
             'chapter' => $chapter,
-            'judul' => $model->getMateri($id_mapel, $chapter)->judul,
-            'konten'=> $model->getMateri($id_mapel, $chapter)->konten,
+            'judul' => $model->get_Materi($id_mapel, $chapter)->judul,
+            'konten'=> $model->get_Materi($id_mapel, $chapter)->konten,
         ];
 
         return view('Page/editChapter', $data);

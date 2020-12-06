@@ -16,10 +16,14 @@ class Biology extends Science
 
     public function chapter1(){
         $model = new M_materi();
+        $id_materi = 16;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
+            'num' => 1,
             'materi' => (string)$model->getMateri(16)->judul,
             'isi' => (string)$model->getMateri(16)->konten,
             'next' => '/'.$this->mapel.'/chapter2',
@@ -29,10 +33,14 @@ class Biology extends Science
 
     public function chapter2(){
         $model = new M_materi();
+        $id_materi = 17;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
+            'num' => 2,
             'materi' => (string)$model->getMateri(17)->judul,
             'isi' => (string)$model->getMateri(17)->konten,
             'next' => '/'.$this->mapel.'/chapter3',
@@ -42,10 +50,14 @@ class Biology extends Science
 
     public function chapter3(){
         $model = new M_materi();
+        $id_materi = 18;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
+            'num' => 3,
             'materi' => (string)$model->getMateri(18)->judul,
             'isi' => (string)$model->getMateri(18)->konten,
             'next' => '/'.$this->mapel.'/chapter4',
@@ -55,10 +67,14 @@ class Biology extends Science
 
     public function chapter4(){
         $model = new M_materi();
+        $id_materi = 19;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
+            'num' => 4,
             'materi' => (string)$model->getMateri(19)->judul,
             'isi' => (string)$model->getMateri(19)->konten,
             'next' => '/'.$this->mapel.'/chapter5',
@@ -68,10 +84,14 @@ class Biology extends Science
 
     public function chapter5(){
         $model = new M_materi();
+        $id_materi = 20;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
+            'num' => 5,
             'materi' => (string)$model->getMateri(20)->judul,
             'isi' => (string)$model->getMateri(20)->konten,
             'next' => '/'.$this->mapel.'/midtest',

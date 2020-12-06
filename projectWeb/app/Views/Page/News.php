@@ -58,24 +58,24 @@
         <br>
         <br>
         <br>
-        <h1>Your Notifications</h1>
-        <div class="notification">
+        <h1>Latest News</h1>
+        <div class="news">
             <h3><?= $title1; ?></h3>
             <p><?= $content1; ?></p>
         </div><br>
-        <div class="notification">
+        <div class="news">
             <h3><?= $title2; ?></h3>
             <p><?= $content2; ?></p>
         </div><br>
-        <div class="notification">
+        <div class="news">
             <h3><?= $title3; ?></h3>
             <p><?= $content3; ?></p>
         </div><br>
-        <div class="notification">
+        <div class="news">
             <h3><?= $title4; ?></h3>
             <p><?= $content4; ?></p>
         </div><br>
-        <div class="notification">
+        <div class="news">
             <h3><?= $title5; ?></h3>
             <p><?= $content5; ?></p>
         </div>

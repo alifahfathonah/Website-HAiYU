@@ -45,7 +45,7 @@
             </div>
             <div class="aboutUser">
                 <img src="/images/about.png" alt="" style="width: 32px;height: 32px">
-                <a href="about">About</a>
+                <a href="/about">About</a>
             </div>
         </div>
         <div class="bottom-nav">
@@ -67,7 +67,7 @@
             <input type="hidden" name="chapter" id="chapter" value="<?= $chapter ?>"><br>
             <div class="form-control">
                 <label for="judul">Title : </label>
-                <input type="text" name="judul" id="judul" maxlength="15" value="<?= $judul ?>"><br>
+                <input type="text" name="judul" id="judul" maxlength="22" value="<?= $judul ?>"><br>
             </div>
             <div class="form-control">
                 <label for="konten">Content : </label>

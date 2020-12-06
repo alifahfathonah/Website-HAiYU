@@ -3,13 +3,14 @@
 namespace App\Controllers;
 
 use App\Models\M_materi;
+use App\Models\M_mapel;
 
 class Math extends Science
 {
     private $course = 'Math';
     private $mapel = 'math';
     private $id = '1';
-
+    
     public function index(){
         return redirect()->to('/science/math');
     }
@@ -18,6 +19,7 @@ class Math extends Science
         $model = new M_materi();
         $id_materi = 1;
         $data=[
+            'id_pengajar' => $this->getIdPengajar($this->id),
             'id_mapel' => $this->id,
             'id_materi' => $id_materi,
             'course' => $this->course,
@@ -34,6 +36,7 @@ class Math extends Science
         $model = new M_materi();
         $id_materi = 2;
         $data=[
+            'id_pengajar' => $this->getIdPengajar($this->id),
             'id_mapel' => $this->id,
             'id_materi' => $id_materi,
             'course' => $this->course,
@@ -50,6 +53,7 @@ class Math extends Science
         $model = new M_materi();
         $id_materi = 3;
         $data=[
+            'id_pengajar' => $this->getIdPengajar($this->id),
             'id_mapel' => $this->id,
             'id_materi' => $id_materi,
             'course' => $this->course,
@@ -66,6 +70,7 @@ class Math extends Science
         $model = new M_materi();
         $id_materi = 4;
         $data=[
+            'id_pengajar' => $this->getIdPengajar($this->id),
             'id_mapel' => $this->id,
             'id_materi' => $id_materi,
             'course' => $this->course,
@@ -82,6 +87,7 @@ class Math extends Science
         $model = new M_materi();
         $id_materi = 5;
         $data=[
+            'id_pengajar' => $this->getIdPengajar($this->id),
             'id_mapel' => $this->id,
             'id_materi' => $id_materi,
             'course' => $this->course,

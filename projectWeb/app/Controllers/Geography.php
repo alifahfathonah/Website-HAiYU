@@ -15,10 +15,14 @@ class Geography extends Social
     }
     public function chapter1(){
         $model = new M_materi();
+        $id_materi = 31;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 1',
+            'num' => 1,
             'materi' => 'Introduction',
             'materi' => (string)$model->getMateri(31)->judul,
             'isi' => (string)$model->getMateri(31)->konten,
@@ -29,10 +33,14 @@ class Geography extends Social
 
     public function chapter2(){
         $model = new M_materi();
+        $id_materi = 32;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 2',
+            'num' => 2,
             'materi' => (string)$model->getMateri(32)->judul,
             'isi' => (string)$model->getMateri(32)->konten,
             'next' => '/'.$this->mapel.'/chapter3',
@@ -42,10 +50,14 @@ class Geography extends Social
 
     public function chapter3(){
         $model = new M_materi();
+        $id_materi = 33;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 3',
+            'num' => 3,
             'materi' => (string)$model->getMateri(33)->judul,
             'isi' => (string)$model->getMateri(33)->konten,
             'next' => '/'.$this->mapel.'/chapter4',
@@ -55,10 +67,14 @@ class Geography extends Social
 
     public function chapter4(){
         $model = new M_materi();
+        $id_materi = 34;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 4',
+            'num' => 4,
             'materi' => (string)$model->getMateri(34)->judul,
             'isi' => (string)$model->getMateri(34)->konten,
             'next' => '/'.$this->mapel.'/chapter5',
@@ -68,10 +84,14 @@ class Geography extends Social
 
     public function chapter5(){
         $model = new M_materi();
+        $id_materi = 35;
         $data=[
-            'id' => $this->id,
+            'id_pengajar' => $this->getIdPengajar($this->id),
+            'id_mapel' => $this->id,
+            'id_materi' => $id_materi,
             'course' => $this->course,
             'chapter' => 'Chapter 5',
+            'num' => 5,
             'materi' => (string)$model->getMateri(35)->judul,
             'isi' => (string)$model->getMateri(35)->konten,
             'next' => '/'.$this->mapel.'/midtest',

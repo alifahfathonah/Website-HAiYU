@@ -47,7 +47,7 @@ $routes->get('/news', 'Pages::news');
 // $routes->get('/editChapter/(:num)', 'Pages::editChapter/$1');
 // $routes->post('/editChapter/(:num)', 'Pages::editChapter/$1');
 
-$routes->get('/editChapter/(:any)/(:num)', 'Pages::editChapter/$1/$2');
+$routes->get('/editChapter/(:num)/(:num)', 'Pages::editChapter/$1/$2');
 
 
 $routes->get('/user/subject', 'Pages::subject');
