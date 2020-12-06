@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\M_materi;
+
 class English extends Language
 {
     private $course = 'English';
@@ -12,70 +14,60 @@ class English extends Language
         return redirect()->to('/language/english');
     }
     public function chapter1(){
+        $model = new M_materi();
         $data=[
             'course' => $this->course,
             'chapter' => 'Chapter 1',
-            'materi' => 'Foundations of English I',
-            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.</p>
-            <br>
-            <p>Suspendisse ultricies consectetur sodales. Nunc vulputate, ipsum id fringilla semper, lorem nisi faucibus nisi, in commodo urna dolor in ligula. Ut vel sollicitudin odio, id porttitor ligula. Vestibulum pretium porta nisl, eget suscipit turpis. Nullam vitae nisl enim. Curabitur auctor, tortor fringilla laoreet convallis, felis ligula cursus mi, quis dignissim dolor enim non orci. Maecenas dictum justo massa, nec venenatis metus ullamcorper sit amet. Donec iaculis, lorem sed tristique porttitor, sem risus auctor velit, et facilisis dui mi eu magna. Vivamus feugiat diam orci, eu aliquam mi dapibus ut. Pellentesque rutrum vel ante nec dignissim.</p>
-            <br>',
+            'materi' => (string)$model->getMateri(41)->judul,
+            'isi' => (string)$model->getMateri(41)->konten,
             'next' => '/'.$this->mapel.'/chapter2',
         ];
         return view('Page/Content',$data);        
     }
 
     public function chapter2(){
+        $model = new M_materi();
         $data=[
             'course' => $this->course,
             'chapter' => 'Chapter 2',
-            'materi' => 'Foundations of English II',
-            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.</p>
-            <br>
-            <p>Suspendisse ultricies consectetur sodales. Nunc vulputate, ipsum id fringilla semper, lorem nisi faucibus nisi, in commodo urna dolor in ligula. Ut vel sollicitudin odio, id porttitor ligula. Vestibulum pretium porta nisl, eget suscipit turpis. Nullam vitae nisl enim. Curabitur auctor, tortor fringilla laoreet convallis, felis ligula cursus mi, quis dignissim dolor enim non orci. Maecenas dictum justo massa, nec venenatis metus ullamcorper sit amet. Donec iaculis, lorem sed tristique porttitor, sem risus auctor velit, et facilisis dui mi eu magna. Vivamus feugiat diam orci, eu aliquam mi dapibus ut. Pellentesque rutrum vel ante nec dignissim.</p>
-            <br>',
+            'materi' => (string)$model->getMateri(42)->judul,
+            'isi' => (string)$model->getMateri(42)->konten,
             'next' => '/'.$this->mapel.'/chapter3',
         ];
         return view('Page/Content',$data);
     }
 
     public function chapter3(){
+        $model = new M_materi();
         $data=[
             'course' => $this->course,
             'chapter' => 'Chapter 3',
-            'materi' => 'English Language and Composition',
-            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.</p>
-            <br>
-            <p>Suspendisse ultricies consectetur sodales. Nunc vulputate, ipsum id fringilla semper, lorem nisi faucibus nisi, in commodo urna dolor in ligula. Ut vel sollicitudin odio, id porttitor ligula. Vestibulum pretium porta nisl, eget suscipit turpis. Nullam vitae nisl enim. Curabitur auctor, tortor fringilla laoreet convallis, felis ligula cursus mi, quis dignissim dolor enim non orci. Maecenas dictum justo massa, nec venenatis metus ullamcorper sit amet. Donec iaculis, lorem sed tristique porttitor, sem risus auctor velit, et facilisis dui mi eu magna. Vivamus feugiat diam orci, eu aliquam mi dapibus ut. Pellentesque rutrum vel ante nec dignissim.</p>
-            <br>',
+            'materi' => (string)$model->getMateri(43)->judul,
+            'isi' => (string)$model->getMateri(43)->konten,
             'next' => '/'.$this->mapel.'/chapter4',
         ];
         return view('Page/Content',$data);
     }
 
     public function chapter4(){
+        $model = new M_materi();
         $data=[
             'course' => $this->course,
             'chapter' => 'Chapter 4',
-            'materi' => 'English Literature and Compostion',
-            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.</p>
-            <br>
-            <p>Suspendisse ultricies consectetur sodales. Nunc vulputate, ipsum id fringilla semper, lorem nisi faucibus nisi, in commodo urna dolor in ligula. Ut vel sollicitudin odio, id porttitor ligula. Vestibulum pretium porta nisl, eget suscipit turpis. Nullam vitae nisl enim. Curabitur auctor, tortor fringilla laoreet convallis, felis ligula cursus mi, quis dignissim dolor enim non orci. Maecenas dictum justo massa, nec venenatis metus ullamcorper sit amet. Donec iaculis, lorem sed tristique porttitor, sem risus auctor velit, et facilisis dui mi eu magna. Vivamus feugiat diam orci, eu aliquam mi dapibus ut. Pellentesque rutrum vel ante nec dignissim.</p>
-            <br>',
+            'materi' => (string)$model->getMateri(44)->judul,
+            'isi' => (string)$model->getMateri(44)->konten,
             'next' => '/'.$this->mapel.'/chapter5',
         ];
         return view('Page/Content',$data);
     }
 
     public function chapter5(){
+        $model = new M_materi();
         $data=[
             'course' => $this->course,
             'chapter' => 'Chapter 5',
-            'materi' => 'Public Speaking',
-            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ex blandit, sollicitudin enim sed, consequat lacus. In aliquet facilisis risus, sed laoreet tellus convallis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean porta sit amet ex a elementum. Maecenas auctor mattis dapibus. Duis non ornare nulla, eu iaculis dolor. Nulla sem leo, tristique a efficitur quis, tincidunt at turpis. Duis nisl enim, pharetra convallis justo sed, egestas venenatis arcu. Nullam porttitor ac tortor ac tincidunt.</p>
-            <br>
-            <p>Suspendisse ultricies consectetur sodales. Nunc vulputate, ipsum id fringilla semper, lorem nisi faucibus nisi, in commodo urna dolor in ligula. Ut vel sollicitudin odio, id porttitor ligula. Vestibulum pretium porta nisl, eget suscipit turpis. Nullam vitae nisl enim. Curabitur auctor, tortor fringilla laoreet convallis, felis ligula cursus mi, quis dignissim dolor enim non orci. Maecenas dictum justo massa, nec venenatis metus ullamcorper sit amet. Donec iaculis, lorem sed tristique porttitor, sem risus auctor velit, et facilisis dui mi eu magna. Vivamus feugiat diam orci, eu aliquam mi dapibus ut. Pellentesque rutrum vel ante nec dignissim.</p>
-            <br>',
+            'materi' => (string)$model->getMateri(45)->judul,
+            'isi' => (string)$model->getMateri(45)->konten,
             'next' => '/'.$this->mapel.'/midtest',
         ];
         return view('Page/Content',$data);
