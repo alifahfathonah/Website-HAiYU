@@ -8,25 +8,25 @@
             </form>
         </div>
     </div>
-    <span><img src="../images/avatar.png" alt="" id="avatar"></span>
+    <span><img src="/images/avatar.png" alt="" id="avatar"></span>
     <div class="user-info">
         <p id="welcome">Welcome! <br> <?= session('username') ?></p>
     </div>
     <div class="navUser">
         <div class="home">
-            <img src="../images/homepage.png" alt="">
+            <img src="/images/homepage.png" alt="">
             <a href="/">Home</a>
         </div>
         <div class="subject">
-            <img src="../images/language.png" alt="">
+            <img src="/images/language.png" alt="">
             <a href="/user/subject">Subject</a>
         </div>
         <div class="profile">
-            <img src="../images/user.png" alt="">
+            <img src="/images/user.png" alt="">
             <a href="/user/edit/<?= session('username') ?>">Profile</a>
         </div>
         <div class="aboutUser">
-            <img src="../images/about.png" alt="" style="width: 32px;height: 32px">
+            <img src="/images/about.png" alt="" style="width: 32px;height: 32px">
             <a href="about">About</a>
         </div>
     </div>

@@ -163,9 +163,9 @@ class User extends Controller
         // if (!$validated) {
         //     return redirect()->to('/about');
         // } else {
-        $avatar = $this->request->getFIle('foto');
-        dd($avatar);
-        $avatar->move(ROOTPATH . 'public/uploads');
+        // $avatar = $this->request->getFIle('foto');
+        // // dd($avatar);
+        // $avatar->move(ROOTPATH . 'public/uploads');
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
@@ -173,7 +173,7 @@ class User extends Controller
             'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
             'telepon' => $this->request->getPost('telepon'),
-            'foto' => $avatar->getName()
+            // 'foto' => $avatar->getName()
         );
         $ubah = $model2->updateUser($data, $id);
         if ($ubah) {
@@ -217,7 +217,7 @@ class User extends Controller
             $userdata->saveNilai($data, $id_siswa, $id_mapel);
         }
 
-        setcookie('score', '', time() - 10000, '/', '');    
+        setcookie('score', '', time() - 10000, '/', '');
         return redirect()->to("/$mapel/midTest");
     }
     public function contact()
@@ -225,5 +225,36 @@ class User extends Controller
         $model = new M_teacherProfile();
         $data['teacher'] = $model->getAllTeacher();
         echo view('Page/askYuk', $data);
+    }
+    public function deleteAccount($username)
+    {
+        $userdata = new M_user();
+        $row = $userdata->getData($username);
+        $email = $row->email;
+        $level = $row->level;
+        $row2 = $userdata->get_data_siswa($email);
+        $idUser = $row2->id;
+        // dd($row2);
+        if ($level == 1) {
+            $model1 = new M_userProfile();
+            $deleteBelajar = $model1->deleteBelajar($idUser);
+            if ($deleteBelajar == true) {
+                $deleteStudent = $model1->deleteStudent($email);
+                if ($deleteStudent == true) {
+                    $userdata->deleteAccount($email);
+                    session()->destroy();
+                    setcookie('log', '', time() - 10000, '/', '');
+                    setcookie('email', '', time() - 10000, '/', '');
+                    setcookie('username', '', time() - 10000, '/', '');
+                    setcookie('id', '', time() - 10000, '/', '');
+                    return redirect()->to('/dashboard');
+                }
+            } else {
+                session()->setFlashdata('info', 'Delete account failed!');
+                return redirect()->to('/');
+            }
+        } else {
+            return redirect()->to('/');
+        }
     }
 }

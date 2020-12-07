@@ -40,6 +40,7 @@ $routes->get('/signup', 'user::signup');
 $routes->get('/user/login', 'user::login');
 $routes->get('/user/logout', 'user::logout');
 $routes->get('/user/edit/(:any)', 'user::edit/$1');
+$routes->get('/user/delete/(:any)', 'user::deleteAccount/$1');
 $routes->match(['get', 'post'], '/user/login', 'user::login');
 $routes->match(['get', 'post'], '/user/regis', 'user::regis');
 

@@ -72,4 +72,9 @@ class M_user extends Model
 
         return $log;
     }
+    function deleteAccount($email)
+    {
+        $query = $this->db->table($this->table)->delete(array('email' => $email));
+        return $query;
+    }
 }

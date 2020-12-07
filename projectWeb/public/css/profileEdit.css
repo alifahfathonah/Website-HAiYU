@@ -43,7 +43,7 @@ body {
   left: 0px;
   top: 0px;
 }
-.sidebar .top-nav .closebtn {
+.sidebar .top-nav .closedelete {
   position: absolute;
   top: 0;
   left: 0px;
@@ -126,7 +126,7 @@ body {
     border: 1px solid #ccc;
   }
 }
-.openbtn img {
+.opendelete img {
   position: absolute;
   background-color: #000000;
   color: #ffffff;
@@ -323,4 +323,19 @@ form .form-control input:focus {
   background-color: #bf71ff;
   color: rgb(66, 66, 66);
 }
-
+.delete {
+  position: absolute;
+  text-decoration: none;
+  top: 25px;
+  left: 26%;
+  background-color: rgb(255, 30, 41);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.delete:hover {
+  background-color: rgb(225, 65, 92);
+}

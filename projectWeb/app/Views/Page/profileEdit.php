@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/js/sidebar_script.js"></script>
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-    <?php include 'sidebar.php'?>
+    <?php include 'sidebar.php' ?>
 
     <div class="main">
         <div class="menu">
@@ -27,6 +28,7 @@
     </div>
 
     <div class="content">
+        <a class="delete" href="/user/deleteAccount/<?= session('username') ?>"><i class="fa fa-trash"></i> Delete Account</a>
         <h2>Edit Profile</h2>
         <form action="/user/updateUser/" method="POST" enctype="mulipart/form-data">
             <div class="row1">
