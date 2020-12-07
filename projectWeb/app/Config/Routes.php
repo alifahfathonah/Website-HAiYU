@@ -52,6 +52,7 @@ $routes->get('/pages/edit', 'Pages::edit', ['filter' => 'authFilter']);
 $routes->get('/pages/news', 'Pages::news', ['filter' => 'authFilter']);
 $routes->get('/pages/editChapter', 'Pages::editChapter', ['filter' => 'authFilter']);
 
+$routes->match(['get', 'post'], '/user/midTest', 'user::midTest');
 $routes->get('/about', 'Pages::about');
 $routes->get('/news', 'Pages::news', ['filter' => 'authFilter']);
 $routes->get('/editChapter/(:num)/(:num)', 'Pages::editChapter/$1/$2', ['filter' => 'authFilter']);
