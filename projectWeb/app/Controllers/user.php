@@ -87,18 +87,18 @@ class User extends Controller
         $email_username = $this->request->getPost('email_username');
         $password = $this->request->getPost('password');
         $row = $userdata->get_data_login($email_username, $email_username, $table);
+        $level = $row->level;
+        if ($level == 1) {
+            $row2 = $userdata->get_data_siswa($row->email);
+        } else {
+            $row2 = $userdata->get_data_pengajar($row->email);
+        }
 
         if ($row == NULL) {
             session()->setFlashData('pesan', 'Sorry! your email/username and password doesn\'t match');
             return redirect()->to('/signin');
         }
         if (password_verify($password, $row->password)) {
-            $level = $row->level;
-            if ($level == 1) {
-                $row2 = $userdata->get_data_siswa($row->email);
-            } else {
-                $row2 = $userdata->get_data_pengajar($row->email);
-            }
             $data = array(
                 'log' => TRUE,
                 'email' => $row->email,
@@ -111,11 +111,8 @@ class User extends Controller
 
             if ($level == 2) {
                 $mapel = new M_mapel();
-                $builder = $mapel->get_mapel($row2->id);
-                if ($builder != null) {
-                    $nama_mapel = $builder->nama;
-                    session()->set('nama_mapel', $nama_mapel);
-                }
+                $nama_mapel = $mapel->get_mapel($row2->id)->nama;
+                session()->set('nama_mapel', $nama_mapel);
             }
 
             if ($rm == 'on') {

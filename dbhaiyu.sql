@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2020 at 12:43 PM
+-- Generation Time: Dec 07, 2020 at 12:51 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.3.24
 
@@ -82,12 +82,10 @@ INSERT INTO `login` (`email`, `username`, `password`, `level`) VALUES
 ('farhan@gmail.com', 'guru1', '$2y$10$eKm.fn5vCyJRx/vFXJl2C.ZZ7A5u75H367q3Vv2RBQqHTmf5fQAxm', 2),
 ('farhang@gmail.com', 'farhang', '$2y$10$vN2R67XbQPPCjNV6gZqLQ.qtMDQE92uFe/QgTpKRfmPev3X4drdfy', 2),
 ('lindam@gmail.com', 'lindam', '$2y$10$4tuqx8GvYelhn0KzLjX2Duup7UOvSf.7iOYdj0uzOd0xo.V6DJFLy', 2),
-('murid2@gmail.com', 'murid2', '$2y$10$hGRKntbNF1p0dtFqilMS2uufzJF2H0t.p3DTK7BuuuWJAKtBWVN.e', 1),
-('murid@gmail.com', 'murid1', '$2y$10$o/nMI5swxutBAAf8Y0TYdOiIleIKNVDhS1ht8HPlUzivTuAptin.W', 1),
+('murid@gmail.com', 'murid1', '$2y$10$hE43sIHui.MqzVB3dnT2MOU22J6dC5v0hcVNJWh8NL5gTALyUm4UK', 1),
 ('nurula@gmail.com', 'nurula', '$2y$10$4CpbdKOtvGuK1ZcOGgzWse.rEQ7Wm2gZijnGbeEXYbOrS9w2vJbry', 2),
 ('renataa@gmail.com', 'renataa', '$2y$10$4R/Nmh5mndJH4O8bU0cqxOVFIIY4sqvC2o9tBiqQrSmM3UIIFLmYW', 2),
 ('sitih@gmail.com', 'sitih', '$2y$10$IjKI.jOcQ/ssLyW6MJl6pugB.Y/XvxqBZuj.FbkqerUuQB7elOIga', 2),
-('test@gmail.com', 'frhn232', '$2y$10$tgr3K0EpQXdVF4448EEXeetucHTZSFVCqkCLkwX7yQbksohSmjyN.', 2),
 ('zahraf@gmail.com', 'zahraf', '$2y$10$NiTyAWvKm3Zssk5ZDCpY7u..jhyfMs6PJPX9nzE0fAP0UA5/hNgCC', 2);
 
 -- --------------------------------------------------------
@@ -249,8 +247,7 @@ INSERT INTO `siswa` (`id`, `email`, `username`, `nama`, `jenis_kelamin`, `tangga
 (2, 'bagasadifirdaus@gmail.com', 'test', 'a', 'L', '2020-12-03', '123', 'edit7.jpg'),
 (3, 'abdurrahman1270@gmail.com', 'rahman', NULL, NULL, NULL, NULL, NULL),
 (4, 'abcd@gmail.com', 'frhn231', '', '', '0000-00-00', '', 'selfpotrait.png'),
-(11, 'murid@gmail.com', 'murid1', '', '', '0000-00-00', '', 'edit10.jpg'),
-(12, 'murid2@gmail.com', 'murid2', '', '', '0000-00-00', '', '2467499.jpg');
+(13, 'murid@gmail.com', 'murid1', 'Farhan', 'L', '2020-12-03', '968574674', '2467498.jpg');
 
 --
 -- Indexes for dumped tables
@@ -309,7 +306,7 @@ ALTER TABLE `pengajar`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
