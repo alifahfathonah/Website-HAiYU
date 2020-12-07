@@ -16,8 +16,7 @@
 1. Guru, sebagai yang memfasilitasi tanya jawab dari pengguna web.  
 2. Siswa SMA.   
 3. Siswa SMK yang ingin melanjutkan ke jenjang perguruan tinggi.    
-<br>
-##Mockup kasar sementara :  
+## Mockup kasar sementara :  
 1. Homepage  
 ![Mockup Homepage https://i.ibb.co/02CBYxH/Homepage-mockup.png](https://i.ibb.co/02CBYxH/Homepage-mockup.png)  
 2. Menu Science  
@@ -33,7 +32,7 @@
 7. Login Page  
 ![Mockup Login Page https://i.ibb.co/n1FK3bf/Login-mockup.png](https://i.ibb.co/n1FK3bf/Login-mockup.png)  
 <br>
-##Skema Database :  
+## Skema Database :  
 1. ERD  
 ![Skema ERD https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png](https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png)  
 2. Tabel  
