@@ -165,7 +165,8 @@ class User extends Controller
             'foto' => 'uploaded[foto]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,4096]'
         ]);
         if (!$validated) {
-            return redirect()->to('/about');
+            session()->setFlashData('info', 'File does not comply with the conditions!');
+            return redirect()->to('/');
         } else {
             $avatar = $this->request->getFIle('foto');
             // dd($avatar);

@@ -279,6 +279,16 @@ form .form-control1 label .profilePhoto {
   object-fit: cover;
   border-radius: 100px;
 }
+.profileGuru {
+  position: absolute;
+  left: 25%;
+  top: 150px;
+  max-width: 300px;
+  max-height: 400px;
+  display: block;
+  cursor: pointer;
+  object-fit: cover;
+}
 h3 {
   position: absolute;
   top: 450px;

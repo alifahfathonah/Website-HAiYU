@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <?php include 'sidebar.php'?>
+    <?php include 'sidebar.php' ?>
     <div class="main">
         <div class="menu">
             <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
@@ -32,7 +32,7 @@
                 <div class="col">
                     <div class="form-control1">
                         <label for="imgProfile">
-                            <img src="/images/avatar.png" alt="">
+                            <img src="/images/avatar.png" alt="" class="profileGuru">
                         </label>
                         <input type="file" id="imgProfile">
                     </div>
@@ -50,7 +50,7 @@
                         <input type="text" name="username" id="username" value="<?php echo $teacher['username']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="nama" id="nama" value="<?php echo $teacher['nama']; ?>"><br>
+                        <input type="text" name="nama" id="nama" value="<?php echo $teacher['nama_pengajar']; ?>"><br>
                     </div>
                     <div class="form-control">
                         <select name="jenis_kelamin">
