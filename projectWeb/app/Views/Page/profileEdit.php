@@ -28,7 +28,7 @@
     </div>
 
     <div class="content">
-        <a class="delete" href="/user/deleteAccount/<?= session('username') ?>"><i class="fa fa-trash"></i> Delete Account</a>
+        <a class="delete" href="/user/deleteAccount/<?= session('username') ?>" onclick="return confirm('Are You Sure Want to Delete Your Account?')"><i class="fa fa-trash"></i> Delete Account</a>
         <h2>Edit Profile</h2>
         <form action="/user/updateUser/" method="POST" enctype="multipart/form-data">
             <div class="row1">
