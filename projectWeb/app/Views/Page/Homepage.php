@@ -26,10 +26,12 @@
         </div>
         <div class="btn-container">
             <button class="find-it-btn"><a href="signin">Find it</a></button>
-            </span>
         </div>
+        <br>
+        <br>
+        <br>
+        <h6>© HAiYU Developer Team. All Rights Reserved</h6>
     </div>
-    <h6>© HAiYU Developer Team. All Rights Reserved</h6>
 </body>
 
 </html>
