@@ -18,11 +18,11 @@
             <img src="/images/homepage.png" alt="">
             <a href="/">Home</a>
         </div>
+        <?php if (session('log')) : ?>
         <div class="subject">
             <img src="/images/language.png" alt="">
             <a href="/user/subject">Subject</a>
         </div>
-        <?php if (session('log')) : ?>
         <div class="profile">
             <img src="/images/user.png" alt="">
             <a href="/user/edit/<?= session('username') ?>">Profile</a>
