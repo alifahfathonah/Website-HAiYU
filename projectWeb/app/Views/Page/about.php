@@ -73,9 +73,6 @@
             </ol>
         </div>
 
-        <div>
-            <img id=background src="../images/background.png" alt="background">
-        </div>
 
     </div>
 
