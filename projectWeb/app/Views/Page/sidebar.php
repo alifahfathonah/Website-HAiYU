@@ -27,17 +27,25 @@
             <img src="/images/language.png" alt="">
             <a href="/user/subject">Subject</a>
         </div>
+        <?php if (session('login')) : ?>
         <div class="profile">
             <img src="/images/user.png" alt="">
             <a href="/user/edit/<?= session('username') ?>">Profile</a>
         </div>
+        <?php endif; ?>
         <div class="aboutUser">
             <img src="/images/about.png" alt="" style="width: 32px;height: 32px">
             <a href="about">About</a>
         </div>
     </div>
+
     <div class="bottom-nav">
         <!-- <a href="#">Settings</a> -->
+        <?php if (session('login')) : ?>
         <a href="/user/logout">Log out</a>
+        <?php else : ?>
+        <a href="/user/signin">Sign in</a>
+        <a href="/user/signup">Sign up</a>
+        <?php endif; ?>
     </div>
 </div>
