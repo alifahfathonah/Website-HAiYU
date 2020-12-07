@@ -196,7 +196,7 @@ class User extends Controller
         $data = array(
             'email' => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
-            'nama' => $this->request->getPost('nama'),
+            'nama_pengajar' => $this->request->getPost('nama'),
             'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
             'telepon' => $this->request->getPost('telepon')

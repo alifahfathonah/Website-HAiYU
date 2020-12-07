@@ -29,6 +29,7 @@
             <img src="../images/bg4.svg" alt="background" class="bg2" style="top: 20%; left: 49%">
         </div>
         <div class="landing-text">
+
             <h4><?= session('info') ?></h4>
             <h2>Hello <?= session('username') ?>!</h2>
             <h1>Learn your Hardskill <br> for The Great Future</h1>
