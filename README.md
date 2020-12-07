@@ -16,7 +16,7 @@
 1. Guru, sebagai yang memfasilitasi tanya jawab dari pengguna web.  
 2. Siswa SMA.   
 3. Siswa SMK yang ingin melanjutkan ke jenjang perguruan tinggi.    
-## Mockup kasar sementara :  ![https://www.figma.com/file/jN06PMwr9uSa1ukAGNGmpb/HAiYU] (https://www.figma.com/file/jN06PMwr9uSa1ukAGNGmpb/HAiYU)
+## Mockup kasar sementara :  https://www.figma.com/file/jN06PMwr9uSa1ukAGNGmpb/HAiYU
 1. Homepage  
 ![Mockup Homepage https://i.ibb.co/02CBYxH/Homepage-mockup.png](https://i.ibb.co/02CBYxH/Homepage-mockup.png)  
 2. Menu Science  
@@ -33,6 +33,6 @@
 ![Mockup Login Page https://i.ibb.co/n1FK3bf/Login-mockup.png](https://i.ibb.co/n1FK3bf/Login-mockup.png)  
 ## Skema Database :  
 1. ERD  
-![Skema ERD https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/ERD%20dbhaiyu.png](https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/ERD%20dbhaiyu.png)  
+![Skema ERD Skema Database/ERD dbhaiyu.png](Skema Database/ERD dbhaiyu.png)  
 2. Tabel  
-![Tabel https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/Tabel%20dbhaiyu.png](https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/Tabel%20dbhaiyu.png)
+![Tabel Skema Database/Tabel dbhaiyu.png](Skema Database/Tabel dbhaiyu.png) 
