@@ -14,13 +14,6 @@
     
 </head>
 <body>
-    <?php include 'sidebar.php'?>
-    <div class="main">
-        <div class="menu">
-            <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
-            <span class="haiyu">HAiYU</span>
-        </div>
-    </div>
     <h1 id="title"> <?=$title?> - Mid Test</h1>
 
     <div id="quiz"></div>

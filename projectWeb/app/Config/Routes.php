@@ -34,98 +34,118 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index', ['filter' => 'authFilter']);
 $routes->get('/dashboard', 'Pages::dashboard');
 
-$routes->get('/user/askyuk', 'user::contact');
+$routes->get('/user/askyuk', 'user::contact', ['filter' => 'authFilter']);
 $routes->get('/signin', 'user::signin');
 $routes->get('/signup', 'user::signup');
 $routes->get('/user/login', 'user::login');
 $routes->get('/user/logout', 'user::logout');
-$routes->get('/user/edit/(:any)', 'user::edit/$1');
-$routes->get('/user/delete/(:any)', 'user::deleteAccount/$1');
+$routes->get('/user/edit/(:any)', 'user::edit/$1', ['filter' => 'authFilter']);
+$routes->get('/user/delete/(:any)', 'user::deleteAccount/$1', ['filter' => 'authFilter']);
 $routes->match(['get', 'post'], '/user/login', 'user::login');
 $routes->match(['get', 'post'], '/user/regis', 'user::regis');
-
 $routes->get('/about', 'Pages::about');
-$routes->get('/news', 'Pages::news');
-// $routes->get('/editChapter/(:num)', 'Pages::editChapter/$1');
-// $routes->post('/editChapter/(:num)', 'Pages::editChapter/$1');
+$routes->get('/news', 'Pages::news', ['filter' => 'authFilter']);
+$routes->get('/editChapter/(:num)/(:num)', 'Pages::editChapter/$1/$2', ['filter' => 'authFilter']);
 
-$routes->get('/editChapter/(:num)/(:num)', 'Pages::editChapter/$1/$2');
+$routes->get('/subject', 'Subject::index', ['filter' => 'authFilter']);
+$routes->get('/science', 'Science::index', ['filter' => 'authFilter']);
+$routes->get('/social', 'Social::index', ['filter' => 'authFilter']);
+$routes->get('/language', 'Language::index', ['filter' => 'authFilter']);
 
+$routes->get('/user/subject', 'Pages::subject', ['filter' => 'authFilter']);
+$routes->get('/user/science', 'Pages::science', ['filter' => 'authFilter']);
+$routes->get('/user/social', 'Pages::social', ['filter' => 'authFilter']);
+$routes->get('/user/language', 'Language::index', ['filter' => 'authFilter']);
 
-$routes->get('/user/subject', 'Pages::subject');
-$routes->get('/user/science', 'Pages::science');
-$routes->get('/user/social', 'Pages::social');
-$routes->get('/user/language', 'Language::index');
+$routes->get('/science/math', 'Science::math', ['filter' => 'authFilter']);
+$routes->get('/science/physics', 'Science::physics', ['filter' => 'authFilter']);
+$routes->get('/science/chemistry', 'Science::chemistry', ['filter' => 'authFilter']);
+$routes->get('/science/biology', 'Science::biology', ['filter' => 'authFilter']);
 
-$routes->get('/science/math', 'Science::math');
-$routes->get('/science/physics', 'Science::physics');
-$routes->get('/science/chemistry', 'Science::chemistry');
-$routes->get('/science/biology', 'Science::biology');
+$routes->get('/social/economics', 'Social::economics', ['filter' => 'authFilter']);
+$routes->get('/social/history', 'Social::history', ['filter' => 'authFilter']);
+$routes->get('/social/geography', 'Social::geography', ['filter' => 'authFilter']);
+$routes->get('/social/sociology', 'Social::sociology', ['filter' => 'authFilter']);
 
-$routes->get('/social/economics', 'Social::economics');
-$routes->get('/social/history', 'Social::history');
-$routes->get('/social/geography', 'Social::geography');
-$routes->get('/social/sociology', 'Social::sociology');
+$routes->get('/math', 'Math::index', ['filter' => 'authFilter']);
+$routes->get('/math/chapter1', 'Math::chapter1', ['filter' => 'authFilter']);
+$routes->get('/math/chapter2', 'Math::chapter2', ['filter' => 'authFilter']);
+$routes->get('/math/chapter3', 'Math::chapter3', ['filter' => 'authFilter']);
+$routes->get('/math/chapter4', 'Math::chapter4', ['filter' => 'authFilter']);
+$routes->get('/math/chapter5', 'Math::chapter5', ['filter' => 'authFilter']);
+$routes->get('/math/midTest', 'Math::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/math/chapter1', 'Math::chapter1');
-$routes->get('/math/chapter2', 'Math::chapter2');
-$routes->get('/math/chapter3', 'Math::chapter3');
-$routes->get('/math/chapter4', 'Math::chapter4');
-$routes->get('/math/chapter5', 'Math::chapter5');
+$routes->get('/physics', 'Physics::index', ['filter' => 'authFilter']);
+$routes->get('/physics/chapter1', 'Physics::chapter1', ['filter' => 'authFilter']);
+$routes->get('/physics/chapter2', 'Physics::chapter2', ['filter' => 'authFilter']);
+$routes->get('/physics/chapter3', 'Physics::chapter3', ['filter' => 'authFilter']);
+$routes->get('/physics/chapter4', 'Physics::chapter4', ['filter' => 'authFilter']);
+$routes->get('/physics/chapter5', 'Physics::chapter5', ['filter' => 'authFilter']);
+$routes->get('/physics/midTest', 'Physics::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/physics/chapter1', 'Physics::chapter1');
-$routes->get('/physics/chapter2', 'Physics::chapter2');
-$routes->get('/physics/chapter3', 'Physics::chapter3');
-$routes->get('/physics/chapter4', 'Physics::chapter4');
-$routes->get('/physics/chapter5', 'Physics::chapter5');
+$routes->get('/chemistry', 'Chemistry::index', ['filter' => 'authFilter']);
+$routes->get('/chemistry/chapter1', 'Chemistry::chapter1', ['filter' => 'authFilter']);
+$routes->get('/chemistry/chapter2', 'Chemistry::chapter2', ['filter' => 'authFilter']);
+$routes->get('/chemistry/chapter3', 'Chemistry::chapter3', ['filter' => 'authFilter']);
+$routes->get('/chemistry/chapter4', 'Chemistry::chapter4', ['filter' => 'authFilter']);
+$routes->get('/chemistry/chapter5', 'Chemistry::chapter5', ['filter' => 'authFilter']);
+$routes->get('/chemistry/midTest', 'Chemistry::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/chemistry/chapter1', 'Chemistry::chapter1');
-$routes->get('/chemistry/chapter2', 'Chemistry::chapter2');
-$routes->get('/chemistry/chapter3', 'Chemistry::chapter3');
-$routes->get('/chemistry/chapter4', 'Chemistry::chapter4');
-$routes->get('/chemistry/chapter5', 'Chemistry::chapter5');
+$routes->get('/biology', 'Biology::index', ['filter' => 'authFilter']);
+$routes->get('/biology/chapter1', 'Biology::chapter1', ['filter' => 'authFilter']);
+$routes->get('/biology/chapter2', 'Biology::chapter2', ['filter' => 'authFilter']);
+$routes->get('/biology/chapter3', 'Biology::chapter3', ['filter' => 'authFilter']);
+$routes->get('/biology/chapter4', 'Biology::chapter4', ['filter' => 'authFilter']);
+$routes->get('/biology/chapter5', 'Biology::chapter5', ['filter' => 'authFilter']);
+$routes->get('/biology/midTest', 'Biology::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/biology/chapter1', 'Biology::chapter1');
-$routes->get('/biology/chapter2', 'Biology::chapter2');
-$routes->get('/biology/chapter3', 'Biology::chapter3');
-$routes->get('/biology/chapter4', 'Biology::chapter4');
-$routes->get('/biology/chapter5', 'Biology::chapter5');
+$routes->get('/economics', 'Economics::index', ['filter' => 'authFilter']);
+$routes->get('/economics/chapter1', 'Economics::chapter1', ['filter' => 'authFilter']);
+$routes->get('/economics/chapter2', 'Economics::chapter2', ['filter' => 'authFilter']);
+$routes->get('/economics/chapter3', 'Economics::chapter3', ['filter' => 'authFilter']);
+$routes->get('/economics/chapter4', 'Economics::chapter4', ['filter' => 'authFilter']);
+$routes->get('/economics/chapter5', 'Economics::chapter5', ['filter' => 'authFilter']);
+$routes->get('/economics/midTest', 'Economics::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/economics/chapter1', 'Economics::chapter1');
-$routes->get('/economics/chapter2', 'Economics::chapter2');
-$routes->get('/economics/chapter3', 'Economics::chapter3');
-$routes->get('/economics/chapter4', 'Economics::chapter4');
-$routes->get('/economics/chapter5', 'Economics::chapter5');
+$routes->get('/history', 'History::index', ['filter' => 'authFilter']);
+$routes->get('/history/chapter1', 'History::chapter1', ['filter' => 'authFilter']);
+$routes->get('/history/chapter2', 'History::chapter2', ['filter' => 'authFilter']);
+$routes->get('/history/chapter3', 'History::chapter3', ['filter' => 'authFilter']);
+$routes->get('/history/chapter4', 'History::chapter4', ['filter' => 'authFilter']);
+$routes->get('/history/chapter5', 'History::chapter5', ['filter' => 'authFilter']);
+$routes->get('/history/midTest', 'History::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/history/chapter1', 'History::chapter1');
-$routes->get('/history/chapter2', 'History::chapter2');
-$routes->get('/history/chapter3', 'History::chapter3');
-$routes->get('/history/chapter4', 'History::chapter4');
-$routes->get('/history/chapter5', 'History::chapter5');
+$routes->get('/geography', 'Geography::index', ['filter' => 'authFilter']);
+$routes->get('/geography/chapter1', 'Geography::chapter1', ['filter' => 'authFilter']);
+$routes->get('/geography/chapter2', 'Geography::chapter2', ['filter' => 'authFilter']);
+$routes->get('/geography/chapter3', 'Geography::chapter3', ['filter' => 'authFilter']);
+$routes->get('/geography/chapter4', 'Geography::chapter4', ['filter' => 'authFilter']);
+$routes->get('/geography/chapter5', 'Geography::chapter5', ['filter' => 'authFilter']);
+$routes->get('/geography/midTest', 'Geography::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/geography/chapter1', 'Geography::chapter1');
-$routes->get('/geography/chapter2', 'Geography::chapter2');
-$routes->get('/geography/chapter3', 'Geography::chapter3');
-$routes->get('/geography/chapter4', 'Geography::chapter4');
-$routes->get('/geography/chapter5', 'Geography::chapter5');
+$routes->get('/sociology', 'Sociology::index', ['filter' => 'authFilter']);
+$routes->get('/sociology/chapter1', 'Sociology::chapter1', ['filter' => 'authFilter']);
+$routes->get('/sociology/chapter2', 'Sociology::chapter2', ['filter' => 'authFilter']);
+$routes->get('/sociology/chapter3', 'Sociology::chapter3', ['filter' => 'authFilter']);
+$routes->get('/sociology/chapter4', 'Sociology::chapter4', ['filter' => 'authFilter']);
+$routes->get('/sociology/chapter5', 'Sociology::chapter5', ['filter' => 'authFilter']);
+$routes->get('/sociology/midTest', 'Sociology::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/sociology/chapter1', 'Sociology::chapter1');
-$routes->get('/sociology/chapter2', 'Sociology::chapter2');
-$routes->get('/sociology/chapter3', 'Sociology::chapter3');
-$routes->get('/sociology/chapter4', 'Sociology::chapter4');
-$routes->get('/sociology/chapter5', 'Sociology::chapter5');
+$routes->get('/english', 'English::index', ['filter' => 'authFilter']);
+$routes->get('/english/chapter1', 'English::chapter1', ['filter' => 'authFilter']);
+$routes->get('/english/chapter2', 'English::chapter2', ['filter' => 'authFilter']);
+$routes->get('/english/chapter3', 'English::chapter3', ['filter' => 'authFilter']);
+$routes->get('/english/chapter4', 'English::chapter4', ['filter' => 'authFilter']);
+$routes->get('/english/chapter5', 'English::chapter5', ['filter' => 'authFilter']);
+$routes->get('/english/midTest', 'English::midTest', ['filter' => 'authFilter']);
 
-$routes->get('/english/chapter1', 'English::chapter1');
-$routes->get('/english/chapter2', 'English::chapter2');
-$routes->get('/english/chapter3', 'English::chapter3');
-$routes->get('/english/chapter4', 'English::chapter4');
-$routes->get('/english/chapter5', 'English::chapter5');
-
-$routes->get('/indonesia/chapter1', 'Indonesian::chapter1');
-$routes->get('/indonesia/chapter2', 'Indonesian::chapter2');
-$routes->get('/indonesia/chapter3', 'Indonesian::chapter3');
-$routes->get('/indonesia/chapter4', 'Indonesian::chapter4');
-$routes->get('/indonesia/chapter5', 'Indonesian::chapter5');
+$routes->get('/indonesia', 'Indonesian::index', ['filter' => 'authFilter']);
+$routes->get('/indonesia/chapter1', 'Indonesian::chapter1', ['filter' => 'authFilter']);
+$routes->get('/indonesia/chapter2', 'Indonesian::chapter2', ['filter' => 'authFilter']);
+$routes->get('/indonesia/chapter3', 'Indonesian::chapter3', ['filter' => 'authFilter']);
+$routes->get('/indonesia/chapter4', 'Indonesian::chapter4', ['filter' => 'authFilter']);
+$routes->get('/indonesia/chapter5', 'Indonesian::chapter5', ['filter' => 'authFilter']);
+$routes->get('/indonesia/midTest', 'Indonesian::midTest', ['filter' => 'authFilter']);
 /**
  * --------------------------------------------------------------------
  * Additional Routing
