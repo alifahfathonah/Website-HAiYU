@@ -28,7 +28,7 @@ class Social extends Subject
             'chapter3' => $model->get_Materi($id, 3)->judul,
             'chapter4' => $model->get_Materi($id, 4)->judul,
             'chapter5' => $model->get_Materi($id, 5)->judul,
-            'nama_pengajar' => $pengajar->nama_pengajar,
+            'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
@@ -56,7 +56,7 @@ class Social extends Subject
             'chapter3' => $model->get_Materi($id, 3)->judul,
             'chapter4' => $model->get_Materi($id, 4)->judul,
             'chapter5' => $model->get_Materi($id, 5)->judul,
-            'nama_pengajar' => $pengajar->nama_pengajar,
+            'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
@@ -84,7 +84,7 @@ class Social extends Subject
             'chapter3' => $model->get_Materi($id, 3)->judul,
             'chapter4' => $model->get_Materi($id, 4)->judul,
             'chapter5' => $model->get_Materi($id, 5)->judul,
-            'nama_pengajar' => $pengajar->nama_pengajar,
+            'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
@@ -112,7 +112,7 @@ class Social extends Subject
             'chapter3' => $model->get_Materi($id, 3)->judul,
             'chapter4' => $model->get_Materi($id, 4)->judul,
             'chapter5' => $model->get_Materi($id, 5)->judul,
-            'nama_pengajar' => $pengajar->nama_pengajar,
+            'nama_pengajar' => $pengajar->nama,
             'telepon_pengajar' => $pengajar->telepon,
             'graded' => $this->isGraded($id),
         ];
