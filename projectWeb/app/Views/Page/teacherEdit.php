@@ -27,30 +27,36 @@
 
     <div class="content">
         <h2>Edit Profile</h2>
-        <form action="/user/updateTeacher/" method="POST" enctype="mulipart/form-data">
+        <form action="/user/updateTeacher/" method="POST" enctype="multipart/form-data">
             <div class="row1">
                 <div class="col">
                     <div class="form-control1">
                         <label for="imgProfile">
-                            <img src="/images/avatar.png" alt="" class="profileGuru">
+                            <?php if ($teacher['foto'] != null) { ?>
+                                <img src="/uploads/<?php echo $teacher['foto']; ?>" alt="" class="profilePhoto">
+                                <h3>Tap photo for edit</h3>
+                            <?php } else { ?>
+                                <img src="/uploads/avatar.png" alt="" class="default">
+                                <h3>Tap photo for change</h3>
+                            <?php } ?>
                         </label>
-                        <input type="file" id="imgProfile">
+                        <input type="file" id="imgProfile" name="foto">
                     </div>
                 </div>
             </div>
             <div class="row2">
                 <div class="col">
                     <div class="form-control">
-                        <input type="hidden" name="id" id="id" value="<?php echo $teacher['id']; ?>" readonly><br>
+                        <input type="hidden" name="id" id="id" value="<?php echo $teacher['id']; ?>" placeholder="id" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="email" id="email" value="<?php echo $teacher['email']; ?>" readonly><br>
+                        <input type="text" name="email" id="email" value="<?php echo $teacher['email']; ?>" placeholder="email" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="username" id="username" value="<?php echo $teacher['username']; ?>" readonly><br>
+                        <input type="text" name="username" id="username" value="<?php echo $teacher['username']; ?>" placeholder="username" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="nama" id="nama" value="<?php echo $teacher['nama_pengajar']; ?>"><br>
+                        <input type="text" name="nama" id="nama" value="<?php echo $teacher['nama_pengajar']; ?>" placeholder="Enter your name"><br>
                     </div>
                     <div class="form-control">
                         <select name="jenis_kelamin">
@@ -60,10 +66,10 @@
                         </select><br>
                     </div>
                     <div class="form-control">
-                        <input type="date" name="tanggal_lahir" id="birthdate" value="<?php echo $teacher['tanggal_lahir']; ?>">
+                        <input type="date" name="tanggal_lahir" id="birthdate" value="<?php echo $teacher['tanggal_lahir']; ?>" placeholder="Choose your birthdate">
                     </div>
                     <div class="form-control">
-                        <input type="number" name="telepon" id="telepon" value="<?php echo $teacher['telepon']; ?>"><br>
+                        <input type="number" name="telepon" id="telepon" value="<?php echo $teacher['telepon']; ?>" placeholder="Enter your phone number"><br>
                     </div>
                 </div>
             </div>

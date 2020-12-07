@@ -193,19 +193,32 @@ class User extends Controller
     {
         $model2 = new M_teacherProfile();
         $id = $this->request->getPost('id');
-        $data = array(
-            'email' => $this->request->getPost('email'),
-            'username' => $this->request->getPost('username'),
-            'nama_pengajar' => $this->request->getPost('nama'),
-            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
-            'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
-            'telepon' => $this->request->getPost('telepon')
-        );
-        $ubah = $model2->updateTeacher($data, $id);
-        if ($ubah) {
-            // Deklarasikan session flashdata dengan tipe info
-            session()->setFlashdata('info', 'Updated profile successfully');
+        $validated = $this->validate([
+            'foto' => 'uploaded[foto]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,4096]'
+        ]);
+        if (!$validated) {
+            session()->setFlashData('info', 'File does not comply with the conditions!');
             return redirect()->to('/');
+        } else {
+            $avatar = $this->request->getFIle('foto');
+            // dd($avatar);
+            $avatar->move(ROOTPATH . 'public/uploads');
+            $data = array(
+                'email' => $this->request->getPost('email'),
+                'username' => $this->request->getPost('username'),
+                'nama_pengajar' => $this->request->getPost('nama'),
+                'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+                'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+                'telepon' => $this->request->getPost('telepon'),
+                'foto' => $avatar->getName()
+            );
+            session()->set($data);
+            $ubah = $model2->updateTeacher($data, $id);
+            if ($ubah) {
+                // Deklarasikan session flashdata dengan tipe info
+                session()->setFlashdata('info', 'Updated profile successfully');
+                return redirect()->to('/');
+            }
         }
     }
 

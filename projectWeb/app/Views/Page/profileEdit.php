@@ -59,7 +59,7 @@
                         <input type="text" name="username" id="username" value="<?php echo $user['username']; ?>" readonly><br>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="nama" id="nama" value="<?php echo $user['nama']; ?>"><br>
+                        <input type="text" name="nama" id="nama" value="<?php echo $user['nama']; ?>" placeholder="Enter your name"><br>
                     </div>
                     <div class="form-control">
                         <select name="jenis_kelamin">
@@ -69,10 +69,10 @@
                         </select><br>
                     </div>
                     <div class="form-control">
-                        <input type="date" name="tanggal_lahir" id="birthdate" value="<?php echo $user['tanggal_lahir']; ?>">
+                        <input type="date" name="tanggal_lahir" id="birthdate" value="<?php echo $user['tanggal_lahir']; ?>" placeholder="Choose your birthdate">
                     </div>
                     <div class="form-control">
-                        <input type="number" name="telepon" id="telepon" value="<?php echo $user['telepon']; ?>"><br>
+                        <input type="number" name="telepon" id="telepon" value="<?php echo $user['telepon']; ?>" placeholder="Enter your phone number"><br>
                     </div>
                 </div>
             </div>
