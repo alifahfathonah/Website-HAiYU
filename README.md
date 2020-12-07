@@ -12,7 +12,7 @@
 1. Memudahkan para pelajar SMA dalam meningkatkan hardskill mereka sesuai bidang minatnya (IPA/IPS).   
 2. Membantu para pelajar SMA/SMK yang ingin melanjutkan pendidikannya ke tingkat perguruan tinggi dengan cara menyediakan informasi seputar perguruan tinggi dan menyediakan bank-bank soal seperti tryout dan sebagainya.  
 3. Menjadikan website ini sebagai salah satu wadah untuk mendapatkan pendidikan secara gratis.  
-##Target Pengguna :  
+## Target Pengguna :  
 1. Guru, sebagai yang memfasilitasi tanya jawab dari pengguna web.  
 2. Siswa SMA.   
 3. Siswa SMK yang ingin melanjutkan ke jenjang perguruan tinggi.    
@@ -31,7 +31,6 @@
 ![Mockup Navbar https://i.ibb.co/w00V6Lq/Navbar-mockup.png](https://i.ibb.co/w00V6Lq/Navbar-mockup.png)  
 7. Login Page  
 ![Mockup Login Page https://i.ibb.co/n1FK3bf/Login-mockup.png](https://i.ibb.co/n1FK3bf/Login-mockup.png)  
-<br>
 ## Skema Database :  
 1. ERD  
 ![Skema ERD https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png](https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png)  
