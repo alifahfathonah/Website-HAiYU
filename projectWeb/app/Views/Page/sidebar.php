@@ -30,7 +30,7 @@
         <?php endif; ?>
         <div class="aboutUser">
             <img src="/images/about.png" alt="" style="width: 32px;height: 32px">
-            <a href="about">About</a>
+            <a href="/about">About</a>
         </div>
     </div>
 
