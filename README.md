@@ -1,40 +1,38 @@
-Judul Proyek : HAiYU (Hardskill for You).  
-Anggota Kelompok :  
-1.Farhan Gunadi (140810190009).  
-2.Aghniya Abdurrahman Mannan (140810190025).  
-3.Bagas Adi Firdaus (140810190037).  
-Fungsi :  
-1.Menyediakan materi-materi pelajaran SMA yang akan diperlukan di tes masuk perguruan tinggi.  
-2.Menyediakan bank-bank soal untuk tes masuk perguruan tinggi.  
-3.Sebagai wadah untuk bertanya jawab (konsul) kepada guru mengenai mata pelajaran terkait.  
-4.Menyediakan informasi seputar perguruan tinggi dan jurusannya.  
-Tujuan :  
-1.Memudahkan para pelajar SMA dalam meningkatkan hardskill mereka sesuai bidang minatnya (IPA/IPS).   
-2.Membantu para pelajar SMA/SMK yang ingin melanjutkan pendidikannya ke tingkat perguruan tinggi dengan cara menyediakan informasi seputar perguruan tinggi dan menyediakan bank-bank soal seperti tryout dan sebagainya.  
-3.Menjadikan website ini sebagai salah satu wadah untuk mendapatkan pendidikan secara gratis.  
-Target Pengguna :  
-1.Guru, sebagai yang memfasilitasi tanya jawab dari pengguna web.  
-2.Siswa SMA.   
-3.Siswa SMK yang ingin melanjutkan ke jenjang perguruan tinggi.    
-<br>
-Mockup kasar sementara :  
-1.Homepage  
+# Judul Proyek : HAiYU (Hardskill for You).  
+## Anggota Kelompok :  
+1. Farhan Gunadi (140810190009).  
+2. Aghniya Abdurrahman Mannan (140810190025).  
+3. Bagas Adi Firdaus (140810190037).  
+## Fungsi :  
+1. Menyediakan materi-materi pelajaran SMA yang akan diperlukan di tes masuk perguruan tinggi.  
+2. Menyediakan bank-bank soal untuk tes masuk perguruan tinggi.  
+3. Sebagai wadah untuk bertanya jawab (konsul) kepada guru mengenai mata pelajaran terkait.  
+4. Menyediakan informasi seputar perguruan tinggi dan jurusannya.  
+## Tujuan :  
+1. Memudahkan para pelajar SMA dalam meningkatkan hardskill mereka sesuai bidang minatnya (IPA/IPS).   
+2. Membantu para pelajar SMA/SMK yang ingin melanjutkan pendidikannya ke tingkat perguruan tinggi dengan cara menyediakan informasi seputar perguruan tinggi dan menyediakan bank-bank soal seperti tryout dan sebagainya.  
+3. Menjadikan website ini sebagai salah satu wadah untuk mendapatkan pendidikan secara gratis.  
+## Target Pengguna :  
+1. Guru, sebagai yang memfasilitasi tanya jawab dari pengguna web.  
+2. Siswa SMA.   
+3. Siswa SMK yang ingin melanjutkan ke jenjang perguruan tinggi.    
+## Mockup kasar sementara :  ![https://www.figma.com/file/jN06PMwr9uSa1ukAGNGmpb/HAiYU] (https://www.figma.com/file/jN06PMwr9uSa1ukAGNGmpb/HAiYU)
+1. Homepage  
 ![Mockup Homepage https://i.ibb.co/02CBYxH/Homepage-mockup.png](https://i.ibb.co/02CBYxH/Homepage-mockup.png)  
-2.Menu Science  
+2. Menu Science  
 ![Mockup Menu Science https://i.ibb.co/mCg7vTj/Menu-Science-mockup.png](https://i.ibb.co/mCg7vTj/Menu-Science-mockup.png)  
-3.Menu Social  
+3. Menu Social  
 ![Mockup Menu Social https://i.ibb.co/D4NQ6Zb/Menu-Social-mockup.png](https://i.ibb.co/D4NQ6Zb/Menu-Social-mockup.png)  
-4.Konten Mata Pelajaran  
+4. Konten Mata Pelajaran  
 ![Mockup Konten Mapel https://i.ibb.co/YjKp10j/Content-Mapel-mockup.png](https://i.ibb.co/YjKp10j/Content-Mapel-mockup.png)  
-5.Konten Materi  
+5. Konten Materi  
 ![Mockup Konten Materi https://i.ibb.co/7J9LQfz/Content-Materi-mockup.png](https://i.ibb.co/7J9LQfz/Content-Materi-mockup.png)  
-6.Navbar  
+6. Navbar  
 ![Mockup Navbar https://i.ibb.co/w00V6Lq/Navbar-mockup.png](https://i.ibb.co/w00V6Lq/Navbar-mockup.png)  
-7.Login Page  
+7. Login Page  
 ![Mockup Login Page https://i.ibb.co/n1FK3bf/Login-mockup.png](https://i.ibb.co/n1FK3bf/Login-mockup.png)  
-<br>
-Skema Database :  
-1.ERD  
-![Skema ERD https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png](https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png)  
-2.Tabel  
-![Tabel https://i.ibb.co/F64qW84/Tabel-Database-HAi-YU.png](https://i.ibb.co/F64qW84/Tabel-Database-HAi-YU.png)
+## Skema Database :  
+1. ERD  
+![Skema ERD https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/ERD%20dbhaiyu.png](https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/ERD%20dbhaiyu.png)  
+2. Tabel  
+![Tabel https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/Tabel%20dbhaiyu.png](https://gitlab.com/praktikum-pemweb-2020/kelas-a/kelompok-9/-/blob/master/Skema%20Database/Tabel%20dbhaiyu.png)
