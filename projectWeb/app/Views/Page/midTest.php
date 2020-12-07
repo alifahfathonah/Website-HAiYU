@@ -18,7 +18,7 @@
 
     <div id="quiz"></div>
 
-    <form action="/User/midTest" method="POST">
+    <form action="/user/midTest" method="POST">
     <button id="submit">Submit</button>
     <input type="hidden" value="<?=$id?>" name="id_mapel">
     <input type="hidden" value="<?=$mapel?>" name="nama_mapel">

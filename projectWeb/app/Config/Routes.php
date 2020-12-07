@@ -43,6 +43,7 @@ $routes->get('/user/edit/(:any)', 'user::edit/$1', ['filter' => 'authFilter']);
 $routes->get('/user/delete/(:any)', 'user::deleteAccount/$1', ['filter' => 'authFilter']);
 $routes->match(['get', 'post'], '/user/login', 'user::login');
 $routes->match(['get', 'post'], '/user/regis', 'user::regis');
+$routes->match(['get', 'post'], '/user/midTest', 'user::midTest');
 $routes->get('/about', 'Pages::about');
 $routes->get('/news', 'Pages::news', ['filter' => 'authFilter']);
 $routes->get('/editChapter/(:num)/(:num)', 'Pages::editChapter/$1/$2', ['filter' => 'authFilter']);
