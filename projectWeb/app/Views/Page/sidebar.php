@@ -27,7 +27,7 @@
             <img src="/images/language.png" alt="">
             <a href="/user/subject">Subject</a>
         </div>
-        <?php if (session('login')) : ?>
+        <?php if (session('log')) : ?>
         <div class="profile">
             <img src="/images/user.png" alt="">
             <a href="/user/edit/<?= session('username') ?>">Profile</a>
@@ -41,7 +41,7 @@
 
     <div class="bottom-nav">
         <!-- <a href="#">Settings</a> -->
-        <?php if (session('login')) : ?>
+        <?php if (session('log')) : ?>
         <a href="/user/logout">Log out</a>
         <?php else : ?>
         <a href="/user/signin">Sign in</a>
