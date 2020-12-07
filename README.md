@@ -1,23 +1,23 @@
-Judul Proyek : HAiYU (Hardskill for You).  
-Anggota Kelompok :  
+#Judul Proyek : HAiYU (Hardskill for You).  
+##Anggota Kelompok :  
 1.Farhan Gunadi (140810190009).  
 2.Aghniya Abdurrahman Mannan (140810190025).  
 3.Bagas Adi Firdaus (140810190037).  
-Fungsi :  
+##Fungsi :  
 1.Menyediakan materi-materi pelajaran SMA yang akan diperlukan di tes masuk perguruan tinggi.  
 2.Menyediakan bank-bank soal untuk tes masuk perguruan tinggi.  
 3.Sebagai wadah untuk bertanya jawab (konsul) kepada guru mengenai mata pelajaran terkait.  
 4.Menyediakan informasi seputar perguruan tinggi dan jurusannya.  
-Tujuan :  
+##Tujuan :  
 1.Memudahkan para pelajar SMA dalam meningkatkan hardskill mereka sesuai bidang minatnya (IPA/IPS).   
 2.Membantu para pelajar SMA/SMK yang ingin melanjutkan pendidikannya ke tingkat perguruan tinggi dengan cara menyediakan informasi seputar perguruan tinggi dan menyediakan bank-bank soal seperti tryout dan sebagainya.  
 3.Menjadikan website ini sebagai salah satu wadah untuk mendapatkan pendidikan secara gratis.  
-Target Pengguna :  
+##Target Pengguna :  
 1.Guru, sebagai yang memfasilitasi tanya jawab dari pengguna web.  
 2.Siswa SMA.   
 3.Siswa SMK yang ingin melanjutkan ke jenjang perguruan tinggi.    
 <br>
-Mockup kasar sementara :  
+##Mockup kasar sementara :  
 1.Homepage  
 ![Mockup Homepage https://i.ibb.co/02CBYxH/Homepage-mockup.png](https://i.ibb.co/02CBYxH/Homepage-mockup.png)  
 2.Menu Science  
@@ -33,7 +33,7 @@ Mockup kasar sementara :
 7.Login Page  
 ![Mockup Login Page https://i.ibb.co/n1FK3bf/Login-mockup.png](https://i.ibb.co/n1FK3bf/Login-mockup.png)  
 <br>
-Skema Database :  
+##Skema Database :  
 1.ERD  
 ![Skema ERD https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png](https://i.ibb.co/TH5Z6w4/ERD-Database-HAi-YU.png)  
 2.Tabel  
