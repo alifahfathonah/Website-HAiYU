@@ -38,11 +38,20 @@ $routes->get('/user/askyuk', 'user::contact', ['filter' => 'authFilter']);
 $routes->get('/signin', 'user::signin');
 $routes->get('/signup', 'user::signup');
 $routes->get('/user/login', 'user::login');
-$routes->get('/user/logout', 'user::logout');
+$routes->get('/user/logout', 'user::logout', ['filter' => 'authFilter']);
 $routes->get('/user/edit/(:any)', 'user::edit/$1', ['filter' => 'authFilter']);
 $routes->get('/user/delete/(:any)', 'user::deleteAccount/$1', ['filter' => 'authFilter']);
 $routes->match(['get', 'post'], '/user/login', 'user::login');
 $routes->match(['get', 'post'], '/user/regis', 'user::regis');
+
+$routes->get('/pages/subject', 'Pages::subject', ['filter' => 'authFilter']);
+$routes->get('/pages/science', 'Pages::science', ['filter' => 'authFilter']);
+$routes->get('/pages/social', 'Pages::social', ['filter' => 'authFilter']);
+$routes->get('/pages/language', 'Pages::language', ['filter' => 'authFilter']);
+$routes->get('/pages/edit', 'Pages::edit', ['filter' => 'authFilter']);
+$routes->get('/pages/news', 'Pages::news', ['filter' => 'authFilter']);
+$routes->get('/pages/editChapter', 'Pages::editChapter', ['filter' => 'authFilter']);
+
 $routes->get('/about', 'Pages::about');
 $routes->get('/news', 'Pages::news', ['filter' => 'authFilter']);
 $routes->get('/editChapter/(:num)/(:num)', 'Pages::editChapter/$1/$2', ['filter' => 'authFilter']);
@@ -56,6 +65,7 @@ $routes->get('/user/subject', 'Pages::subject', ['filter' => 'authFilter']);
 $routes->get('/user/science', 'Pages::science', ['filter' => 'authFilter']);
 $routes->get('/user/social', 'Pages::social', ['filter' => 'authFilter']);
 $routes->get('/user/language', 'Language::index', ['filter' => 'authFilter']);
+$routes->get('/user/midTest', 'User::midTest', ['filter' => 'authFilter']);
 
 $routes->get('/science/math', 'Science::math', ['filter' => 'authFilter']);
 $routes->get('/science/physics', 'Science::physics', ['filter' => 'authFilter']);

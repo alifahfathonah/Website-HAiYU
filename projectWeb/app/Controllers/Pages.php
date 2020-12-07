@@ -43,7 +43,7 @@ class Pages extends BaseController
     }
     public function edit()
     {
-        return view('profileEdit');
+        return view('Page/profileEdit');
     }
     public function news()
     {
