@@ -29,10 +29,30 @@
             <div class="isi">
                 <p><?= $isi; ?></p>
                 <br>
-                <div class="next">
-                    <img src="../images/next.png" alt="->" onclick="location.href = '<?= $next; ?>'">
-                    <a href="<?= $next; ?>">Next chapter</a><br>
-                </div>
+                <?php if ($num == 1) : ?>
+                    <span class="next">
+                        <img src="../images/next.png" alt="->" onclick="location.href = '<?= $next; ?>'">
+                        <a href="<?= $next; ?>">Next chapter</a><br>
+                    </span>
+                <?php elseif ($num != 1 && $num < 5) : ?>
+                    <span class="prev">
+                        <img src="../images/prev.png" alt="->" onclick="location.href = '<?= $next; ?>'">
+                        <a href="<?= $prev; ?>">Previous chapter</a><br>
+                    </span>
+                    <span class="next">
+                        <img src="../images/next.png" alt="->" onclick="location.href = '<?= $next; ?>'">
+                        <a href="<?= $next; ?>">Next chapter</a><br>
+                    </span>
+                <?php else : ?>
+                    <span class="prev">
+                        <img src="../images/prev.png" alt="->" onclick="location.href = '<?= $next; ?>'">
+                        <a href="<?= $prev; ?>">Previous chapter</a><br>
+                    </span>
+                    <span class="next">
+                        <img src="../images/next.png" alt="->" onclick="location.href = '<?= $next; ?>'">
+                        <a href="<?= $next; ?>">Mid Test</a><br>
+                    </span>
+                <?php endif; ?>
             </div>
         </div>
     </div>

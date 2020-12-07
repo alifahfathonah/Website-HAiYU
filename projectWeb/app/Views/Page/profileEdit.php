@@ -26,7 +26,7 @@
             <span class="haiyu">HAiYU</span>
         </div>
     </div>
-
+    <br>
     <div class="content">
         <a class="delete" href="/user/deleteAccount/<?= session('username') ?>" onclick="return confirm('Are You Sure Want to Delete Your Account?')"><i class="fa fa-trash"></i> Delete Account</a>
         <h2>Edit Profile</h2>

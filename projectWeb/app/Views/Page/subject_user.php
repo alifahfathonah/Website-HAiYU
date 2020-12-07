@@ -17,7 +17,7 @@
     <div class="main">
         <div class="menu">
             <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
-            <span class="haiyu">HAiYU</span>
+            <span class="haiyu" style="color:black;">HAiYU</span>
         </div>
     </div>
     <a id="backButton" href="/">&#8678</a>

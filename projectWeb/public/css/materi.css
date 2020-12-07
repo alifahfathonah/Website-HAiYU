@@ -231,6 +231,19 @@ body{
     background-color:rgba(196, 196, 196, 0.29);
 }
 
+.Content .isi .prev a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: orange;
+    float : left;
+}
+
+.Content .isi .prev img{
+    float : left;
+    height: 40px;
+}
+
 .Content .isi .next a{
     padding: 8px 8px 8px 32px;
     text-decoration: none;

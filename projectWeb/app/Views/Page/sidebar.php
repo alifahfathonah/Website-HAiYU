@@ -2,11 +2,6 @@
     <div class="top-nav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰</a>
         <span class="haiyu-sidebar">HAiYU</span>
-        <div class="search-container">
-            <form name="Searchbar">
-                <input type="text" placeholder="Search.." name="search" class="search">
-            </form>
-        </div>
     </div>
     <span>
         <?php if (session('foto') != null) { ?>
@@ -35,7 +30,7 @@
         <?php endif; ?>
         <div class="aboutUser">
             <img src="/images/about.png" alt="" style="width: 32px;height: 32px">
-            <a href="/about">About</a>
+            <a href="about">About</a>
         </div>
     </div>
 
@@ -44,8 +39,8 @@
         <?php if (session('log')) : ?>
         <a href="/user/logout">Log out</a>
         <?php else : ?>
-        <a href="/user/signin">Sign in</a>
-        <a href="/user/signup">Sign up</a>
+        <a href="/signin">Sign in</a>
+        <a href="/signup">Sign up</a>
         <?php endif; ?>
     </div>
 </div>

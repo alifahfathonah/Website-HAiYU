@@ -24,7 +24,7 @@
             <span class="haiyu">HAiYU</span>
         </div>
     </div>
-
+    <br>
     <div class="content">
         <h2>Edit Profile</h2>
         <form action="/user/updateTeacher/" method="POST" enctype="multipart/form-data">

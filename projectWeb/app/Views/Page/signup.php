@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="../css/signin.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <script src="/js/sidebar_script.js"></script>
     <script src="../js/signin.js" defer></script>
 </head>
 
 <body>
+    <?php include 'sidebar.php'?>
+    <div class="main">
+        <div class="menu">
+            <a class="openbtn" onclick="openNav()"><img src="/images/open-menu.png" alt="" style="width: 32px;height: auto"></a>
+            <span class="haiyu">HAiYU</span>
+        </div>
+    </div>
     <div class="grid-container">
 
         <div class="item1">
