@@ -260,13 +260,29 @@ form {
     ".row1 .row2"
     ".submit .submit";
 }
-form .form-control1 label img {
+form .form-control1 label .default {
   width: 250px;
   height: auto;
   display: block;
   cursor: pointer;
   margin-top: 60px;
-  margin-left: 50px;
+  margin-left: 16%;
+}
+form .form-control1 label .profilePhoto {
+  position: absolute;
+  left: 25%;
+  top: 150px;
+  max-width: 300px;
+  max-height: 400px;
+  display: block;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 100px;
+}
+h3 {
+  position: absolute;
+  top: 430px;
+  left: 30%;
 }
 form .form-control1 #imgProfile {
   visibility: hidden;
@@ -317,7 +333,7 @@ form .form-control input:focus {
   border: none;
   cursor: pointer;
   margin-top: 30px;
-  margin-left: 73%;
+  margin-left: 118%;
 }
 .submit:hover {
   background-color: #bf71ff;

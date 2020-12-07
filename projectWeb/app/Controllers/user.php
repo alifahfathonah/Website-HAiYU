@@ -105,6 +105,7 @@ class User extends Controller
                 'username' => $row->username,
                 'level' => $level,
                 'id' => $row2->id,
+                'foto' => $row2->foto
             );
             session()->set($data);
 
@@ -160,28 +161,29 @@ class User extends Controller
         $validated = $this->validate([
             'foto' => 'uploaded[foto]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,4096]'
         ]);
-        // if (!$validated) {
-        //     return redirect()->to('/about');
-        // } else {
-        // $avatar = $this->request->getFIle('foto');
-        // // dd($avatar);
-        // $avatar->move(ROOTPATH . 'public/uploads');
-        $data = array(
-            'email' => $this->request->getPost('email'),
-            'username' => $this->request->getPost('username'),
-            'nama' => $this->request->getPost('nama'),
-            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
-            'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
-            'telepon' => $this->request->getPost('telepon'),
-            // 'foto' => $avatar->getName()
-        );
-        $ubah = $model2->updateUser($data, $id);
-        if ($ubah) {
-            // Deklarasikan session flashdata dengan tipe info
-            session()->setFlashdata('info', 'Updated profile successfully');
-            return redirect()->to('/');
+        if (!$validated) {
+            return redirect()->to('/about');
+        } else {
+            $avatar = $this->request->getFIle('foto');
+            // dd($avatar);
+            $avatar->move(ROOTPATH . 'public/uploads');
+            $data = array(
+                'email' => $this->request->getPost('email'),
+                'username' => $this->request->getPost('username'),
+                'nama' => $this->request->getPost('nama'),
+                'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+                'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+                'telepon' => $this->request->getPost('telepon'),
+                'foto' => $avatar->getName()
+            );
+            session()->set($data);
+            $ubah = $model2->updateUser($data, $id);
+            if ($ubah) {
+                // Deklarasikan session flashdata dengan tipe info
+                session()->setFlashdata('info', 'Updated profile successfully');
+                return redirect()->to('/');
+            }
         }
-        // }
     }
     public function updateTeacher()
     {

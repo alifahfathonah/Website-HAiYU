@@ -1,186 +1,195 @@
 .sidebar {
-    height: 100%;
-    width: 0;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
-    position: fixed;
-    z-index: 1;
-    background-color: #520091;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: fixed;
+  z-index: 1;
+  background-color: #520091;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 .sidebar a {
-    font-family: "Open Sans", sans-serif;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
+  font-family: "Open Sans", sans-serif;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
 }
 .sidebar .top-nav {
-    position: absolute;
-    width: 481px;
-    height: 40px;
-    left: 0px;
-    top: 0px;
+  position: absolute;
+  width: 481px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
 }
 .sidebar .top-nav .closebtn {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    font-size: 36px;
-    color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  font-size: 36px;
+  color: #ffffff;
 }
-  .sidebar .top-nav .haiyu-sidebar {
-    position: relative;
-    font-family: "Righteous", cursive;
-    color: #ffffff;
-    font-size: 48px;
-    left: 70px;
-    width: 80px;
+.sidebar .top-nav .haiyu-sidebar {
+  position: relative;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  font-size: 48px;
+  left: 70px;
+  width: 80px;
+}
+.sidebar .top-nav .search-container {
+  float: right;
+  margin: 5px 10px 10px 10px;
+}
+.search {
+  background: rgba(208, 208, 208, 0.37);
+  border-radius: 7px;
+}
+.sidebar .user-info {
+  margin-top: 55px;
+}
+.sidebar .user-info #welcome {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  margin-left: 40%;
+  text-align: left;
+}
+
+.sidebar .bottom-nav {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  width: 481px;
+  height: 100px;
+}
+.sidebar .bottom-nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  float: left;
+}
+.sidebar input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.sidebar .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.sidebar .search-container button:hover {
+  background: #ccc;
+}
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
   }
-  .sidebar .top-nav .search-container {
-    float: right;
-    margin: 5px 10px 10px 10px;
-  }
-  .search {
-    background: rgba(208, 208, 208, 0.37);
-    border-radius: 7px;
-  }
-  .sidebar .user-info {
-    margin-top: 75px;
-  }
-  .sidebar .user-info #welcome {
-    color: white;
-    font-family: "Open Sans", sans-serif;
-    font-size: 30px;
-    margin-left: 40%;
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav .search-container button {
+    float: none;
+    display: block;
     text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
   }
-  
-  .sidebar .bottom-nav {
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    width: 481px;
-    height: 100px;
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
   }
-  .sidebar .bottom-nav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    float: left;
-  }
-  .sidebar input[type="text"] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-  }
-  .sidebar .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  .sidebar .search-container button:hover {
-    background: #ccc;
-  }
-  @media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
-    .topnav a,
-    .topnav input[type="text"],
-    .topnav .search-container button {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    .topnav input[type="text"] {
-      border: 1px solid #ccc;
-    }
-  }
-  .openbtn img {
-    position: absolute;
-    background-color: #000000;
-    color: #ffffff;
-    height: 24px;
-    width: 40px;
-    left: 20px;
-    top: 6px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .nav1 {
-    margin-top: 200px;
-  }
-  #avatar {
-    width: 100px;
-    height: auto;
-    /* border-radius: 233.5px; */
-    position: absolute;
-    left: 12%;
-    top: 15%;
-    cursor: pointer;
-  }
-  .navUser {
-    margin-top: 50px;
-  }
-  .iconHome {
-    display: block;
-    width: 50px;
-    height: auto;
-  }
-  .nav2 {
-    margin-top: 100px;
-  }
-  .home,
-  .subject,
-  .account,
-  .profile,
-  .aboutUser {
-    margin: 0px;
-    padding: 20px 20px 20px 60px;
-    transition: 0.4s;
-  }
-  .signIn,
-  .signOut,
-  .about {
-    margin: 0px;
-    padding: 10px 10px 10px 60px;
-    transition: 0.4s;
-  }
-  .home:hover,
-  .subject:hover,
-  .account:hover,
-  .about:hover,
-  .signIn:hover,
-  .signOut:hover,
-  .profile:hover,
-  .aboutUser:hover {
-    background-color: #260041;
-  }
-  .nav1 a,
-  .navUser a {
-    font-family: "Open Sans", sans-serif;
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
-    margin-top: -40px;
-    margin-left: 40px;
-  }
+}
+.openbtn img {
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  height: 24px;
+  width: 40px;
+  left: 20px;
+  top: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav1 {
+  margin-top: 200px;
+}
+.default {
+  width: 100px;
+  height: auto;
+  /* border-radius: 233.5px; */
+  position: absolute;
+  left: 12%;
+  top: 15%;
+  cursor: pointer;
+}
+.profilePhoto {
+  max-width: 100px;
+  max-height: 100px;
+  /* border-radius: 233.5px; */
+  position: absolute;
+  left: 12%;
+  top: 15%;
+  cursor: pointer;
+}
+.navUser {
+  margin-top: 50px;
+}
+.iconHome {
+  display: block;
+  width: 50px;
+  height: auto;
+}
+.nav2 {
+  margin-top: 100px;
+}
+.home,
+.subject,
+.account,
+.profile,
+.aboutUser {
+  margin: 0px;
+  padding: 20px 20px 20px 60px;
+  transition: 0.4s;
+}
+.signIn,
+.signOut,
+.about {
+  margin: 0px;
+  padding: 10px 10px 10px 60px;
+  transition: 0.4s;
+}
+.home:hover,
+.subject:hover,
+.account:hover,
+.about:hover,
+.signIn:hover,
+.signOut:hover,
+.profile:hover,
+.aboutUser:hover {
+  background-color: #260041;
+}
+.nav1 a,
+.navUser a {
+  font-family: "Open Sans", sans-serif;
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  margin-top: -40px;
+  margin-left: 40px;
+}

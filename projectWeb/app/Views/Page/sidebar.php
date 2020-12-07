@@ -8,7 +8,13 @@
             </form>
         </div>
     </div>
-    <span><img src="/images/avatar.png" alt="" id="avatar"></span>
+    <span>
+        <?php if (session('foto') != null) { ?>
+            <img src="/uploads/<?php echo session('foto') ?>" alt="" class="profilePhoto">
+        <?php } else { ?>
+            <img src="/uploads/avatar.png" alt="" class="default">
+        <?php } ?>
+    </span>
     <div class="user-info">
         <p id="welcome">Welcome! <br> <?= session('username') ?></p>
     </div>

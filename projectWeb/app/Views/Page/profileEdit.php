@@ -30,12 +30,18 @@
     <div class="content">
         <a class="delete" href="/user/deleteAccount/<?= session('username') ?>"><i class="fa fa-trash"></i> Delete Account</a>
         <h2>Edit Profile</h2>
-        <form action="/user/updateUser/" method="POST" enctype="mulipart/form-data">
+        <form action="/user/updateUser/" method="POST" enctype="multipart/form-data">
             <div class="row1">
                 <div class="col">
                     <div class="form-control1">
                         <label for="imgProfile">
-                            <img src="/images/avatar.png" alt="">
+                            <?php if ($user['foto'] != null) { ?>
+                                <img src="/uploads/<?php echo $user['foto']; ?>" alt="" class="profilePhoto">
+                                <h3>Tap photo for edit</h3>
+                            <?php } else { ?>
+                                <img src="/uploads/avatar.png" alt="" class="default">
+                                <h3>Tap photo for change</h3>
+                            <?php } ?>
                         </label>
                         <input type="file" name="foto" id="imgProfile" />
                     </div>
