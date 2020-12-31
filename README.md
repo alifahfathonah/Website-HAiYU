@@ -16,7 +16,7 @@
 1. Guru, sebagai yang memfasilitasi tanya jawab dari pengguna web.  
 2. Siswa SMA.   
 3. Siswa SMK yang ingin melanjutkan ke jenjang perguruan tinggi.    
-## Mockup kasar sementara :  https://www.figma.com/file/jN06PMwr9uSa1ukAGNGmpb/HAiYU
+## Mockup kasar :
 1. Homepage  
 ![Mockup Homepage https://i.ibb.co/02CBYxH/Homepage-mockup.png](https://i.ibb.co/02CBYxH/Homepage-mockup.png)  
 2. Menu Science  
