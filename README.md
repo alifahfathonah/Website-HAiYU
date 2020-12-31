@@ -33,6 +33,6 @@
 ![Mockup Login Page https://i.ibb.co/n1FK3bf/Login-mockup.png](https://i.ibb.co/n1FK3bf/Login-mockup.png)  
 ## Skema Database :  
 1. ERD  
-![Skema ERD Skema Database/ERD dbhaiyu.png](/Skema Database/ERD dbhaiyu.png)  
+![Skema ERD](Skema%20Database/ERD%20dbhaiyu.png)  
 2. Tabel  
-![Tabel Skema Database/Tabel dbhaiyu.png](/Skema Database/Tabel dbhaiyu.png) 
+![Tabel](/Skema%20Database/Tabel%20dbhaiyu.png) 
